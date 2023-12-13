@@ -74,23 +74,16 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">U7 | ArrayLists | Student P3</h1><p class="page-description">Lesson on the College Board Unit 6 Arrays. This is the teacher notebook.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-10-24T00:00:00-07:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">U7 | ArrayLists | Student P3</h1>
+    <p class="post-meta"><time class="dt-published" datetime="2023-10-24T00:00:00-07:00" itemprop="datePublished">
         Oct 24, 2023
       </time>• 
           <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <span class="p-author h-card" itemprop="name">Paaras, Yuri, Shreyas, Tanay</span></span>
-       • <span class="read-time" title="Estimated read time">
-    
-    
-      20 min read
-    
-</span></p>
+            <span class="p-author h-card" itemprop="name">Paaras, Yuri, Shreyas, Tanay</span></span></p>
+  </header>
 
-    
-
-    </header>
-
-  <div class="post-content e-content" itemprop="articleBody"><ul><li><a href="#unit-7-arraylist">Unit 7: ArrayList</a></li><li><a href="#71-arraylist-intro">7.1: ArrayList Intro</a><ul><li><a href="#quick-lil-popcorn-hack">Quick lil popcorn hack</a></li></ul></li></ul></li></ul></li><li><a href="#72-arraylist-methods">7.2: ArrayList Methods</a><ul><li><a href="#learning-objectives">Learning Objectives</a></li><li><a href="#essential-knowledge">Essential Knowledge</a></li><li><a href="#size-of-the-arraylist">Size of the <code class="language-plaintext highlighter-rouge">ArrayList</code></a></li><li><a href="#adding-items-to-an-arraylist">Adding Items to an <code class="language-plaintext highlighter-rouge">ArrayList</code></a></li><li><a href="#lets-look-at-an-example">Let’s Look at an Example</a></li><li><a href="#deleting-items-from-an-arraylist">Deleting Items from an <code class="language-plaintext highlighter-rouge">ArrayList</code></a></li><li><a href="#updating-items-in-an-arraylist">Updating Items in an <code class="language-plaintext highlighter-rouge">ArrayList</code></a></li><li><a href="#accessing-items-in-an-arraylist">Accessing Items in an <code class="language-plaintext highlighter-rouge">ArrayList</code></a></li><li><a href="#passing-an-arraylist-as-a-method-parameter">Passing an <code class="language-plaintext highlighter-rouge">ArrayList</code> as a Method Parameter</a></li><li><a href="#returning-an-arraylist-from-a-method">Returning an <code class="language-plaintext highlighter-rouge">ArrayList</code> from a Method</a></li><li><a href="#hacks">Hacks</a></li><li><a href="#hack-helper">Hack Helper</a></li></ul></li></ul></li><li><a href="#73-traversing-arraylists">7.3: Traversing Arraylists</a><ul><li><a href="#learning-objectives-1">Learning Objectives:</a></li><li><a href="#essential-knowledge-1">Essential Knowledge:</a><ul><li><a href="#breakdown">Breakdown:</a></li><li><a href="#loop-conditions">Loop Conditions:</a></li><li><a href="#practice">Practice:</a></li><li><a href="#using-enhanced-for-loop-with-traversing">Using Enhanced For-Loop With Traversing:</a></li><li><a href="#common-mistakes">Common mistakes:</a></li></ul></li></ul></li><li><a href="#hacks-1">Hacks:</a></li></ul></li><li><a href="#74-developing-algorithms-using-arraylists">7.4: Developing Algorithms Using ArrayLists</a><ul><li><a href="#learning-objectives-2">Learning Objectives</a></li><li><a href="#essential-knowledge-2">Essential Knowledge</a></li></ul></li><li><a href="#popcorn-hacks">Popcorn Hacks:</a><ul><li><a href="#lets-look-at-an-example-example-1">Let’s Look at an Example (Example 1)</a></li><li><a href="#lets-look-at-an-example-example-2">Let’s Look at an Example (Example 2)</a></li><li><a href="#hacks-2">Hacks</a></li><li><a href="#hack-helper-1">Hack Helper</a></li></ul></li></ul></li><li><a href="#75-searching">7.5 Searching</a><ul><li><a href="#learning-objectives-3">Learning Objectives</a></li><li><a href="#essential-knowledge-3">Essential Knowledge:</a></li><li><a href="#search-process">Search Process</a></li><li><a href="#searching-linear-structures">Searching Linear Structures</a><ul><li><a href="#finding-information-with-a-computer-is-something-we-need-to-know-how-to-do-linear-search-algorithms-are-best-used-when-we-do-not-have-any-idea-about-the-order-of-the-data-and-so-we-need-to-look-at-each-element-to-determine-if-what-we-are-looking-for-is-in-fact-inside-the-array-or-arraylist">Finding information with a computer is something we need to know how to do. Linear search algorithms are BEST used when we do not have any idea about the order of the data and so we need to look at each element to determine if what we are looking for is in fact inside the array or <code class="language-plaintext highlighter-rouge">ArrayList</code>.</a></li><li><a href="#when-searching-we-do-need-to-remember-that-different-data-types-require-comparisons">When searching, we do need to remember that different data types require comparisons!</a></li></ul></li></ul></li><li><a href="#searching-an-arraylist-of-double">Searching an <code class="language-plaintext highlighter-rouge">ArrayList</code> of Double</a><ul><li><a href="#explanation">Explanation</a></li></ul></li><li><a href="#searching-an-arraylist-of-book-for-a-string">Searching an <code class="language-plaintext highlighter-rouge">ArrayList</code> of book for a <code class="language-plaintext highlighter-rouge">String</code></a><ul><li><a href="#explanation-1">Explanation</a></li></ul></li><li><a href="#questions">Questions</a><ul><li><a href="#should-we-use--when-looking-for-an-object">Should we use == when looking for an Object?</a></li><li><a href="#why-did-we-subtract-the-double-values">Why did we subtract the double values?</a></li></ul></li></ul></li><li><a href="#why-does-order-sometimes-matter">Why does order sometimes matter?</a><ul><li><a href="#when-searching-for-a-value-to-remove-from-a-list-if-we-search-forward-we-have-to-make-sure-to-adjust-the-loop-control-variable-or-we-might-skip-what-we-are-looking-for-when-removing">When searching for a value to remove from a list, if we search forward we have to make sure to adjust the loop control variable, or we might skip what we are looking for when removing!</a></li></ul></li></ul></li></ul></li><li><a href="#76-sorting">7.6 Sorting</a><ul><li><a href="#learning-objectives-4">Learning Objectives</a></li><li><a href="#essential-knowledge-4">Essential Knowledge:</a></li></ul></li><li><a href="#selection-sort">Selection Sort</a></li><li><a href="#insertion-sort-algorithm">Insertion Sort Algorithm</a></li></ul></li><li><a href="#77-ethical-issues-around-data-collection">7.7: Ethical Issues around Data Collection</a><ul><li><a href="#learning-objectives-5">Learning Objectives:</a></li><li><a href="#essential-knowledge-5">Essential Knowledge:</a><ul><li><a href="#privacy-protection">Privacy Protection:</a></li></ul></li></ul></li><li><a href="#hacks-3">Hacks:</a></li></ul></li><li><a href="#grading">Grading:</a></li></ul><h1 id="unit-7-arraylist">Unit 7: ArrayList</h1>
+  <div class="post-content e-content" itemprop="articleBody">
+    <h1 id="unit-7-arraylist">Unit 7: ArrayList</h1>
 <blockquote>
   <p>Mastering the concept of Java’s ArrayList. AP Exam weighting: 2.5-7.5%.</p>
 </blockquote>
@@ -989,15 +982,7 @@ During each iteration of the outer loop, it finds the index of the minimum eleme
   <li>Anything else creative or above-and-beyond showing your understanding of ArrayLists (0.05)</li>
 </ul>
 
-  </div><!-- from https://github.com/utterance/utterances -->
-<script src="https://utteranc.es/client.js"
-        repo="nighthawkcoders/teacher_portfolio"
-        issue-term="title"
-        label="blogpost-comment"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-</script><a class="u-url" href="/teacher_portfolio/2023/10/24/java_arraylist_P3_IPYNB_2_.html" hidden></a>
+  </div><a class="u-url" href="/teacher_portfolio/2023/10/24/java_arraylist_P3_IPYNB_2_.html" hidden></a>
 </article>
 
       </div>
