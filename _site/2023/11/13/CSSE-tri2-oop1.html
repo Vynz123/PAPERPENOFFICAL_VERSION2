@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>OOP, CSSE mini project Part 1 | Teacher 2.0</title>
+<meta name="generator" content="Jekyll v3.9.3" />
+<meta property="og:title" content="OOP, CSSE mini project Part 1" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Fundamentals of OOP. This describes outline of game object, game levels, and game control." />
+<meta property="og:description" content="Fundamentals of OOP. This describes outline of game object, game levels, and game control." />
+<link rel="canonical" href="http://localhost:4100/teacher_portfolio/2023/11/13/CSSE-tri2-oop1.html" />
+<meta property="og:url" content="http://localhost:4100/teacher_portfolio/2023/11/13/CSSE-tri2-oop1.html" />
+<meta property="og:site_name" content="Teacher 2.0" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-11-13T00:00:00-08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="OOP, CSSE mini project Part 1" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-11-13T00:00:00-08:00","datePublished":"2023-11-13T00:00:00-08:00","description":"Fundamentals of OOP. This describes outline of game object, game levels, and game control.","headline":"OOP, CSSE mini project Part 1","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4100/teacher_portfolio/2023/11/13/CSSE-tri2-oop1.html"},"url":"http://localhost:4100/teacher_portfolio/2023/11/13/CSSE-tri2-oop1.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/teacher_portfolio/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4100/teacher_portfolio/feed.xml" title="Teacher 2.0" /><link rel="shortcut icon" type="image/x-icon" href="/teacher_portfolio/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/teacher_portfolio/">Teacher 2.0</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/teacher_portfolio/blogs/">Blogs</a><a class="page-link" href="/teacher_portfolio/search/">Search</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">OOP, CSSE mini project Part 1</h1><p class="page-description">Fundamentals of OOP.  This describes outline of game object, game levels, and game control.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-11-13T00:00:00-08:00" itemprop="datePublished">
+        Nov 13, 2023
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      5 min read
+    
+</span></p>
+
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody"><table>
+    <tr>
+        <td><a href="/teacher_portfolio/2023/07/30/mario_overview_IPYNB_2_.html">Overview</a></td>
+        <td><a href="/teacher_portfolio/2023/08/01/mario_player_IPYNB_2_.html">Player</a></td>
+        <td><a href="/teacher_portfolio/2023/08/02/mario_platform_IPYNB_2_.html">Platform</a></td>
+        <td><a href="/teacher_portfolio/2023/08/06/mario_background_IPYNB_2_.html">Background</a></td>
+        <td><a href="/teacher_portfolio/2023/08/03/mario_tube_IPYNB_2_.html">Tube</a></td>
+        <td><a href="/teacher_portfolio/2023/08/04/mario_block_IPYNB_2_.html">Block</a></td>
+        <td><a href="/teacher_portfolio/2023/08/05/mario_goomba_IPYNB_2_.html">Goomba</a></td>
+    </tr>
+</table>
+
+<h2 id="oop-conversion-outline">OOP Conversion Outline</h2>
+
+<p>The OOP hierarchy shown below is designed to promote reusability, encapsulation, and a clear separation of entities.</p>
+
+<ul>
+  <li>GameEnv manages the overall game state variables</li>
+  <li>GameObject provides a common base for defining game entities (Player, Background, …)</li>
+  <li>GameLevel holds level-specific assets and creates GameObjects</li>
+  <li>GameControl handles the transition between different Game Levels</li>
+</ul>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GameEnv
+|   ├── Attributes:
+│   |   ├── levels
+│   |   ├── gameObjects
+|   │   └── ...
+|   |
+|   ├── Methods: 
+│   |    ├── update: update, draw
+│   |    ├── destroy: all gameObjects
+│   |    └── ...
+│
+├── GameObject
+│   ├── Player: sprite animation, wasd
+│   ├── Background: fit to screen, scrolling 
+│   ├── Platform: fixed to bottom, scrolling
+│   └── ...
+│
+├── GameLevel
+|   ├── Tag: key
+│   ├── Attributes:
+│   |   ├── playerAssets
+│   |   ├── backgroundAssets
+│   |   ├── platformAssets
+│   |   └── ...
+|   |
+│   └── Methods: 
+│   |    ├── load: "new" GameObject created from assets
+│   |    └── ...
+|
+└── GameControl
+│   ├── Methods: 
+|   |    ├── gameLoop: drive action of game level
+│   |    ├── transitionToLevel: destroys and creates objects for game level
+│   |    └── ...
+|   |
+│   └── ...
+</code></pre></div></div>
+
+<h3 id="game-environment">Game Environment</h3>
+
+<p>GameEnv is the overarching environment class that holds the game levels, game objects, and manages environment updates.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nx">GameEnv</span> <span class="p">{</span>
+    <span class="c1">// defined and current game levels</span>
+    <span class="kd">static</span> <span class="nx">levels</span> <span class="o">=</span> <span class="p">[];</span>
+    <span class="kd">static</span> <span class="nx">currentLevel</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+
+    <span class="c1">// active Game Objects</span>
+    <span class="kd">static</span> <span class="nx">gameObjects</span> <span class="o">=</span> <span class="p">[];</span>
+
+    <span class="c1">// initialize for Game Environment </span>
+    <span class="kd">static</span> <span class="nx">initialize</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">// store width and height based on screen size</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">setTop</span><span class="p">();</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">setBottom</span><span class="p">();</span> 
+
+        <span class="c1">// ...</span>
+    <span class="p">}</span>
+
+    <span class="c1">// resize Game Objects</span>
+    <span class="kd">static</span> <span class="nx">resize</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">initialize</span><span class="p">();</span>  <span class="c1">// Update dimensions</span>
+
+        <span class="c1">// Call the sizing method on all game objects</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">gameObj</span> <span class="k">of</span> <span class="nx">GameEnv</span><span class="p">.</span><span class="nx">gameObjects</span><span class="p">){</span>
+            <span class="nx">gameObj</span><span class="p">.</span><span class="nx">size</span><span class="p">();</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="c1">// gameLoop method to update Game Objects</span>
+    <span class="kd">static</span> <span class="nx">update</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">// Update game state, including all game objects</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kd">const</span> <span class="nx">gameObject</span> <span class="k">of</span> <span class="k">this</span><span class="p">.</span><span class="nx">gameObjects</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">gameObject</span><span class="p">.</span><span class="nx">update</span><span class="p">();</span>
+            <span class="nx">gameObject</span><span class="p">.</span><span class="nx">draw</span><span class="p">();</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="gameobject">GameObject</h3>
+
+<p>GameObject is the base class for all objects in the game. It contains common attributes and methods.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Common attributes, methods, prototype methods for all objects in the Game.</span>
+<span class="kd">class</span> <span class="nx">GameObject</span> <span class="p">{</span>
+    <span class="kd">constructor</span><span class="p">(</span><span class="nx">canvas</span><span class="p">,</span> <span class="nx">config</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">x</span> <span class="o">=</span> <span class="nx">config</span><span class="p">.</span><span class="nx">x</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">y</span> <span class="o">=</span> <span class="nx">config</span><span class="p">.</span><span class="nx">y</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">canvas</span> <span class="o">=</span> <span class="nx">canvas</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">ctx</span> <span class="o">=</span> <span class="nx">canvas</span><span class="p">.</span><span class="nx">getContext</span><span class="p">(</span><span class="dl">'</span><span class="s1">2d</span><span class="dl">'</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">image</span> <span class="o">=</span> <span class="nx">config</span><span class="p">.</span><span class="nx">image</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">frame</span> <span class="o">=</span> <span class="nx">config</span><span class="p">.</span><span class="nx">frame</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">width</span> <span class="o">=</span> <span class="nx">config</span><span class="p">.</span><span class="nx">width</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">height</span> <span class="o">=</span> <span class="nx">config</span><span class="p">.</span><span class="nx">height</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">aspect_ratio</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">width</span> <span class="o">/</span> <span class="k">this</span><span class="p">.</span><span class="nx">height</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">speedRatio</span> <span class="o">=</span> <span class="nx">config</span><span class="p">.</span><span class="nx">speedRatio</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">speed</span> <span class="o">=</span> <span class="nx">GameEnv</span><span class="p">.</span><span class="nx">gameSpeed</span> <span class="o">*</span> <span class="k">this</span><span class="p">.</span><span class="nx">speedRatio</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">collisionWidth</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">collisionHeight</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">collisionData</span> <span class="o">=</span> <span class="p">{};</span>
+        <span class="nx">GameObject</span><span class="p">.</span><span class="nx">gameObjects</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="nx">destroy</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">const</span> <span class="nx">index</span> <span class="o">=</span> <span class="nx">GameObject</span><span class="p">.</span><span class="nx">gameObjects</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">index</span> <span class="o">!==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+            <span class="c1">// Remove the canvas from the DOM</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">canvas</span><span class="p">.</span><span class="nx">parentNode</span><span class="p">.</span><span class="nx">removeChild</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">canvas</span><span class="p">);</span>
+            <span class="nx">GameObject</span><span class="p">.</span><span class="nx">gameObjects</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="nx">index</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="nx">update</span><span class="p">()</span> <span class="p">{</span> <span class="p">}</span>
+    <span class="nx">draw</span><span class="p">()</span> <span class="p">{</span> <span class="p">}</span>
+    <span class="nx">size</span><span class="p">()</span> <span class="p">{</span> <span class="p">}</span>
+    <span class="nx">isCollision</span><span class="p">(</span><span class="nx">object</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
+    <span class="nx">collisionAction</span><span class="p">(</span><span class="nx">object</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
+    <span class="nx">handleCollision</span><span class="p">(</span><span class="nx">object</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">isCollision</span><span class="p">(</span><span class="nx">object</span><span class="p">))</span> <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">collisionAction</span><span class="p">(</span><span class="nx">object</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="player">Player</h3>
+
+<p>Player is a class specific to the player character, extending GameObject and adding properties like speed, jump height, etc.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Create a class specifically for the player character, extending the GameObject class.</span>
+<span class="kd">class</span> <span class="nx">Player</span> <span class="kd">extends</span> <span class="nx">GameObject</span> <span class="p">{</span>
+    <span class="kd">constructor</span><span class="p">(</span><span class="nx">canvas</span><span class="p">,</span> <span class="nx">config</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">super</span><span class="p">(</span><span class="nx">canvas</span><span class="p">,</span> <span class="nx">config</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">speed</span> <span class="o">=</span> <span class="nx">config</span><span class="p">.</span><span class="nx">speed</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">jumpHeight</span> <span class="o">=</span> <span class="nx">config</span><span class="p">.</span><span class="nx">jumpHeight</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">health</span> <span class="o">=</span> <span class="nx">config</span><span class="p">.</span><span class="nx">health</span><span class="p">;</span>
+
+        <span class="c1">// Set up event listeners for user input</span>
+        <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">keydown</span><span class="dl">'</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">handleKeyDown</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">));</span>
+        <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">keyup</span><span class="dl">'</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">handleKeyUp</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">));</span>
+    <span class="p">}</span>
+
+    <span class="nx">handleKeyDown</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Handle key down events (e.g., move left or right, jump)</span>
+        <span class="k">switch</span> <span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">key</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">case</span> <span class="dl">'</span><span class="s1">ArrowLeft</span><span class="dl">'</span><span class="p">:</span>
+                <span class="k">this</span><span class="p">.</span><span class="nx">moveLeft</span><span class="p">();</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="dl">'</span><span class="s1">ArrowRight</span><span class="dl">'</span><span class="p">:</span>
+                <span class="k">this</span><span class="p">.</span><span class="nx">moveRight</span><span class="p">();</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="dl">'</span><span class="s1">Space</span><span class="dl">'</span><span class="p">:</span>
+                <span class="k">this</span><span class="p">.</span><span class="nx">jump</span><span class="p">();</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="c1">// Handle other keys as needed</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="nx">handleKeyUp</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Handle key up events (e.g., stop moving)</span>
+        <span class="k">switch</span> <span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">key</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">case</span> <span class="dl">'</span><span class="s1">ArrowLeft</span><span class="dl">'</span><span class="p">:</span>
+            <span class="k">case</span> <span class="dl">'</span><span class="s1">ArrowRight</span><span class="dl">'</span><span class="p">:</span>
+                <span class="k">this</span><span class="p">.</span><span class="nx">stopMoving</span><span class="p">();</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="c1">// Handle other keys as needed</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="nx">moveLeft</span><span class="p">()</span> <span class="p">{</span> <span class="cm">/* Implement left movement logic */</span> <span class="p">}</span>
+    <span class="nx">moveRight</span><span class="p">()</span> <span class="p">{</span> <span class="cm">/* Implement right movement logic */</span> <span class="p">}</span>
+    <span class="nx">stopMoving</span><span class="p">()</span> <span class="p">{</span> <span class="cm">/* Implement stop movement logic */</span> <span class="p">}</span>
+    <span class="nx">jump</span><span class="p">()</span> <span class="p">{</span> <span class="cm">/* Implement jump logic */</span> <span class="p">}</span>
+    <span class="nx">attack</span><span class="p">()</span> <span class="p">{</span> <span class="cm">/* Implement attack logic */</span> <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="platform">Platform</h3>
+
+<p>Platform is a class for platforms that the player can stand on, extending GameObject.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Create a class for platforms that the player can stand on.</span>
+<span class="kd">class</span> <span class="nx">Platform</span> <span class="kd">extends</span> <span class="nx">GameObject</span> <span class="p">{</span>
+    <span class="kd">constructor</span><span class="p">(</span><span class="nx">canvas</span><span class="p">,</span> <span class="nx">config</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">super</span><span class="p">(</span><span class="nx">canvas</span><span class="p">,</span> <span class="nx">config</span><span class="p">);</span>
+
+    <span class="p">}</span>
+    <span class="c1">// Additional platform-specific methods or properties</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="game-level">Game Level</h3>
+
+<p>GameLevel stores the assets and attributes specific to a particular level. It has properties like background, platforms, player, …</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Store the assets and attributes of the Game at the specific GameLevel.</span>
+<span class="kd">class</span> <span class="nx">GameLevel</span> <span class="p">{</span>
+    <span class="kd">constructor</span><span class="p">(</span><span class="nx">tag</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">tag</span> <span class="o">=</span> <span class="nx">tag</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">backgroundImg</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">platformImg</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">playerImg</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">isComplete</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span> <span class="c1">// function that determines if level is complete</span>
+    <span class="p">}</span>
+
+    <span class="nx">setBackgroundFile</span><span class="p">(</span><span class="nx">file</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">backgroundImg</span> <span class="o">=</span> <span class="nx">file</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">// ...</span>
+
+    <span class="nx">setIsComplete</span><span class="p">(</span><span class="nx">callBack</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">isComplete</span> <span class="o">=</span> <span class="nx">callBack</span><span class="p">;</span>  <span class="c1">// callBack is function to test for level completion</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Load level data</span>
+    <span class="nx">load</span><span class="p">()</span> <span class="p">{</span> <span class="cm">/* Load level data */</span> <span class="p">}</span>
+
+    <span class="c1">// ...</span>
+
+    <span class="c1">// Add a GameLevel to the array levels</span>
+    <span class="kd">static</span> <span class="nx">create</span><span class="p">(</span><span class="nx">tag</span><span class="p">,</span> <span class="nx">backgroundFile</span><span class="p">,</span> <span class="nx">platformFile</span><span class="p">,</span> <span class="nx">playerFile</span><span class="p">,</span> <span class="nx">isComplete</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">const</span> <span class="nx">newLevel</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">GameLevel</span><span class="p">(</span><span class="nx">tag</span><span class="p">);</span>
+        <span class="nx">newLevel</span><span class="p">.</span><span class="nx">setBackgroundFile</span><span class="p">(</span><span class="nx">backgroundFile</span><span class="p">);</span>
+        <span class="nx">newLevel</span><span class="p">.</span><span class="nx">setPlatformFile</span><span class="p">(</span><span class="nx">platformFile</span><span class="p">);</span>
+        <span class="nx">newLevel</span><span class="p">.</span><span class="nx">setPlayerFile</span><span class="p">(</span><span class="nx">playerFile</span><span class="p">);</span>
+        <span class="nx">newLevel</span><span class="p">.</span><span class="nx">setIsComplete</span><span class="p">(</span><span class="nx">isComplete</span><span class="p">);</span>
+        <span class="nx">GameEnv</span><span class="p">.</span><span class="nx">levels</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">newLevel</span><span class="p">);</span>
+    <span class="p">}</span>
+
+
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="game-control">Game Control</h3>
+<p>The gameLoop and the setup and teardown between game levels</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">GameControl</span> <span class="o">=</span> <span class="p">{</span>
+
+    <span class="c1">// Level transition method (destroy then newlevel)</span>
+    <span class="k">async</span> <span class="nx">transitionToLevel</span><span class="p">(</span><span class="nx">newLevel</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">inTransition</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+
+        <span class="c1">// Destroy existing game objects</span>
+        <span class="nx">GameEnv</span><span class="p">.</span><span class="nx">destroy</span><span class="p">();</span>
+
+        <span class="c1">// Load GameLevel objects</span>
+        <span class="k">await</span> <span class="nx">newLevel</span><span class="p">.</span><span class="nx">load</span><span class="p">();</span>
+        <span class="nx">GameEnv</span><span class="p">.</span><span class="nx">currentLevel</span> <span class="o">=</span> <span class="nx">newLevel</span><span class="p">;</span>
+
+        <span class="c1">// Trigger a resize to redraw canvas elements</span>
+        <span class="nb">window</span><span class="p">.</span><span class="nx">dispatchEvent</span><span class="p">(</span><span class="k">new</span> <span class="nx">Event</span><span class="p">(</span><span class="dl">'</span><span class="s1">resize</span><span class="dl">'</span><span class="p">));</span>
+        <span class="c1">// Update invert property, twice means same as before</span>
+        <span class="nx">toggleCanvasEffect</span><span class="p">.</span><span class="nx">dispatchEvent</span><span class="p">(</span><span class="k">new</span> <span class="nx">Event</span><span class="p">(</span><span class="dl">'</span><span class="s1">click</span><span class="dl">'</span><span class="p">));</span>
+        <span class="nx">toggleCanvasEffect</span><span class="p">.</span><span class="nx">dispatchEvent</span><span class="p">(</span><span class="k">new</span> <span class="nx">Event</span><span class="p">(</span><span class="dl">'</span><span class="s1">click</span><span class="dl">'</span><span class="p">));</span>
+
+        <span class="k">this</span><span class="p">.</span><span class="nx">inTransition</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+    <span class="p">},</span>
+
+    <span class="c1">// Game control loop</span>
+    <span class="nx">gameLoop</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">// Turn game loop off during transitions</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">inTransition</span><span class="p">)</span> <span class="p">{</span>
+
+            <span class="c1">// Get current level</span>
+            <span class="nx">GameEnv</span><span class="p">.</span><span class="nx">update</span><span class="p">();</span>
+            <span class="kd">const</span> <span class="nx">currentLevel</span> <span class="o">=</span> <span class="nx">GameEnv</span><span class="p">.</span><span class="nx">currentLevel</span><span class="p">;</span>
+
+            <span class="c1">// currentLevel is defined</span>
+            <span class="k">if</span> <span class="p">(</span><span class="nx">currentLevel</span><span class="p">)</span> <span class="p">{</span>
+                <span class="c1">// run the isComplete callback function</span>
+                <span class="k">if</span> <span class="p">(</span><span class="nx">currentLevel</span><span class="p">.</span><span class="nx">isComplete</span> <span class="o">&amp;&amp;</span> <span class="nx">currentLevel</span><span class="p">.</span><span class="nx">isComplete</span><span class="p">())</span> <span class="p">{</span>
+                    <span class="kd">const</span> <span class="nx">currentIndex</span> <span class="o">=</span> <span class="nx">GameEnv</span><span class="p">.</span><span class="nx">levels</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">currentLevel</span><span class="p">);</span>
+                    <span class="c1">// next index is in bounds</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="nx">currentIndex</span> <span class="o">!==</span> <span class="o">-</span><span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="nx">currentIndex</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="nx">GameEnv</span><span class="p">.</span><span class="nx">levels</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
+                        <span class="c1">// transition to the next level</span>
+                        <span class="k">this</span><span class="p">.</span><span class="nx">transitionToLevel</span><span class="p">(</span><span class="nx">GameEnv</span><span class="p">.</span><span class="nx">levels</span><span class="p">[</span><span class="nx">currentIndex</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]);</span>
+                    <span class="p">}</span> 
+                <span class="p">}</span>
+            <span class="c1">// currentLevel is null, (ie start or restart game)</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="c1">// transition to beginning of game</span>
+                <span class="k">this</span><span class="p">.</span><span class="nx">transitionToLevel</span><span class="p">(</span><span class="nx">GameEnv</span><span class="p">.</span><span class="nx">levels</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="c1">// recycle gameLoop, aka recursion</span>
+        <span class="nx">requestAnimationFrame</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">gameLoop</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">));</span>  
+    <span class="p">},</span>
+
+<span class="p">};</span>
+</code></pre></div></div>
+
+  </div><a class="u-url" href="/teacher_portfolio/2023/11/13/CSSE-tri2-oop1.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+    <data class="u-url" href="/teacher_portfolio/"></data>
+  
+    <div class="wrapper">
+  
+      <div class="footer-col-wrapper">
+  
+        <div class="social-links"><ul class="social-media-list"><li>
+  <a rel="me" href="https://github.com/nighthawkcoders/teacher_portfolio" target="_blank" title="github">
+    <svg class="svg-icon grey">
+      <use xlink:href="/teacher_portfolio/assets/minima-social-icons.svg#github"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="https://x.com/NighthawkCoding/" target="_blank" title="x">
+    <svg class="svg-icon grey">
+      <use xlink:href="/teacher_portfolio/assets/minima-social-icons.svg#x"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="https://www.youtube.com/@nighthawkcodingsociety2868" target="_blank" title="youtube">
+    <svg class="svg-icon grey">
+      <use xlink:href="/teacher_portfolio/assets/minima-social-icons.svg#youtube"></use>
+    </svg>
+  </a>
+</li>
+</ul>
+</div>
+
+      </div>
+    </div>
+  
+  </footer></body>
+
+</html>

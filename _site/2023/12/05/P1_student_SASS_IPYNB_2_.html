@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>SASS Student P1 | Teacher 2.0</title>
+<meta name="generator" content="Jekyll v3.9.3" />
+<meta property="og:title" content="SASS Student P1" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Entire SASS Lesson." />
+<meta property="og:description" content="Entire SASS Lesson." />
+<link rel="canonical" href="http://localhost:4100/teacher_portfolio/2023/12/05/P1_student_SASS_IPYNB_2_.html" />
+<meta property="og:url" content="http://localhost:4100/teacher_portfolio/2023/12/05/P1_student_SASS_IPYNB_2_.html" />
+<meta property="og:site_name" content="Teacher 2.0" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-12-05T00:00:00-08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="SASS Student P1" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-12-05T00:00:00-08:00","datePublished":"2023-12-05T00:00:00-08:00","description":"Entire SASS Lesson.","headline":"SASS Student P1","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4100/teacher_portfolio/2023/12/05/P1_student_SASS_IPYNB_2_.html"},"url":"http://localhost:4100/teacher_portfolio/2023/12/05/P1_student_SASS_IPYNB_2_.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/teacher_portfolio/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4100/teacher_portfolio/feed.xml" title="Teacher 2.0" /><link rel="shortcut icon" type="image/x-icon" href="/teacher_portfolio/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/teacher_portfolio/">Teacher 2.0</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/teacher_portfolio/blogs/">Blogs</a><a class="page-link" href="/teacher_portfolio/search/">Search</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">SASS | Student P1</h1><p class="page-description">Entire SASS Lesson.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-12-05T00:00:00-08:00" itemprop="datePublished">
+        Dec 5, 2023
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      15 min read
+    
+</span></p>
+
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody"><ul><li><a href="#introduction-to-sass">Introduction to SASS</a><ul><li><a href="#benefits-over-traditional-css">Benefits Over Traditional CSS</a><ul><li><a href="#improved-code-organization">Improved Code Organization</a></li><li><a href="#maintainability">Maintainability</a></li><li><a href="#advanced-features">Advanced Features</a></li></ul></li></ul></li><li><a href="#sass-basics">SASS Basics</a><ul><li><a href="#preprocessing">Preprocessing</a></li><li><a href="#modules">Modules</a></li><li><a href="#operators">Operators</a></li></ul></li><li>SASS Role in Design:<ul><li>Visual Concept as a Blueprint</li></ul></li><li>Hacks<ul><li><a href="#partials-and-modular-styling-with-sass">Partials and Modular Styling with SASS</a><ul><li><a href="#understanding-sass-partials">Understanding SASS Partials:</a></li><li><a href="#benefits-of-using-partials">Benefits of Using Partials:</a></li><li><a href="#importing-partials-into-a-main-sass-file">Importing Partials into a Main SASS File:</a></li></ul></li><li><a href="#variables-in-sass">Variables in SASS</a><ul><li><a href="#introduction-to-variables">Introduction to Variables:</a></li><li><a href="#variable-syntax">Variable Syntax:</a></li><li><a href="#sass-variable-scope">SASS Variable Scope:</a></li></ul></li></ul></li><li><a href="#nested-techniques">Nested techniques</a></li><li><a href="#flexbox-and-grid-integration">Flexbox and Grid Integration</a><ul><li><a href="#flexbox">Flexbox</a></li><li><a href="#grid">Grid</a></li></ul></li><li><a href="#simplifying-responsive-layouts-with-sass">Simplifying Responsive Layouts with SASS</a><ul><li><a href="#advanced-mixins-for-flexbox-and-grid">Advanced Mixins for Flexbox and Grid</a></li><li><a href="#dynamic-layouts-with-sass-functions">Dynamic Layouts with SASS Functions</a></li><li><a href="#nested-media-queries-for-responsive-design">Nested Media Queries for Responsive Design</a></li><li><a href="#demonstration-complex-flexbox-layout-with-sass">Demonstration: Complex Flexbox Layout with SASS</a></li><li><a href="#demonstration-responsive-grid-layout-with-sass">Demonstration: Responsive Grid Layout with SASS</a></li></ul></li><li><a href="#hacks">Hacks</a></li></ul></li><li><a href="#scripting-in-sass">Scripting in SASS</a><ul><li><a href="#sass-scripting">SASS Scripting</a></li><li><a href="#for-loops">For Loops</a><ul><li><a href="#for-loop-practice">For Loop Practice</a><ul><li><a href="#html">HTML</a></li><li><a href="#sass">SASS</a></li></ul></li></ul></li><li><a href="#conditionals">Conditionals</a><ul><li><a href="#if-statements">If Statements</a></li><li><a href="#else-statements">Else Statements</a></li><li><a href="#else-if-statements">Else If Statements</a></li><li><a href="#ternary-statement">Ternary Statement</a></li><li><a href="#conditional-examples">Conditional Examples</a></li></ul></li></ul></li><li><a href="#hacks-1">Hacks</a><ul><li><a href="#example-image">Example Image</a></li></ul></li></ul></li><li><a href="#extending--inheritance">Extending &amp; Inheritance</a></li><li><a href="#handling-errors-and-debugging-in-sass">Handling Errors and Debugging in Sass</a><ul><li><a href="#1-error-directive">1. @error Directive:</a></li><li><a href="#2-debug-directive">2. @debug Directive:</a></li><li><a href="#popcorn-hacks">Popcorn Hacks</a><ul><li><a href="#popcorn-hack-1">Popcorn Hack 1:</a></li><li><a href="#popcorn-hack-2">Popcorn Hack 2:</a></li></ul></li></ul></li><li><a href="#hacks-2">Hacks</a><ul><li><a href="#example-image-1">Example Image</a></li></ul></li></ul></li><li><a href="#mixins">Mixins</a><ul><li><a href="#mixins-in-sass">Mixins in SASS</a></li></ul></li><li><a href="#mixin-with-parameters">Mixin with Parameters</a></li><li><a href="#mixins-for-responsive-web-design">Mixins for Responsive Web Design</a><ul><li><a href="#responsive-design">Responsive Design</a></li><li><a href="#breakpoints-in-responsive-design">Breakpoints in Responsive Design</a></li><li><a href="#using-mixins-for-breakpoints">Using Mixins for Breakpoints</a><ul><li><a href="#example-of-a-breakpoint-mixin">Example of a Breakpoint Mixin</a></li><li><a href="#responsive-images-and-media-with-sass">Responsive Images and Media with SASS</a></li></ul></li></ul></li><li><a href="#responsive-images-and-media-with-sass-1">Responsive Images and Media with SASS</a><ul><li><a href="#handling-images-responsively">Handling Images Responsively</a><ul><li><a href="#example-scaling-images">Example: Scaling Images</a></li></ul></li><li><a href="#device-specific-media-queries">Device-Specific Media Queries</a><ul><li><a href="#targeting-specific-devices">Targeting Specific Devices</a><ul><li><a href="#example-targeting-iphones">Example: Targeting iPhones</a></li></ul></li></ul></li></ul></li><li><a href="#conclusion">Conclusion</a></li></ul><h1 id="introduction-to-sass">Introduction to SASS</h1>
+
+<p>SASS (Syntactically Awesome Stylesheets) is a powerful preprocessor scripting language that enhances CSS with advanced features. It’s compiled into standard CSS, making it a robust tool for modern web development.</p>
+<h2 id="benefits-over-traditional-css">Benefits Over Traditional CSS</h2>
+
+<h3 id="improved-code-organization">Improved Code Organization</h3>
+<ul>
+  <li><strong>Nesting Capabilities</strong>: SASS allows you to nest your CSS selectors in a way that follows the same visual hierarchy of your HTML.</li>
+  <li><strong>Modular Approach</strong>: You can split your CSS into multiple files (partials) and import them into a main file, making your project more organized.</li>
+</ul>
+
+<h3 id="maintainability">Maintainability</h3>
+<ul>
+  <li><strong>Use of Variables</strong>: Define colors, fonts, and other CSS values as variables for easy updates and consistency across the project.</li>
+  <li><strong>Mixins for Reusable Code</strong>: Create reusable pieces of code for things like buttons, forms, which can be included wherever needed.</li>
+  <li><strong>Extend/Inheritance</strong>: Share a set of CSS properties from one selector to another, reducing the amount of code you need to write and maintain.</li>
+</ul>
+
+<h3 id="advanced-features">Advanced Features</h3>
+<ul>
+  <li><strong>Control Directives</strong>: Use if/else statements and for/each loops in your CSS, which are not possible in plain CSS.</li>
+  <li><strong>Built-in Functions</strong>: SASS offers functions for color manipulation, mathematics and more, enhancing the functionality of CSS.</li>
+  <li><strong>Compatibility</strong>: Automatically handles browser prefixing, ensuring that your styles work across different browsers without extra code.</li>
+</ul>
+
+<h1 id="sass-basics">SASS Basics</h1>
+
+<h2 id="preprocessing">Preprocessing</h2>
+<ul>
+  <li><strong>Compilation</strong>: Sass files are preprocessed to generate standard CSS files.</li>
+  <li><strong>Usage</strong>: Use the <code class="language-plaintext highlighter-rouge">sass</code> command in the terminal to compile Sass files. For example, <code class="language-plaintext highlighter-rouge">sass input.sass output.css</code>.</li>
+  <li><strong>Watching Files</strong>: The <code class="language-plaintext highlighter-rouge">--watch</code> flag allows Sass to monitor files for changes and recompile automatically.</li>
+</ul>
+
+<div class="language-sass highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Command to compile Sass</span>
+<span class="nt">sass</span> <span class="nt">input</span><span class="nc">.sass</span> <span class="nt">output</span><span class="nc">.css</span>
+
+<span class="c1">// Command to watch and compile Sass</span>
+<span class="nt">sass</span> <span class="nt">--watch</span> <span class="nt">input</span><span class="nc">.sass</span> <span class="nt">output</span><span class="nc">.css</span>
+</code></pre></div></div>
+
+<h2 id="modules">Modules</h2>
+<ul>
+  <li><strong>Splitting Code</strong>: Sass allows splitting code into multiple files.</li>
+  <li><strong>@use Rule</strong>: Loads another Sass file as a module, enabling access to its variables, mixins, and functions.</li>
+  <li><strong>Namespace</strong>: Refer to module contents using a namespace based on the filename.</li>
+</ul>
+
+<div class="language-sass highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="c1">// In _base.sass</span>
+<span class="nv">$primary-color</span><span class="p">:</span> <span class="mh">#333</span>
+
+<span class="c1">// In styles.sass</span>
+<span class="k">@use</span> <span class="s1">'base'</span>
+<span class="nc">.inverse</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="n">base</span><span class="o">.</span><span class="nv">$primary-color</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="no">white</span>
+</code></pre></div></div>
+
+<h2 id="operators">Operators</h2>
+<ul>
+  <li><strong>Math Operations</strong>: Sass supports standard math operators for calculations within CSS.</li>
+  <li><strong>Example</strong>: Calculating widths for a fluid grid using operations like division.</li>
+</ul>
+
+<div class="language-sass highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="nc">.container</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">flex</span>
+<span class="nt">article</span><span class="o">[</span><span class="nt">role</span><span class="o">=</span><span class="s2">"main"</span><span class="o">]</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">600px</span> <span class="o">/</span> <span class="m">960px</span> <span class="o">*</span> <span class="m">100%</span>
+<span class="nt">aside</span><span class="o">[</span><span class="nt">role</span><span class="o">=</span><span class="s2">"complementary"</span><span class="o">]</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">300px</span> <span class="o">/</span> <span class="m">960px</span> <span class="o">*</span> <span class="m">100%</span>
+  <span class="nl">margin-left</span><span class="p">:</span> <span class="nb">auto</span>
+</code></pre></div></div>
+
+<h1>SASS Role in Design:</h1>
+
+<p>In the design phase of any project, maintaining uniformity is extremely important for creating a polished look. SASS allows for this by allowing the use of variables to store and reuse colors, fonts, and other design elements.</p>
+
+<p>This makes it so that there is a <strong>__</strong>__ theme applied throughout the entire project. SASS allows for visual cohesion.</p>
+
+<h2>Visual Concept as a Blueprint</h2>
+
+<p>Before going into the functional code, it is very important to create a visual concept or design mockup. This is a model for the project, which gives a clear visual representation for the final product. It allows for a scrum team to align on the aesthetics and overall design direction.</p>
+
+<p>This also allows for feedback and <strong>__</strong>_. People can make adjustments to the visual elements without complexity of functional code, and it makes sure that all requirements are met.</p>
+
+<p>These visual concepts also play a role in planning the <strong>__</strong>_ design. The team members can visualize how layouts and styles are adapted for different <strong>__</strong>__ <strong>__</strong>___, so that all users can have a great visual experience across all types of devices.</p>
+
+<h1>Hacks</h1>
+
+<p><strong>Explore SASS documentation to discover any additional features not covered in the lesson and implement one or more of these features in your GH Pages project. Write a couple sentences explaining the feature and demonstrate it.</strong></p>
+
+<h2 id="partials-and-modular-styling-with-sass">Partials and Modular Styling with SASS</h2>
+
+<h3 id="understanding-sass-partials">Understanding SASS Partials:</h3>
+
+<p>SASS partials are separate files containing any specific style or component. They allow for better organization and modularization of styles. They play a very important role in organizing and modularizing styles.</p>
+
+<p>Partials are named with a leading underscore (e.g., <code class="language-plaintext highlighter-rouge">_variables.sass</code>) to indicate that they are meant to be <strong>__</strong> into another stylesheet.</p>
+
+<h3 id="benefits-of-using-partials">Benefits of Using Partials:</h3>
+
+<ol>
+  <li><strong>Modular Organization:</strong>
+    <ul>
+      <li>Partials break down stylesheets into smaller files, each focusing on a specific aspect (e.g., variables, typography, layout).</li>
+      <li>This modular approach improves code organization, making it easier to maintain and scale.</li>
+    </ul>
+  </li>
+  <li><strong>Code Reusability:</strong>
+    <ul>
+      <li>Partials enable the reuse of styles across multiple files. For example, a <code class="language-plaintext highlighter-rouge">_variables.sass</code> partial may store color schemes and fonts, allowing for greater consistency.</li>
+    </ul>
+  </li>
+  <li><strong>Readability and Collaboration:</strong>
+    <ul>
+      <li>Smaller files enhance code readability. Developers can quickly locate and understand specific styles.</li>
+      <li>Supports <strong>__</strong>__ development, allowing different team members to work on different partials simultaneously.</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="importing-partials-into-a-main-sass-file">Importing Partials into a Main SASS File:</h3>
+
+<p>To use SASS partials, import them into a main SCSS file using the <code class="language-plaintext highlighter-rouge">@import</code> directive. The main file (e.g., <code class="language-plaintext highlighter-rouge">main.sass</code>) serves as the entry point for compiling styles.</p>
+
+<p><strong>Importing Partials into a Main SASS File:</strong></p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="c1">// main.sass</span>
+
+<span class="c1">// Importing variables partial</span>
+<span class="k">@use</span> <span class="nt">variables</span>
+
+<span class="o">//</span> <span class="nt">Importing</span> <span class="nt">typography</span> <span class="nt">partial</span>
+<span class="o">@</span><span class="nt">use</span> <span class="nt">typography</span>
+
+<span class="o">//</span> <span class="nt">Importing</span> <span class="nt">layout</span> <span class="nt">partial</span>
+<span class="o">@</span><span class="nt">use</span> <span class="nt">layout</span>
+
+<span class="o">//</span> <span class="nt">Importing</span> <span class="nt">components</span> <span class="nt">partial</span>
+<span class="o">@</span><span class="nt">use</span> <span class="nt">components</span>
+
+</code></pre></div></div>
+
+<h2 id="variables-in-sass">Variables in SASS</h2>
+
+<h3 id="introduction-to-variables">Introduction to Variables:</h3>
+
+<p>SASS variables provide a way to store information for later use in a stylesheet. They offer several advantages, including enhanced maintainability and consistency, by allowing you to define values in <strong>__</strong> location.</p>
+
+<h3 id="variable-syntax">Variable Syntax:</h3>
+
+<p>In SASS, variables are declared using the ‘$’ symbol followed by the variable name. Once a variable is defined, its value can be reused throughout the stylesheet.</p>
+
+<p><strong>Variable Syntax:</strong></p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// _variables.sass</span>
+
+<span class="c1">// Define variables</span>
+<span class="nv">$primary-color</span><span class="p">:</span> <span class="mh">#3498db</span>
+<span class="nv">$secondary-color</span><span class="o">:</span> <span class="mh">#2ecc71</span>
+
+<span class="o">//</span> <span class="n">Use</span> <span class="n">variables</span>
+<span class="n">body</span>
+  <span class="n">background-color</span><span class="o">:</span> <span class="nv">$primary-color</span>
+
+<span class="o">.</span><span class="n">button</span>
+  <span class="n">background-color</span><span class="o">:</span> <span class="nv">$secondary-color</span>
+  <span class="n">color</span><span class="o">:</span> <span class="mh">#fff</span>
+
+</code></pre></div></div>
+
+<h3 id="sass-variable-scope">SASS Variable Scope:</h3>
+
+<p>Variable scope is similar to the range in which a variable is accessible. By default, variables are local to the file in which they are defined. However, you can create a <strong>GLOBAL VARIABLE</strong>:</p>
+
+<p>By default, variables are local to the scope in which they are defined. However, the !global flag can be used to create global variables. Global variables are accessible throughout the entire stylesheet.</p>
+
+<p><strong>Global Variables:</strong></p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// _variables.sass</span>
+
+<span class="c1">// Local variable</span>
+<span class="nv">$local-font-size</span><span class="p">:</span> <span class="m">16px</span> <span class="o">!</span><span class="nb">default</span>
+
+<span class="o">//</span> <span class="n">Global</span> <span class="n">variable</span>
+<span class="nv">$global-font-size</span><span class="o">:</span> <span class="m">18px</span> <span class="o">!</span><span class="n">global</span>
+
+</code></pre></div></div>
+
+<p><strong>Variable Scope:</strong></p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="c1">// styles.sass</span>
+
+<span class="c1">// Importing variables partial</span>
+<span class="k">@use</span> <span class="s1">'variables'</span>
+
+<span class="err">$</span><span class="nt">font-size</span><span class="nd">:</span> <span class="nt">14px</span> <span class="o">//</span> <span class="nt">Global</span> <span class="nt">variable</span>
+
+<span class="nt">body</span>
+  <span class="nt">font-size</span><span class="nd">:</span> <span class="err">$</span><span class="nt">font-size</span> <span class="o">//</span> <span class="nt">Accessing</span> <span class="nt">the</span> <span class="nt">global</span> <span class="nt">variable</span>
+
+<span class="nc">.container</span>
+  <span class="err">$</span><span class="nt">font-size</span><span class="nd">:</span> <span class="err">$</span><span class="nt">local-font-size</span> <span class="o">//</span> <span class="nt">Local</span> <span class="nt">variable</span> <span class="nt">within</span> <span class="nc">.container</span> <span class="nt">scope</span>
+  <span class="nt">font-size</span><span class="nd">:</span> <span class="err">$</span><span class="nt">global-font-size</span> <span class="o">//</span> <span class="nt">Accessing</span> <span class="nt">the</span> <span class="nt">global</span> <span class="nt">variable</span>
+
+</code></pre></div></div>
+
+<h1 id="nested-techniques">Nested techniques</h1>
+
+<p>Basic Nesting:</p>
+
+<div class="language-sass highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="nt">nav</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="mh">#333</span>
+
+  <span class="nt">ul</span>
+    <span class="nl">list-style</span><span class="p">:</span> <span class="nb">none</span>
+    <span class="nl">padding</span><span class="p">:</span> <span class="m">0</span>
+    <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span>
+
+    <span class="nt">li</span>
+      <span class="nl">display</span><span class="p">:</span> <span class="n">inline-block</span>
+      <span class="nl">margin-right</span><span class="p">:</span> <span class="m">10px</span>
+
+      <span class="nt">a</span>
+        <span class="nl">text-decoration</span><span class="p">:</span> <span class="nb">none</span>
+        <span class="nl">color</span><span class="p">:</span> <span class="mh">#fff</span>
+
+</code></pre></div></div>
+
+<p>In this example, the CSS output will be:</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="nt">nav</span> <span class="p">{</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="m">#333</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">nav</span> <span class="nt">ul</span> <span class="p">{</span>
+  <span class="nl">list-style</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">nav</span> <span class="nt">ul</span> <span class="nt">li</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">inline-block</span><span class="p">;</span>
+  <span class="nl">margin-right</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">nav</span> <span class="nt">ul</span> <span class="nt">li</span> <span class="nt">a</span> <span class="p">{</span>
+  <span class="nl">text-decoration</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="m">#fff</span><span class="p">;</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<p>Many CSS properties have the same prefix, like font-family, font-size and font-weight or text-align, text-transform and text-overflow.</p>
+
+<p>With SASS you can write them as nested properties:</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="nl">font</span><span class="p">:</span>
+  <span class="n">family</span><span class="o">:</span> <span class="n">Helvetica</span><span class="o">,</span> <span class="nb">sans-serif</span>
+  <span class="n">size</span><span class="o">:</span> <span class="m">18px</span>
+  <span class="n">weight</span><span class="o">:</span> <span class="nb">bold</span>
+
+<span class="nb">text</span><span class="o">:</span>
+  <span class="n">align</span><span class="o">:</span> <span class="nb">center</span>
+  <span class="n">transform</span><span class="o">:</span> <span class="nb">lowercase</span>
+  <span class="n">overflow</span><span class="o">:</span> <span class="nb">hidden</span>
+
+</code></pre></div></div>
+
+<p>The SASS transpiler will convert the above to normal CSS:</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="nt">font-family</span><span class="o">:</span> <span class="nt">Helvetica</span><span class="o">,</span> <span class="nt">sans-serif</span><span class="o">;</span>
+<span class="nt">font-size</span><span class="o">:</span> <span class="err">18</span><span class="nt">px</span><span class="o">;</span>
+<span class="nt">font-weight</span><span class="o">:</span> <span class="nt">bold</span><span class="o">;</span>
+
+<span class="nt">text-align</span><span class="o">:</span> <span class="nt">center</span><span class="o">;</span>
+<span class="nt">text-transform</span><span class="o">:</span> <span class="nt">lowercase</span><span class="o">;</span>
+<span class="nt">text-overflow</span><span class="o">:</span> <span class="nt">hidden</span><span class="o">;</span>
+
+</code></pre></div></div>
+
+<h1 id="flexbox-and-grid-integration">Flexbox and Grid Integration</h1>
+
+<p>Flexbox and Grid are two powerful layout systems in CSS that allow for responsive design and complex layouts with less effort.</p>
+
+<h3 id="flexbox">Flexbox</h3>
+<ul>
+  <li><strong>Purpose</strong>: Designed for <strong>__-dimensional layouts (either __</strong> or <em>__</em>).</li>
+</ul>
+
+<h3 id="grid">Grid</h3>
+<ul>
+  <li><strong>Purpose</strong>: Designed for <strong>__ -dimensional layouts ( __</strong> and <em>__</em> together).</li>
+</ul>
+
+<h2 id="simplifying-responsive-layouts-with-sass">Simplifying Responsive Layouts with SASS</h2>
+
+<p>SASS enhances the use of Flexbox and Grid by allowing more organized and maintainable stylesheets.</p>
+
+<ul>
+  <li><strong>Variables and Mixins</strong>: Use SASS variables and mixins to create reusable Flexbox and Grid styles.</li>
+  <li><strong>Nesting</strong>: Nest media queries within selectors for responsive design.</li>
+  <li><strong>Functions</strong>: Use SASS functions to calculate flexible dimensions and spacings.</li>
+</ul>
+
+<h3 id="advanced-mixins-for-flexbox-and-grid">Advanced Mixins for Flexbox and Grid</h3>
+
+<p>Create advanced mixins for Flexbox and Grid for greater flexibility and customization. For example, a Flexbox mixin that allows you to specify direction, alignment, and wrap properties:</p>
+
+<div class="language-sass highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@mixin</span> <span class="nf">flexbox-container</span><span class="p">(</span><span class="nv">$direction</span><span class="o">:</span> <span class="n">row</span><span class="o">,</span> <span class="nv">$justify</span><span class="o">:</span> <span class="nb">center</span><span class="o">,</span> <span class="nv">$align</span><span class="o">:</span> <span class="nb">center</span><span class="o">,</span> <span class="nv">$wrap</span><span class="o">:</span> <span class="nb">nowrap</span><span class="p">)</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">flex</span>
+  <span class="nl">flex-direction</span><span class="p">:</span> <span class="nv">$direction</span>
+  <span class="nl">justify-content</span><span class="p">:</span> <span class="nv">$justify</span>
+  <span class="nl">align-items</span><span class="p">:</span> <span class="nv">$align</span>
+  <span class="nl">flex-wrap</span><span class="p">:</span> <span class="nv">$wrap</span>
+</code></pre></div></div>
+
+<p>For Grid, create a mixin to dynamically set grid areas:</p>
+
+<div class="language-sass highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@mixin</span> <span class="nf">grid-areas</span><span class="p">(</span><span class="nv">$areas</span><span class="p">)</span>
+  <span class="na">grid-template-areas</span><span class="p">:</span> <span class="nv">$areas</span>
+</code></pre></div></div>
+
+<h3 id="dynamic-layouts-with-sass-functions">Dynamic Layouts with SASS Functions</h3>
+
+<p>Use SASS functions to dynamically calculate layout values. For example, a function to determine the number of grid columns based on the container width:</p>
+
+<div class="language-sass highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@function</span> <span class="nf">grid-columns</span><span class="p">(</span><span class="nv">$max-width</span><span class="o">,</span> <span class="nv">$column-width</span><span class="o">,</span> <span class="nv">$gap</span><span class="p">)</span>
+  <span class="k">@return</span> <span class="nf">floor</span><span class="p">((</span><span class="nv">$max-width</span> <span class="o">+</span> <span class="nv">$gap</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="nv">$column-width</span> <span class="o">+</span> <span class="nv">$gap</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>Apply these functions in Flexbox and Grid settings for responsive designs:</p>
+
+<div class="language-sass highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.grid-container</span>
+  <span class="k">@media</span> <span class="p">(</span><span class="n">max-width</span><span class="o">:</span> <span class="m">1200px</span><span class="p">)</span>
+    <span class="na">grid-template-columns</span><span class="p">:</span> <span class="nf">repeat</span><span class="p">(</span><span class="nf">grid-columns</span><span class="p">(</span><span class="m">1200px</span><span class="o">,</span> <span class="m">250px</span><span class="o">,</span> <span class="m">10px</span><span class="p">)</span><span class="o">,</span> <span class="m">1fr</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="nested-media-queries-for-responsive-design">Nested Media Queries for Responsive Design</h3>
+
+<p>Nested media queries enhance the management of responsive layouts. Combine them with SASS variables for consistency:</p>
+
+<div class="language-sass highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$item-breakpoint</span><span class="p">:</span> <span class="m">600px</span>
+
+<span class="nc">.item</span>
+  <span class="k">@media</span> <span class="p">(</span><span class="n">max-width</span><span class="o">:</span> <span class="nv">$item-breakpoint</span><span class="p">)</span>
+    <span class="nl">flex</span><span class="p">:</span> <span class="m">100%</span>
+</code></pre></div></div>
+
+<h3 id="demonstration-complex-flexbox-layout-with-sass">Demonstration: Complex Flexbox Layout with SASS</h3>
+
+<div class="language-sass highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="c1">// Define variables</span>
+<span class="nv">$primary-color</span><span class="p">:</span> <span class="mh">#333</span>
+<span class="nv">$secondary-color</span><span class="p">:</span> <span class="mh">#777</span>
+<span class="nv">$padding</span><span class="p">:</span> <span class="m">10px</span>
+
+<span class="c1">// Mixin for flex container</span>
+<span class="k">@mixin</span> <span class="nf">flex-container</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">flex</span>
+  <span class="nl">justify-content</span><span class="p">:</span> <span class="n">space-between</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="nv">$padding</span>
+
+<span class="c1">// Main container</span>
+<span class="nc">.main-container</span>
+  <span class="k">@include</span> <span class="nd">flex-container</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="nv">$primary-color</span>
+
+  <span class="c1">// Nested items</span>
+  <span class="nc">.item</span>
+    <span class="nl">flex</span><span class="p">:</span> <span class="m">1</span>
+    <span class="nl">margin</span><span class="p">:</span> <span class="m">5px</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="nv">$secondary-color</span>
+    <span class="k">&amp;</span><span class="nd">:hover</span>
+      <span class="nl">background-color</span><span class="p">:</span> <span class="nf">darken</span><span class="p">(</span><span class="nv">$secondary-color</span><span class="o">,</span> <span class="m">10%</span><span class="p">)</span>
+
+</code></pre></div></div>
+
+<h3 id="demonstration-responsive-grid-layout-with-sass">Demonstration: Responsive Grid Layout with SASS</h3>
+
+<div class="language-sass highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="c1">// Grid container</span>
+<span class="nc">.grid-container</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">grid</span>
+  <span class="na">grid-template-columns</span><span class="p">:</span> <span class="nf">repeat</span><span class="p">(</span><span class="m">3</span><span class="o">,</span> <span class="m">1fr</span><span class="p">)</span>
+  <span class="na">gap</span><span class="p">:</span> <span class="m">10px</span>
+
+  <span class="c1">// Responsive adjustment</span>
+  <span class="k">@media</span> <span class="p">(</span><span class="n">max-width</span><span class="o">:</span> <span class="m">600px</span><span class="p">)</span>
+    <span class="na">grid-template-columns</span><span class="p">:</span> <span class="nf">repeat</span><span class="p">(</span><span class="m">2</span><span class="o">,</span> <span class="m">1fr</span><span class="p">)</span>
+
+  <span class="c1">// Grid items</span>
+  <span class="nc">.grid-item</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="nv">$primary-color</span>
+    <span class="nl">padding</span><span class="p">:</span> <span class="nv">$padding</span>
+    <span class="k">&amp;</span><span class="nd">:hover</span>
+      <span class="nl">background-color</span><span class="p">:</span> <span class="nf">lighten</span><span class="p">(</span><span class="nv">$primary-color</span><span class="o">,</span> <span class="m">10%</span><span class="p">)</span>
+
+
+</code></pre></div></div>
+
+<h2 id="hacks">Hacks</h2>
+
+<p>Create a grid layout that automatically adjusts the number of columns based on the screen size, using SASS variables and functions.</p>
+
+<h1 id="scripting-in-sass">Scripting in SASS</h1>
+
+<h2 id="sass-scripting">SASS Scripting</h2>
+
+<p>Sass scripting involves using programming-like constructs (for loops, conditionals) in style sheets. It is extremely helpful in creating styles and gives you a lot of freedom difficult to achieve otherwise. Allows for more difficult and advanced styling compared to traditional CSS.</p>
+
+<h2 id="for-loops">For Loops</h2>
+
+<p>Using for loops in styling drastically makes life easier while working with repetitive styles seeing as it enables generation of styles based on conditions.</p>
+
+<div class="language-sass highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$grid-columns</span><span class="p">:</span> <span class="m">12</span><span class="err">;</span>
+
+<span class="k">@for</span> <span class="nv">$i</span> <span class="ow">from</span> <span class="m">1</span> <span class="ow">through</span> <span class="nv">$grid-columns</span> <span class="err">{</span>
+  <span class="nc">.col-</span><span class="si">#{</span><span class="nv">$i</span><span class="si">}</span> <span class="err">{</span>
+    <span class="nl">width</span><span class="p">:</span> <span class="nf">percentage</span><span class="p">(</span><span class="nv">$i</span> <span class="o">/</span> <span class="nv">$grid-columns</span><span class="p">)</span><span class="err">;</span>
+  <span class="err">}</span>
+<span class="err">}</span>
+</code></pre></div></div>
+
+<p>Define grid-columns and dynamically sets the width of each column using a for loop.
+Much shorter than it would normally be if you didn’t use a for loop.</p>
+
+<h3 id="for-loop-practice">For Loop Practice</h3>
+<p>What would appear if you used the following style on the html file below.</p>
+
+<h4 id="html">HTML</h4>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+  <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1.0"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"output2.css"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;title&gt;</span>Boxes<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!-- Colored boxes with pre-generated styles --&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"box"</span> <span class="na">style=</span><span class="s">"background-color: #ffffff;"</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"box"</span> <span class="na">style=</span><span class="s">"background-color: #ffffff;"</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"box"</span> <span class="na">style=</span><span class="s">"background-color: #ffffff;"</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"box"</span> <span class="na">style=</span><span class="s">"background-color: #ffffff;"</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"box"</span> <span class="na">style=</span><span class="s">"background-color: #ffffff;"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<h4 id="sass">SASS</h4>
+<div class="language-sass highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$colors</span><span class="p">:</span> <span class="mh">#ff0000</span><span class="o">,</span> <span class="mh">#ff7f00</span><span class="o">,</span> <span class="mh">#ffff00</span><span class="o">,</span> <span class="mh">#00ff00</span><span class="o">,</span> <span class="mh">#0000ff</span><span class="err">;</span>
+
+<span class="k">@for</span> <span class="nv">$i</span> <span class="ow">from</span> <span class="m">1</span> <span class="ow">through</span> <span class="nf">length</span><span class="p">(</span><span class="nv">$colors</span><span class="p">)</span> <span class="err">{</span>
+  <span class="nc">.box</span><span class="nd">:nth-child</span><span class="o">(</span><span class="si">#{</span><span class="nv">$i</span><span class="si">}</span><span class="o">)</span> <span class="err">{</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="nf">nth</span><span class="p">(</span><span class="nv">$colors</span><span class="o">,</span> <span class="nv">$i</span><span class="p">)</span><span class="err">;</span>
+  <span class="err">}</span>
+<span class="err">}</span>
+
+<span class="nc">.container</span> <span class="err">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">flex</span><span class="err">;</span>
+<span class="err">}</span>
+
+<span class="nc">.box</span> <span class="err">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">50px</span><span class="err">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">50px</span><span class="err">;</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">5px</span><span class="err">;</span>
+<span class="err">}</span>
+</code></pre></div></div>
+
+<h2 id="conditionals">Conditionals</h2>
+
+<p>Conditional statements in SASS allow you to apply styles based on certain conditions. This enhances the flexibility and reusability of your stylesheets.</p>
+
+<h3 id="if-statements">If Statements</h3>
+
+<p>The ‘@if’ statement allows you to conditionally apply a style based on a specified condition.</p>
+
+<div class="language-sass highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$theme</span><span class="p">:</span> <span class="s1">'dark'</span><span class="err">;</span>
+
+<span class="nc">.alert</span> <span class="err">{</span>
+  <span class="k">@if</span> <span class="nv">$theme</span> <span class="o">==</span> <span class="s1">'dark'</span> <span class="err">{</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="mh">#333</span><span class="err">;</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="mh">#fff</span><span class="err">;</span>
+  <span class="err">}</span>
+<span class="err">}</span>
+</code></pre></div></div>
+
+<h3 id="else-statements">Else Statements</h3>
+
+<p>The ‘@else’ statement provides an alternate style when the intial @if statement condition is not met.</p>
+
+<div class="language-sass highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$theme</span><span class="p">:</span> <span class="s1">'dark'</span><span class="err">;</span>
+
+<span class="nc">.alert</span> <span class="err">{</span>
+  <span class="k">@if</span> <span class="nv">$theme</span> <span class="o">==</span> <span class="s1">'dark'</span> <span class="err">{</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="mh">#333</span><span class="err">;</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="mh">#fff</span><span class="err">;</span>
+  <span class="err">}</span> <span class="o">@</span><span class="nt">else</span> <span class="err">{</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="mh">#fff</span><span class="err">;</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="mh">#333</span><span class="err">;</span>
+  <span class="err">}</span>
+<span class="err">}</span>
+</code></pre></div></div>
+
+<h3 id="else-if-statements">Else If Statements</h3>
+
+<p>The ‘@else if’ statement is used to check a condition when the preceding @if or @else if condition is not met.</p>
+
+<div class="language-sass highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$temperature</span><span class="p">:</span> <span class="m">25</span><span class="err">;</span>
+
+<span class="nc">.condition</span> <span class="err">{</span>
+  <span class="k">@if</span> <span class="nv">$temperature</span> <span class="o">&gt;</span> <span class="m">30</span> <span class="err">{</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="mh">#ff0000</span><span class="err">;</span> <span class="o">//</span> <span class="n">Hot</span>
+  <span class="err">}</span> <span class="o">@</span><span class="nt">else</span> <span class="nt">if</span> <span class="err">$</span><span class="nt">temperature</span> <span class="o">&gt;</span> <span class="nt">20</span> <span class="err">{</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="mh">#ffcc00</span><span class="err">;</span> <span class="o">//</span> <span class="n">Warm</span>
+  <span class="err">}</span> <span class="o">@</span><span class="nt">else</span> <span class="err">{</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="mh">#66ccff</span><span class="err">;</span> <span class="o">//</span> <span class="n">Cool</span>
+  <span class="err">}</span>
+<span class="err">}</span>
+</code></pre></div></div>
+
+<h3 id="ternary-statement">Ternary Statement</h3>
+<p>Ternary operators provide a concise way to express conditional statements in just one line.</p>
+
+<div class="language-sass highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$success</span><span class="p">:</span> <span class="bp">true</span><span class="err">;</span>
+
+<span class="nc">.message</span> <span class="err">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="nv">$success</span> <span class="o">?</span> <span class="mh">#00cc00</span> <span class="o">:</span> <span class="mh">#ff0000</span><span class="err">;</span>
+<span class="err">}</span>
+</code></pre></div></div>
+
+<h3 id="conditional-examples">Conditional Examples</h3>
+<div class="language-sass highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$isLoggedIn</span><span class="p">:</span> <span class="bp">true</span><span class="err">;</span>
+
+<span class="nc">.nav</span> <span class="err">{</span>
+  <span class="k">@if</span> <span class="nv">$isLoggedIn</span> <span class="err">{</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="mh">#33cc33</span><span class="err">;</span> <span class="o">//</span> <span class="n">Green</span> <span class="n">for</span> <span class="n">logged-in</span> <span class="n">users</span>
+  <span class="err">}</span> <span class="o">@</span><span class="nt">else</span> <span class="err">{</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="mh">#cc3333</span><span class="err">;</span> <span class="o">//</span> <span class="n">Red</span> <span class="n">for</span> <span class="n">guests</span>
+  <span class="err">}</span>
+<span class="err">}</span>
+</code></pre></div></div>
+
+<div class="language-sass highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$screen-size</span><span class="p">:</span> <span class="m">800px</span><span class="err">;</span>
+
+<span class="nc">.element</span> <span class="err">{</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">16px</span><span class="err">;</span>
+  
+  <span class="k">@if</span> <span class="nv">$screen-size</span> <span class="o">&gt;=</span> <span class="m">768px</span> <span class="err">{</span>
+    <span class="nl">font-size</span><span class="p">:</span> <span class="m">20px</span><span class="err">;</span>
+  <span class="err">}</span>
+<span class="err">}</span>
+</code></pre></div></div>
+
+<h1 id="hacks-1">Hacks</h1>
+
+<p>Define a custom SASS function that uses a for loop in order to slightly decrease the saturation and increase the brightness of a color of your choosing and fill in those increasingly more white colors into a 3x3 array of equal height and width.</p>
+
+<h3 id="example-image">Example Image</h3>
+
+<p><img src="https://github.com/Ant11234/student/assets/40652645/509214d6-bf1a-40f7-9028-cfd4b9f212da" alt="pixil-frame-0 (1)" /></p>
+
+<h1 id="extending--inheritance">Extending &amp; Inheritance</h1>
+
+<p>Extending in SASS allows you to share styles between selectors, reducing redundancy. You have to use the @extend directive to do this. Inheritance in SASS involves using a placeholder selector, and they are represented with the percent sign %. These are essentially templates for styles. This allows for more abstraction and less repetition.</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// common styles</span>
+<span class="err">%</span><span class="na">common-style</span><span class="err">
+  </span><span class="nl">color</span><span class="p">:</span> <span class="mh">#333</span>
+  <span class="n">font-size</span><span class="o">:</span> <span class="m">16px</span>
+
+<span class="o">//</span> <span class="n">Use</span> <span class="o">@</span><span class="n">extend</span> <span class="n">to</span> <span class="n">apply</span> <span class="n">the</span> <span class="n">common</span> <span class="n">style</span> <span class="n">to</span> <span class="n">specific</span> <span class="n">selectors</span>
+<span class="o">.</span><span class="n">button</span>
+  <span class="o">@</span><span class="n">extend</span> <span class="nd">%common-style</span>
+  <span class="n">background-color</span><span class="o">:</span> <span class="mh">#007bff</span>
+
+<span class="o">.</span><span class="n">link</span>
+  <span class="o">@</span><span class="n">extend</span> <span class="nd">%common-style</span>
+  <span class="n">text-decoration</span><span class="o">:</span> <span class="nb">underline</span>
+</code></pre></div></div>
+
+<h1 id="handling-errors-and-debugging-in-sass">Handling Errors and Debugging in Sass</h1>
+<h2 id="1-error-directive">1. @error Directive:</h2>
+
+<p>The @error directive is used to raise an error and stop the Sass compilation process if a certain condition is not met. It’s helpful for catching issues early in the development process.</p>
+
+<div class="language-sass highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// SCSS Syntax</span>
+<span class="nv">$primary-color</span><span class="p">:</span> <span class="mh">#3498db</span><span class="err">;</span> <span class="o">//</span> <span class="n">Change</span> <span class="n">this</span> <span class="n">to</span> <span class="n">an</span> <span class="n">invalid</span> <span class="n">color</span><span class="o">,</span> <span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.,</span> <span class="s1">'red'</span>
+
+<span class="k">@mixin</span> <span class="nf">validate-color</span><span class="p">(</span><span class="nv">$color</span><span class="p">)</span> <span class="err">{</span>
+  <span class="k">@if</span> <span class="nf">type-of</span><span class="p">(</span><span class="nv">$color</span><span class="p">)</span> <span class="o">!=</span> <span class="n">color</span> <span class="err">{</span>
+    <span class="k">@error</span> <span class="s2">"Invalid color provided: </span><span class="si">#{</span><span class="nv">$color</span><span class="si">}</span><span class="s2">. Please provide a valid color."</span><span class="o">;</span>
+  <span class="err">}</span>
+<span class="err">}</span>
+
+<span class="nc">.element</span> <span class="err">{</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="nv">$primary-color</span><span class="err">;</span>
+  <span class="k">@include</span> <span class="nd">validate-color</span><span class="p">(</span><span class="nv">$primary-color</span><span class="p">)</span><span class="err">;</span>
+<span class="err">}</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">%%</span><span class="n">html</span>
+<span class="o">&lt;</span><span class="n">div</span> <span class="n">style</span><span class="o">=</span><span class="s">"background-color: #3498db; padding: 20px;"</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">p</span> <span class="n">style</span><span class="o">=</span><span class="s">"color: #fff;"</span><span class="o">&gt;</span><span class="n">This</span> <span class="ow">is</span> <span class="n">an</span> <span class="n">example</span> <span class="n">element</span> <span class="k">with</span> <span class="n">a</span> <span class="n">primary</span> <span class="n">color</span> <span class="n">background</span><span class="p">.</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+</code></pre></div></div>
+
+<div style="background-color: #3498db; padding: 20px;">
+  <p style="color: #fff;">This is an example element with a primary color background.</p>
+</div>
+
+<p>In this example, if the provided color is not valid, the Sass compilation will stop, and an error message will be displayed.</p>
+
+<h2 id="2-debug-directive">2. @debug Directive:</h2>
+
+<p>The @debug directive is used to print messages to the Sass output. It’s a handy tool for inspecting variable values, checking the flow of your code, and identifying issues during development.</p>
+
+<div class="language-sass highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// SCSS Syntax</span>
+<span class="nv">$font-size-base</span><span class="p">:</span> <span class="m">16px</span><span class="err">;</span> <span class="o">//</span> <span class="n">Try</span> <span class="n">changing</span> <span class="n">this</span> <span class="n">value</span> <span class="n">to</span> <span class="n">observe</span> <span class="o">@</span><span class="n">debug</span> <span class="n">output</span>
+
+<span class="k">@function</span> <span class="nf">calculate-line-height</span><span class="p">(</span><span class="nv">$font-size</span><span class="p">)</span> <span class="err">{</span>
+  <span class="k">@debug</span> <span class="s2">"Calculating line height for font size: </span><span class="si">#{</span><span class="nv">$font-size</span><span class="si">}</span><span class="s2">px"</span><span class="err">;</span>
+
+  <span class="nv">$line-height-ratio</span><span class="p">:</span> <span class="m">1</span><span class="mi">.5</span><span class="err">;</span> 
+  <span class="nv">$line-height</span><span class="p">:</span> <span class="nv">$font-size</span> <span class="o">*</span> <span class="nv">$line-height-ratio</span><span class="err">;</span>
+
+  <span class="k">@return</span> <span class="nv">$line-height</span><span class="err">;</span>
+<span class="err">}</span>
+<span class="nt">body</span> <span class="err">{</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="nv">$font-size-base</span><span class="err">;</span>
+  <span class="nl">line-height</span><span class="p">:</span> <span class="nf">calculate-line-height</span><span class="p">(</span><span class="nv">$font-size-base</span><span class="p">)</span><span class="err">;</span>
+<span class="err">}</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">%%</span><span class="n">html</span>
+<span class="o">&lt;</span><span class="n">style</span><span class="o">&gt;</span>
+  <span class="n">body</span> <span class="p">{</span>
+    <span class="n">font</span><span class="o">-</span><span class="n">size</span><span class="p">:</span> <span class="mi">16</span><span class="n">px</span><span class="p">;</span>
+    <span class="n">line</span><span class="o">-</span><span class="n">height</span><span class="p">:</span> <span class="mi">24</span><span class="n">px</span><span class="p">;</span> <span class="o">/*</span> <span class="n">Calculated</span> <span class="n">line</span> <span class="n">height</span> <span class="o">*/</span>
+  <span class="p">}</span>
+<span class="o">&lt;/</span><span class="n">style</span><span class="o">&gt;</span>
+</code></pre></div></div>
+
+<style>
+  body {
+    font-size: 16px;
+    line-height: 24px; /* Calculated line height */
+  }
+</style>
+
+<p>In this example, the @debug statement will print a message to the console during Sass compilation, providing information about the font size being used and assisting in identifying any potential issues.</p>
+
+<h2 id="popcorn-hacks">Popcorn Hacks</h2>
+<h3 id="popcorn-hack-1">Popcorn Hack 1:</h3>
+<p>Try changing the primary color to an invalid value (e.g., ‘red’) and observe the @error message. Then, correct it to a valid color.</p>
+
+<h3 id="popcorn-hack-2">Popcorn Hack 2:</h3>
+<p>Modify the base font size and observe the @debug message. Try different font sizes and see how it affects the calculated line height.</p>
+
+<h1 id="hacks-2">Hacks</h1>
+
+<p>Define a custom SASS function that uses a for loop in order to slightly decrease the saturation and increase the brightness of a color of your choosing and fill in those increasingly more white colors into a 3x3 array of equal height and width.</p>
+
+<h3 id="example-image-1">Example Image</h3>
+
+<p><img src="https://github.com/Ant11234/student/assets/40652645/509214d6-bf1a-40f7-9028-cfd4b9f212da" alt="pixil-frame-0 (1)" /></p>
+
+<h1 id="mixins">Mixins</h1>
+
+<h2 id="mixins-in-sass">Mixins in SASS</h2>
+<ul>
+  <li>Mixins are reusable blocks of code.</li>
+  <li>They help avoid repetition and keep code organized.</li>
+  <li>Think of them like functions in programming that return CSS code.</li>
+</ul>
+
+<p>```scss
+@mixin center-element {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}</p>
+
+<h1 id="mixin-with-parameters">Mixin with Parameters</h1>
+
+<p>```scss
+@mixin box-shadow($x, $y, $blur, $color) {
+  -webkit-box-shadow: $x $y $blur $color;
+  -moz-box-shadow: $x $y $blur $color;
+  box-shadow: $x $y $blur $color;
+}</p>
+
+<p>Use of this mixin:</p>
+
+<p>```scss
+.card {
+  @include box-shadow(2px, 2px, 5px, rgba(0, 0, 0, .3));
+}</p>
+
+<h1 id="mixins-for-responsive-web-design">Mixins for Responsive Web Design</h1>
+
+<h2 id="responsive-design">Responsive Design</h2>
+<ul>
+  <li>It’s crucial for websites to work well on all devices.</li>
+  <li>Responsive design adjusts the layout based on screen size.</li>
+</ul>
+
+<h2 id="breakpoints-in-responsive-design">Breakpoints in Responsive Design</h2>
+<ul>
+  <li>Breakpoints are screen sizes where the design changes.</li>
+  <li>Common breakpoints are for mobile, tablet, and desktop screens.</li>
+</ul>
+
+<h2 id="using-mixins-for-breakpoints">Using Mixins for Breakpoints</h2>
+<ul>
+  <li>Mixins can encapsulate media queries for different breakpoints.</li>
+  <li>This simplifies managing responsive styles.</li>
+</ul>
+
+<h3 id="example-of-a-breakpoint-mixin">Example of a Breakpoint Mixin</h3>
+<p>```scss
+@mixin for-mobile {
+  @media (max-width: 600px) { @content; }
+}</p>
+
+<hr />
+
+<h3 id="responsive-images-and-media-with-sass">Responsive Images and Media with SASS</h3>
+
+<h1 id="responsive-images-and-media-with-sass-1">Responsive Images and Media with SASS</h1>
+
+<h2 id="handling-images-responsively">Handling Images Responsively</h2>
+<ul>
+  <li>Images should adapt to different screen sizes.</li>
+  <li>Techniques include scaling and changing sources for different resolutions.</li>
+</ul>
+
+<h3 id="example-scaling-images">Example: Scaling Images</h3>
+<p>```scss
+.responsive-image {
+  width: 100%;
+  height: auto;
+}</p>
+
+<h2 id="device-specific-media-queries">Device-Specific Media Queries</h2>
+
+<h3 id="targeting-specific-devices">Targeting Specific Devices</h3>
+<ul>
+  <li>Media queries can be used to target styles for specific devices like iPhones or computers.</li>
+  <li>This is based on characteristics like device width, height, and pixel ratio.</li>
+</ul>
+
+<h4 id="example-targeting-iphones">Example: Targeting iPhones</h4>
+<ul>
+  <li>Here’s how you might target styles specifically for iPhones:
+```scss
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 812px)
+and (-webkit-device-pixel-ratio : 3) {
+  .iphone-specific-class {
+    // iPhone-specific styles go here
+  }
+}</li>
+</ul>
+
+<p>This media query targets devices with specific dimensions and pixel ratios common to iPhones.</p>
+
+<p>For targeting computer screens (like desktops), you might use a broader range:
+```scss
+@media only screen and (min-width: 1024px) {
+  .computer-specific-class {
+    // Styles for larger screens like desktop computers
+  }
+}</p>
+
+<h1 id="conclusion">Conclusion</h1>
+
+<ul>
+  <li>SASS enhances CSS with features like mixins, leading to more efficient and maintainable code.</li>
+  <li>Custom mixins for breakpoints greatly aid in creating flexible, responsive layouts.</li>
+  <li>Techniques for responsive image and media handling in SASS ensure optimal visual presentation across different devices.</li>
+  <li>Overall, SASS is a valuable asset in modern web development, streamlining the creation of responsive, visually appealing websites.</li>
+</ul>
+
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="nighthawkcoders/teacher_portfolio"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/teacher_portfolio/2023/12/05/P1_student_SASS_IPYNB_2_.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+    <data class="u-url" href="/teacher_portfolio/"></data>
+  
+    <div class="wrapper">
+  
+      <div class="footer-col-wrapper">
+  
+        <div class="social-links"><ul class="social-media-list"><li>
+  <a rel="me" href="https://github.com/nighthawkcoders/teacher_portfolio" target="_blank" title="github">
+    <svg class="svg-icon grey">
+      <use xlink:href="/teacher_portfolio/assets/minima-social-icons.svg#github"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="https://x.com/NighthawkCoding/" target="_blank" title="x">
+    <svg class="svg-icon grey">
+      <use xlink:href="/teacher_portfolio/assets/minima-social-icons.svg#x"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="https://www.youtube.com/@nighthawkcodingsociety2868" target="_blank" title="youtube">
+    <svg class="svg-icon grey">
+      <use xlink:href="/teacher_portfolio/assets/minima-social-icons.svg#youtube"></use>
+    </svg>
+  </a>
+</li>
+</ul>
+</div>
+
+      </div>
+    </div>
+  
+  </footer></body>
+
+</html>

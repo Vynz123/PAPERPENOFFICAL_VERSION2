@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Mario Enemies Student | Teacher 2.0</title>
+<meta name="generator" content="Jekyll v3.9.3" />
+<meta property="og:title" content="Mario Enemies Student" />
+<meta name="author" content="Daniel, Justin, Xavier" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Goomba addition to GameLevels project" />
+<meta property="og:description" content="Goomba addition to GameLevels project" />
+<link rel="canonical" href="http://localhost:4100/teacher_portfolio/2023/12/05/CSSE-student-enemy_lesson.html" />
+<meta property="og:url" content="http://localhost:4100/teacher_portfolio/2023/12/05/CSSE-student-enemy_lesson.html" />
+<meta property="og:site_name" content="Teacher 2.0" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-12-05T00:00:00-08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Mario Enemies Student" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Daniel, Justin, Xavier"},"dateModified":"2023-12-05T00:00:00-08:00","datePublished":"2023-12-05T00:00:00-08:00","description":"Goomba addition to GameLevels project","headline":"Mario Enemies Student","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4100/teacher_portfolio/2023/12/05/CSSE-student-enemy_lesson.html"},"url":"http://localhost:4100/teacher_portfolio/2023/12/05/CSSE-student-enemy_lesson.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/teacher_portfolio/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4100/teacher_portfolio/feed.xml" title="Teacher 2.0" /><link rel="shortcut icon" type="image/x-icon" href="/teacher_portfolio/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/teacher_portfolio/">Teacher 2.0</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/teacher_portfolio/blogs/">Blogs</a><a class="page-link" href="/teacher_portfolio/search/">Search</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Mario | Enemies | Student</h1><p class="page-description">Goomba addition to GameLevels project</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-12-05T00:00:00-08:00" itemprop="datePublished">
+        Dec 5, 2023
+      </time>• 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">Daniel, Justin, Xavier</span></span>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      5 min read
+    
+</span></p>
+
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody"><ul><li><a href="#lesson---enemy">Lesson - Enemy</a></li><li><a href="#instructions">Instructions</a></li><li><a href="#step-1---creating-the-enemy">Step 1 - Creating the Enemy</a></li><li><a href="#step-2---basic-features">Step 2 - Basic Features</a></li><li><a href="#step-3---homework--extra-features">Step 3 - Homework / Extra Features</a></li></ul><h2 id="lesson---enemy">Lesson - Enemy</h2>
+<p>In this lesson, we’ll be going over the different characteristics in which all enemies need, and how eventually you will add a fully functional enemy into your own game.</p>
+
+<h2 id="instructions">Instructions</h2>
+<p>Make sure to be following along, so you’ll have the best time understanding the content. As we go over the lesson, keep in mind what you’ll exactly need to do for in order to make the player work. Here is a brief list of essential things that the enemy must do.</p>
+<ul>
+  <li>Ability to move</li>
+  <li>Interaction with Player</li>
+  <li>Ability to be killed by player</li>
+  <li>Must be in OOP</li>
+</ul>
+
+<p>Once we go over how the enemy works, it will be YOUR job implementing into your own game. Snippets and this guide will be resources you can use to refer back on how to make your enemy.</p>
+
+<h2 id="step-1---creating-the-enemy">Step 1 - Creating the Enemy</h2>
+<p>The first step in creating the enemy in the game is creating a new file just for it. The file should be in assets/js/platformer and should called either Enemy.js, Goomba.js or something related. Once you have created the file, we shall now start defining the Enemy class.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import Character from './Character.js';
+import GameEnv from './GameEnv.js';
+
+export class Enemy extends Character {
+    // constructors sets up Character object 
+    constructor(canvas, image, speedRatio, enemyData){
+        super(canvas, 
+            image, 
+            speedRatio,
+            enemyData.width, 
+            enemyData.height, 
+        );
+
+        // Player Data is required for Animations
+        this.enemyData = enemyData;
+    }
+}
+
+export default Enemy
+</code></pre></div></div>
+
+<p>This code is essentially the same as the player code with few differences. The Enemy class is being extended to the Character class, and once extended, we can start defining the different properties in which our enemy will have.</p>
+
+<p>After configuring the enemy in Enemy.js, you will then have to connect Enemy to the main game. There are two files in which you’ll have to do this. The main file in which the game is initialized and GameLevels.js in where the enemy is actually created as an instance.</p>
+
+<p>First, we’ll be adding the enemy into the main file. You’ll notice here that there is a variable that defines all the different assets of the game. Players, Backgrounds, Obstacles, etc. Seeing how everything in the game is defined here, it’d be reasonable to say the enemy will be defined in the assets variable as well.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var assets = {
+      //previous code above ...
+
+      players: {
+        mario: {
+          src: "/images/platformer/sprites/mario.png",
+          width: 256,
+          height: 256,
+          w: { row: 10, frames: 15 },
+          wa: { row: 11, frames: 15 },
+          wd: { row: 10, frames: 15 },
+          a: { row: 3, frames: 7, idleFrame: { column: 7, frames: 0 } },
+          s: {  },
+          d: { row: 2, frames: 7, idleFrame: { column: 7, frames: 0 } }
+        },
+      },
+}
+</code></pre></div></div>
+
+<p>Here is a snippet on how one of the players is defined. We can base our enemy after the player. Our player has an image (src), a width, and a height. The rest doesn’t apply to our enemy.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var assets {
+  enemies: {
+    goomba: {
+      src: "/images/platformer/sprites/goomba.png",
+      width: 448,
+      height: 452,
+    }
+  }
+}
+</code></pre></div></div>
+
+<p>Once we define the goomba in assets, we’ll have to add it to the gameLevel (refer to the code).</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>new GameLevel( {tag: "hills", background: assets.backgrounds.hills, platform: assets.platforms.grass, player: assets.players.mario, enemy: assets.enemies.goomba, tube: assets.obstacles.tube, callback: testerCallBack } );
+</code></pre></div></div>
+
+<h2 id="step-2---basic-features">Step 2 - Basic Features</h2>
+<p>Now that we have the enemy actually defined and created within our game, we can now begin the process of giving our enemy its necessary attributes. The first of these attributes will be movement.</p>
+
+<p>Movement is quite easy to implement. We just need the user of the enemy to continually check its position and based on its position, decide in which direction it needs to go.</p>
+
+<p>The following is how this can be done (this will be added onto the Enemy class):</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> update() {
+        // Check if the enemy is at the left or right boundary
+        if (this.x &lt;= 0 || this.x + this.width &gt;= GameEnv.innerWidth) {
+            // Change direction by reversing the speed
+            this.speed = -this.speed;
+        }
+
+        //Initially get the enemy moving
+        this.x += this.speed;
+
+    }
+</code></pre></div></div>
+
+<p>The code is using an if statement to check whether the player is on the left side of the canvas or all the way on the right side, the direction of the goomba will reverse.</p>
+
+<p>//Talk about how there is code below to initially get the player moving</p>
+
+<p>Now that the Goomba can travel across the canvas, it will hence now eventually cross paths with the player. The next step would be to add collisions between the Goomba and Character, so that the two characters can interact with one another.</p>
+
+<p>The thing about collisions however is Mr. Mortensen has already laid out the foundation for the collision code. We won’t have to code the actual logic for collisions, rather a simpler version of such. Code for collisions will be handled in Player.js rather than in the Enemy file, hence the following is an excerpt from the Player code:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Enemy collision
+        if (this.collisionData.touchPoints.other.id === "enemy") {
+            // Collision with the left side of the Enemy
+            if (this.collisionData.touchPoints.other.left) {
+                // Kill Player (Reset Game)
+            }
+            // Collision with the right side of the Enemy
+            if (this.collisionData.touchPoints.other.right) {
+                deathController.setDeath(1);
+                // Kill Player (Reset Game)
+            }
+            // Collision with the top of the Enemy
+            if (this.collisionData.touchPoints.other.ontop) {
+                // Kill Goomba
+                // Make Mario Bounce
+            }
+          }
+</code></pre></div></div>
+
+<h2 id="step-3---homework--extra-features">Step 3 - Homework / Extra Features</h2>
+
+<ul>
+  <li>Implement the enemy into your game</li>
+  <li>Add what happens in the event of a collision</li>
+  <li>Add special events occur at random</li>
+  <li>Give your Goomba something unique</li>
+</ul>
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="nighthawkcoders/teacher_portfolio"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/teacher_portfolio/2023/12/05/CSSE-student-enemy_lesson.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+    <data class="u-url" href="/teacher_portfolio/"></data>
+  
+    <div class="wrapper">
+  
+      <div class="footer-col-wrapper">
+  
+        <div class="social-links"><ul class="social-media-list"><li>
+  <a rel="me" href="https://github.com/nighthawkcoders/teacher_portfolio" target="_blank" title="github">
+    <svg class="svg-icon grey">
+      <use xlink:href="/teacher_portfolio/assets/minima-social-icons.svg#github"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="https://x.com/NighthawkCoding/" target="_blank" title="x">
+    <svg class="svg-icon grey">
+      <use xlink:href="/teacher_portfolio/assets/minima-social-icons.svg#x"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="https://www.youtube.com/@nighthawkcodingsociety2868" target="_blank" title="youtube">
+    <svg class="svg-icon grey">
+      <use xlink:href="/teacher_portfolio/assets/minima-social-icons.svg#youtube"></use>
+    </svg>
+  </a>
+</li>
+</ul>
+</div>
+
+      </div>
+    </div>
+  
+  </footer></body>
+
+</html>

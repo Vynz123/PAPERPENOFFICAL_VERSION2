@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Build a Student Page | Teacher 2.0</title>
+<meta name="generator" content="Jekyll v3.9.3" />
+<meta property="og:title" content="Build a Student Page" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="JavaScript, HTML, CSS and Markdown are coding languages used by bloggers when developing in the GitHub Pages system. By using these languages, student developers can add functionality to their GitHub pages site." />
+<meta property="og:description" content="JavaScript, HTML, CSS and Markdown are coding languages used by bloggers when developing in the GitHub Pages system. By using these languages, student developers can add functionality to their GitHub pages site." />
+<link rel="canonical" href="http://localhost:4100/teacher_portfolio/c4.3/c5.0/2023/08/17/markdown-html_fragments.html" />
+<meta property="og:url" content="http://localhost:4100/teacher_portfolio/c4.3/c5.0/2023/08/17/markdown-html_fragments.html" />
+<meta property="og:site_name" content="Teacher 2.0" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-08-17T00:00:00-07:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Build a Student Page" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-08-17T00:00:00-07:00","datePublished":"2023-08-17T00:00:00-07:00","description":"JavaScript, HTML, CSS and Markdown are coding languages used by bloggers when developing in the GitHub Pages system. By using these languages, student developers can add functionality to their GitHub pages site.","headline":"Build a Student Page","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4100/teacher_portfolio/c4.3/c5.0/2023/08/17/markdown-html_fragments.html"},"url":"http://localhost:4100/teacher_portfolio/c4.3/c5.0/2023/08/17/markdown-html_fragments.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/teacher_portfolio/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4100/teacher_portfolio/feed.xml" title="Teacher 2.0" /><link rel="shortcut icon" type="image/x-icon" href="/teacher_portfolio/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/teacher_portfolio/">Teacher 2.0</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/teacher_portfolio/blogs/">Blogs</a><a class="page-link" href="/teacher_portfolio/search/">Search</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Build a Student Page</h1><p class="page-description">JavaScript, HTML, CSS and Markdown are coding languages used by bloggers when developing in the GitHub Pages system. By using these languages, student developers can add functionality to their GitHub pages site.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-08-17T00:00:00-07:00" itemprop="datePublished">
+        Aug 17, 2023
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      4 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+          <a class="category-tags-link" href="/teacher_portfolio/categories/cte#C4.3">C4.3</a>
+        
+        &nbsp;
+      
+          <a class="category-tags-link" href="/teacher_portfolio/categories/cte#C5.0">C5.0</a>
+        
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody"><ul><li><a href="#html-fragments-and-markdown">HTML Fragments and Markdown</a><ul><li><a href="#review-these-fragments">Review these Fragments</a><ul><li><a href="#github-pages-indexmd">GitHub Pages index.md</a></li><li><a href="#images">Images</a></li><li><a href="#links">Links</a></li></ul></li><li><a href="#web-page-layout">Web Page Layout</a></li></ul></li><li><a href="#hacks">Hacks</a></li></ul><h2 id="html-fragments-and-markdown">HTML Fragments and Markdown</h2>
+<p><mark>Building an entire frontend web application requires HTML, CSS, and JavaScript</mark>. HTML is responsible for the content, CSS adds styling to the web page, and JavaScript adds functionality and interactivity.  <mark>Markdown is a short hand way of writing HTML</mark>, the GitHub pages system transforms Mardown to HTML.</p>
+
+<p>In GitHub Pages, Jekyll serves as the build framework. It takes our choice of theme specified in the <code class="language-plaintext highlighter-rouge">_config.yml</code> file, along with our Markdown, HTML, and notebook files, to construct a complete static website. A significant portion of the frontend design work has already been done for users through the selection and use of a theme; this greatly reduces the need to code in CSS.</p>
+
+<p>Jekyll converts Markdown (.md) files into HTML. Behind the scenes of GitHub Pages, Jekyll and Liquid programming language build and programmatically construct each Markdown file into a specific web page. Markdown provides a straightforward way to start with GitHub Pages development. <mark>In a Markdown file, you can exclusively use Markdown syntax or incorporate HTML, CSS, and JavaScript</mark> based on your expertise and experience.</p>
+
+<h3 id="review-these-fragments">Review these Fragments</h3>
+<blockquote>
+  <p>The remainder of this document will describe and show code fragments to get the student developer ready for coding and commiting changes to GitHub.</p>
+  <h4 id="github-pages-indexmd">GitHub Pages index.md</h4>
+  <p>In GitHub Pages you can define code in Markdown. The <mark>index.md uses markdown</mark> to define a page about CompSci courses at Del Norte High School.</p>
+</blockquote>
+
+<ul>
+  <li>
+    <p>Markdown fragment. The markdown fragment is written by the developer and is an example of how to start a home page using Markdown.</p>
+
+    <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  ## Build your Home Page here 
+  # Investing in your Technical Future
+<span class="gt">  &gt; Explore the Computer Science Pathway at Del Norte High School and invest in your technical skills. All Del Norte CompSci classes are designed to provide a real-world development experience. Class time includes tech talks (lectures), peer collaboration, communication with teachers, critical thinking while coding, and creativity in projects. Grading is focused on time invested, participation with peers, and engagement in learning.</span>
+<span class="p">  -</span> Introduction to concepts and requirements by the teacher
+<span class="p">  -</span> Project-based learning with teacher support
+<span class="p">  -</span> Peer communication and collaboration
+<span class="p">  -</span> Coding, developer operations, and critical thinking
+<span class="p">  -</span> Creativity, research, and utilizing ChatGPT
+<span class="p">  -</span> Class work with approximately 2-3 hours of homework per week
+
+  !<span class="p">[</span><span class="nv">csse</span><span class="p">](</span><span class="sx">/teacher_portfolio/images/ccr.png</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>HTML conversion.  The HTML <mark>conversion of the Markdown fragment produced by GitHub Pages using Jekyll</mark>. This is programmatically converted from Markdown to HTML.</p>
+
+    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"language-markdown highlighter-rouge"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"highlight"</span><span class="nt">&gt;&lt;pre</span> <span class="na">class=</span><span class="s">"highlight"</span><span class="nt">&gt;&lt;code&gt;</span>  
+  ## Build your Home Page here 
+  # Investing in your Technical Future
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"gt"</span><span class="nt">&gt;</span>  <span class="ni">&amp;gt;</span> Explore the Computer Science Pathway at Del Norte High School and invest in your technical skills. All Del Norte CompSci classes are designed to provide a real-world development experience. Class time includes tech talks (lectures), peer collaboration, communication with teachers, critical thinking while coding, and creativity in projects. Grading is focused on time invested, participation with peers, and engagement in learning.<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>  -<span class="nt">&lt;/span&gt;</span> Introduction to concepts and requirements by the teacher
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>  -<span class="nt">&lt;/span&gt;</span> Project-based learning with teacher support
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>  -<span class="nt">&lt;/span&gt;</span> Peer communication and collaboration
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>  -<span class="nt">&lt;/span&gt;</span> Coding, developer operations, and critical thinking
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>  -<span class="nt">&lt;/span&gt;</span> Creativity, research, and utilizing ChatGPT
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>  -<span class="nt">&lt;/span&gt;</span> Class work with approximately 2-3 hours of homework per week
+
+  !<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>[<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"nv"</span><span class="nt">&gt;</span>csse<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>](<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sx"</span><span class="nt">&gt;</span>/teacher/images/ccr.png<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>)<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</span>    
+  <span class="nt">&lt;/div&gt;</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h4 id="images">Images</h4>
+<p>In GitHub Pages, you can <mark>insert images</mark> in HTML or Markdown.  The Teacher finds &lt;img&gt; easier to work with for embedding links when trying to control size.  This example shows Markdown syntax for embedding images, but students can also use HTML syntax with the <img /> tag.</p>
+<ul>
+  <li>See index.md for ![]() syntax for images, or reference <a href="https://www.markdownguide.org/basic-syntax/#images-1">Markdown images</a></li>
+  <li>Or use “img” tage referencing <a href="https://www.w3schools.com/html/html_images.asp">HTML images</a></li>
+</ul>
+
+<h4 id="links">Links</h4>
+<p>HTML contains an <code class="language-plaintext highlighter-rouge">&lt;href&gt;</code> tag to <mark>create links</mark>. Students can use either HTML or Markdown syntax for links.</p>
+<ul>
+  <li>Look up <a href="https://www.w3schools.com/html/html_links.asp">HTML links</a> &lt;href&gt; or <a href="https://www.markdownguide.org/basic-syntax/#links">Markdown links</a> []() syntax.  These should become easy and familiar.</li>
+</ul>
+
+<h3 id="web-page-layout">Web Page Layout</h3>
+<p>A complete HTML Web Application is typically made off of a Layout and a series of Fragments (sometimes called templates).</p>
+<ul>
+  <li>The design of GitHub pages allows us to <mark>change themes</mark> with the _config.yml file key/value, change the value to a <a href="https://pages.github.com/themes/">supported theme</a>.  Here is a portion of the _config.yml, the <code class="language-plaintext highlighter-rouge">#</code> is a comment symbol.  Add a comment to midnight line, uncomment dinky line to try a new theme. Repeate process until you find something you like.</li>
+</ul>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># theme requirements</span>
+<span class="na">remote_theme</span><span class="pi">:</span> <span class="s">pages-themes/midnight@v0.2.0</span>
+<span class="c1"># remote_theme: pages-themes/dinky@v0.2.0</span>
+<span class="c1"># remote_theme: pages-themes/minimal@v0.2.0</span>
+<span class="c1"># remote_theme: pages-themes/hacker@v0.2.0</span>
+<span class="c1"># remote_theme: pages-themes/cayman@v0.2.0</span>
+<span class="c1"># remote_theme: pages-themes/time-machine@v0.2.0</span>
+<span class="na">plugins</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="s">jekyll-remote-theme</span>
+</code></pre></div></div>
+<ul>
+  <li>Extensive customization of CSS may require advanced knowledge and can be time-consuming for beginners. I have observed many Students spending  to much of their time writing custom CSS.  It is better, for now, to <mark>learn to extend or change a GitHub theme</mark> and work with fragments of Markdown or HTML.</li>
+</ul>
+
+<h2 id="hacks">Hacks</h2>
+<p>At the end of this week you should select your theme and start customizing your page.</p>
+<ul>
+  <li>Students should select a theme from the available options in the _config.yml file and start customizing their page accordingly.</li>
+  <li>Try to alter index.md with images and links according to some of your personal interests.  For instance, make an outline of your classes, school activities, and homework requirements.  Add your freeform picture.</li>
+  <li>Google <code class="language-plaintext highlighter-rouge">Markdown Cheatsheet</code> or <code class="language-plaintext highlighter-rouge">W3Schools HTML Tutorial</code> for guideance.  Try to do something on your index.md not discussed in this blog.</li>
+</ul>
+
+  </div><a class="u-url" href="/teacher_portfolio/c4.3/c5.0/2023/08/17/markdown-html_fragments.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+    <data class="u-url" href="/teacher_portfolio/"></data>
+  
+    <div class="wrapper">
+  
+      <div class="footer-col-wrapper">
+  
+        <div class="social-links"><ul class="social-media-list"><li>
+  <a rel="me" href="https://github.com/nighthawkcoders/teacher_portfolio" target="_blank" title="github">
+    <svg class="svg-icon grey">
+      <use xlink:href="/teacher_portfolio/assets/minima-social-icons.svg#github"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="https://x.com/NighthawkCoding/" target="_blank" title="x">
+    <svg class="svg-icon grey">
+      <use xlink:href="/teacher_portfolio/assets/minima-social-icons.svg#x"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="https://www.youtube.com/@nighthawkcodingsociety2868" target="_blank" title="youtube">
+    <svg class="svg-icon grey">
+      <use xlink:href="/teacher_portfolio/assets/minima-social-icons.svg#youtube"></use>
+    </svg>
+  </a>
+</li>
+</ul>
+</div>
+
+      </div>
+    </div>
+  
+  </footer></body>
+
+</html>

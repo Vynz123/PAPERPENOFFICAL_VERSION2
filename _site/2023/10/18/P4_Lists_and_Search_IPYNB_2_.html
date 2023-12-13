@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>P4 Lists and search | Teacher 2.0</title>
+<meta name="generator" content="Jekyll v3.9.3" />
+<meta property="og:title" content="P4 Lists and search" />
+<meta name="author" content="Tanvi, Anagha, Drishya, Miheer" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Lesson for developing algorithms in Python" />
+<meta property="og:description" content="Lesson for developing algorithms in Python" />
+<link rel="canonical" href="http://localhost:4100/teacher_portfolio/2023/10/18/P4_Lists_and_Search_IPYNB_2_.html" />
+<meta property="og:url" content="http://localhost:4100/teacher_portfolio/2023/10/18/P4_Lists_and_Search_IPYNB_2_.html" />
+<meta property="og:site_name" content="Teacher 2.0" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-10-18T00:00:00-07:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="P4 Lists and search" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Tanvi, Anagha, Drishya, Miheer"},"dateModified":"2023-10-18T00:00:00-07:00","datePublished":"2023-10-18T00:00:00-07:00","description":"Lesson for developing algorithms in Python","headline":"P4 Lists and search","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4100/teacher_portfolio/2023/10/18/P4_Lists_and_Search_IPYNB_2_.html"},"url":"http://localhost:4100/teacher_portfolio/2023/10/18/P4_Lists_and_Search_IPYNB_2_.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/teacher_portfolio/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4100/teacher_portfolio/feed.xml" title="Teacher 2.0" /><link rel="shortcut icon" type="image/x-icon" href="/teacher_portfolio/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/teacher_portfolio/">Teacher 2.0</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/teacher_portfolio/blogs/">Blogs</a><a class="page-link" href="/teacher_portfolio/search/">Search</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">P4 Lists and search</h1><p class="page-description">Lesson for developing algorithms in Python</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-10-18T00:00:00-07:00" itemprop="datePublished">
+        Oct 18, 2023
+      </time>• 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">Tanvi, Anagha, Drishya, Miheer</span></span>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      2 min read
+    
+</span></p>
+
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody"><ul><li><a href="#310-311-lists-and-searches">3.10-3.11 Lists and Searches</a></li><li><a href="#basic-operations">Basic Operations</a></li><li><a href="#popcorn-hack-1">PopCorn hack #1</a></li><li><a href="#finding-the-minimum-value-in-a-list">Finding the Minimum Value in a List</a></li><li><a href="#popcorn-hack-2">PopCorn hack #2</a></li><li><a href="#sum-of-even-numbers-in-a-list-solution">Sum of Even Numbers in a list solution</a></li><li><a href="#determining-outputs-for-code-segments-with-length-function">Determining Outputs for code Segments with Length function</a></li><li><a href="#if-else-statements-with-lists">If Else Statements with Lists</a></li><li><a href="#performing-a-binary-search">Performing a Binary Search</a></li><li><a href="#performing-a-sequential-search">Performing a Sequential Search</a></li><li><a href="#homework-hack-1">Homework Hack 1</a></li><li><a href="#homework-hack-2">Homework Hack 2</a></li></ul><h2 id="310-311-lists-and-searches">3.10-3.11 Lists and Searches</h2>
+
+<h2 id="basic-operations">Basic Operations</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#Defining the List
+</span><span class="n">aList</span><span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">3</span><span class="p">,]</span>
+<span class="c1"># Accessing Elements in a list
+</span><span class="k">print</span><span class="p">(</span><span class="n">aList</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+
+<span class="c1">#Storing Element at an Index to a variable
+</span><span class="n">Element</span> <span class="o">=</span> <span class="n">aList</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">Element</span><span class="p">)</span>
+
+
+<span class="c1">#Setting an Element at an Index to a variable
+</span><span class="n">element</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">aList</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">=</span> <span class="n">element</span>
+<span class="k">print</span><span class="p">(</span><span class="n">aList</span><span class="p">[</span><span class="mi">5</span><span class="p">])</span>
+
+<span class="c1">#Insert a value at a certain index
+</span><span class="n">aList</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">aList</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+
+<span class="c1">#Adding another value to the list (append)
+</span><span class="n">aList</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">aList</span><span class="p">)</span>
+
+<span class="c1">#Removing a value from the List at a specific Index
+</span><span class="n">aList</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">aList</span><span class="p">)</span>
+
+<span class="c1">#Accessing the Length of a list
+</span><span class="k">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">aList</span><span class="p">))</span>
+
+
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>4
+6
+4
+10
+[1, 4, 2, 10, 6, 7, 4, 5]
+[1, 4, 10, 6, 7, 4, 5]
+7
+</code></pre></div></div>
+
+<h2 id="popcorn-hack-1">PopCorn hack #1</h2>
+
+<ul>
+  <li>Create and define your own list and insert a value at a certain index</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#Enter code here
+</span></code></pre></div></div>
+
+<h2 id="finding-the-minimum-value-in-a-list">Finding the Minimum Value in a List</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">nums</span> <span class="o">=</span> <span class="p">[</span><span class="mi">30</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">95</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="mi">73</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">25</span><span class="p">]</span>
+<span class="n">min_value</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>  <span class="c1"># Start with the first element as the minimum
+</span>
+<span class="k">for</span> <span class="n">score</span> <span class="ow">in</span> <span class="n">nums</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">score</span> <span class="o">&lt;</span> <span class="n">min_value</span><span class="p">:</span>
+            <span class="n">min_value</span> <span class="o">=</span> <span class="n">score</span>
+
+
+<span class="k">print</span><span class="p">(</span><span class="n">min_value</span><span class="p">)</span>  <span class="c1"># Display the minimum value
+</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>25
+</code></pre></div></div>
+
+<h2 id="popcorn-hack-2">PopCorn hack #2</h2>
+
+<ul>
+  <li>Using the code above try to find the maximum value in the list</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#Enter Code here
+</span></code></pre></div></div>
+
+<h2 id="sum-of-even-numbers-in-a-list-solution">Sum of Even Numbers in a list solution</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#Defining numbers in list
+</span><span class="n">nums</span> <span class="o">=</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">12</span><span class="p">]</span>
+<span class="n">sum_even</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">([</span><span class="n">score</span> <span class="k">for</span> <span class="n">score</span> <span class="ow">in</span> <span class="n">nums</span> <span class="k">if</span> <span class="n">score</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">])</span>  <span class="c1">#Using for loop to work through each number in the list and using mod to interpret if any numbers have a remainder of 0
+</span><span class="k">print</span><span class="p">(</span><span class="n">sum_even</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>32
+</code></pre></div></div>
+
+<h2 id="determining-outputs-for-code-segments-with-length-function">Determining Outputs for code Segments with Length function</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#Defining the list
+</span><span class="n">words</span> <span class="o">=</span> <span class="p">[</span><span class="s">'old'</span><span class="p">,</span> <span class="s">'computer'</span><span class="p">,</span> <span class="s">'science'</span><span class="p">,</span> <span class="s">'far'</span><span class="p">,</span> <span class="s">'potato'</span><span class="p">]</span>
+<span class="n">new_words</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">3</span><span class="p">:</span> <span class="c1">#if the length of the word is not equal to three
+</span>        <span class="n">new_words</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>  <span class="c1">#adds it to a new list if the length is not equal to three
+</span>
+<span class="k">print</span><span class="p">(</span><span class="n">new_words</span><span class="p">)</span>
+
+
+
+    
+    
+    
+     
+
+
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>['computer', 'science', 'potato']
+</code></pre></div></div>
+
+<h2 id="if-else-statements-with-lists">If Else Statements with Lists</h2>
+
+<h2 id="performing-a-binary-search">Performing a Binary Search</h2>
+<ul>
+  <li>index: organizing the data by assigning a reference value to each element</li>
+  <li>Put the number is order either ascending or descending</li>
+  <li>Search starts with middle number first which is found by adding the highest and lowest index number and dividing it by 2</li>
+  <li>This divides the range by 2</li>
+  <li>Repeat this process by shrinking the range each time till the desired target is found</li>
+  <li>Every time the process is repeated and leads to a target it is considered a comparison</li>
+</ul>
+
+<h2 id="performing-a-sequential-search">Performing a Sequential Search</h2>
+<ul>
+  <li>Each element in a list is examined in the order of the first element till the desired target</li>
+  <li>Order doesn’t matter</li>
+</ul>
+
+<h2 id="homework-hack-1">Homework Hack 1</h2>
+<ul>
+  <li>What will be the middle index number in a Binary Search given the set of number: 3, 6, 12, 14, 50, 53</li>
+  <li>Which of the following lists can a Binary Search be used to find the desired target</li>
+  <li>This is a multiple choice question</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">fruits</span><span class="o">=</span> <span class="p">[</span><span class="s">'Apple'</span><span class="p">,</span> <span class="s">'Carrot'</span><span class="p">,</span> <span class="s">'Mango'</span><span class="p">,</span> <span class="s">'Peach'</span><span class="p">]</span>
+<span class="n">A</span><span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="p">]</span>
+<span class="n">B</span><span class="o">=</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+
+<span class="c1">#Type your choices below
+</span>
+
+</code></pre></div></div>
+
+<h2 id="homework-hack-2">Homework Hack 2</h2>
+<ul>
+  <li>Given a provided list perform two of the basic operations</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">yourlist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">35</span><span class="p">,</span><span class="mi">39</span><span class="p">,</span><span class="mi">49</span><span class="p">,</span><span class="mi">52</span><span class="p">]</span>
+
+<span class="c1">#type out your answers below and run the code and include output in screenshot
+</span></code></pre></div></div>
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="nighthawkcoders/teacher_portfolio"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/teacher_portfolio/2023/10/18/P4_Lists_and_Search_IPYNB_2_.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+    <data class="u-url" href="/teacher_portfolio/"></data>
+  
+    <div class="wrapper">
+  
+      <div class="footer-col-wrapper">
+  
+        <div class="social-links"><ul class="social-media-list"><li>
+  <a rel="me" href="https://github.com/nighthawkcoders/teacher_portfolio" target="_blank" title="github">
+    <svg class="svg-icon grey">
+      <use xlink:href="/teacher_portfolio/assets/minima-social-icons.svg#github"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="https://x.com/NighthawkCoding/" target="_blank" title="x">
+    <svg class="svg-icon grey">
+      <use xlink:href="/teacher_portfolio/assets/minima-social-icons.svg#x"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="https://www.youtube.com/@nighthawkcodingsociety2868" target="_blank" title="youtube">
+    <svg class="svg-icon grey">
+      <use xlink:href="/teacher_portfolio/assets/minima-social-icons.svg#youtube"></use>
+    </svg>
+  </a>
+</li>
+</ul>
+</div>
+
+      </div>
+    </div>
+  
+  </footer></body>
+
+</html>

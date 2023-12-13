@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>OOP, Multi Player | Teacher 2.0</title>
+<meta name="generator" content="Jekyll v3.9.3" />
+<meta property="og:title" content="OOP, Multi Player" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Start discussion on setting up two or more players in a game. A key part of doing this is understanding all attributes in GameObject and GameEnv, serializing and esearilizing this information over the internet." />
+<meta property="og:description" content="Start discussion on setting up two or more players in a game. A key part of doing this is understanding all attributes in GameObject and GameEnv, serializing and esearilizing this information over the internet." />
+<link rel="canonical" href="http://localhost:4100/teacher_portfolio/2023/12/04/CSSE-tri2-oop-multi-player.html" />
+<meta property="og:url" content="http://localhost:4100/teacher_portfolio/2023/12/04/CSSE-tri2-oop-multi-player.html" />
+<meta property="og:site_name" content="Teacher 2.0" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-12-04T00:00:00-08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="OOP, Multi Player" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-12-04T00:00:00-08:00","datePublished":"2023-12-04T00:00:00-08:00","description":"Start discussion on setting up two or more players in a game. A key part of doing this is understanding all attributes in GameObject and GameEnv, serializing and esearilizing this information over the internet.","headline":"OOP, Multi Player","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4100/teacher_portfolio/2023/12/04/CSSE-tri2-oop-multi-player.html"},"url":"http://localhost:4100/teacher_portfolio/2023/12/04/CSSE-tri2-oop-multi-player.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/teacher_portfolio/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4100/teacher_portfolio/feed.xml" title="Teacher 2.0" /><link rel="shortcut icon" type="image/x-icon" href="/teacher_portfolio/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/teacher_portfolio/">Teacher 2.0</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/teacher_portfolio/blogs/">Blogs</a><a class="page-link" href="/teacher_portfolio/search/">Search</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">OOP, Multi Player</h1><p class="page-description">Start discussion on setting up two or more players in a game.  A key part of doing this is understanding all attributes in GameObject and GameEnv, serializing and esearilizing this information over the internet.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-12-04T00:00:00-08:00" itemprop="datePublished">
+        Dec 4, 2023
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      6 min read
+    
+</span></p>
+
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody"><h2 id="multi-player">Multi Player</h2>
+<p>This is a dialog on regarding consideration on how to make a Multi Player game.</p>
+
+<h3 id="multiplayer-game-loop">Multiplayer Game Loop</h3>
+<p>Adjust the game loop to accommodate real-time updates from the server.
+Touch Point: Modify the game loop to integrate server updates and adjust the timing mechanism.</p>
+
+<h3 id="player-actions">Player Actions</h3>
+<p>Player actions (like moving, jumping) are likely handled locally on the client side. In a multiplayer setup, these actions need to be sent to the server.
+Touch Point: Modify handlePlayerAction to emit player actions to the server.</p>
+
+<h3 id="json-representation">JSON Representation</h3>
+<p>JSON or a similar data format can be used to represent game objects when transmitting them between the server and clients.
+Touch Point: Serialize and deserialize game objects to/from JSON for network transmission.</p>
+
+<h3 id="gameobject-lifecycle">GameObject Lifecycle</h3>
+<p>Consider how GameObjects are created, updated, and destroyed in a multiplayer context.
+Touch Point: Modify GameObject and GameLevel methods to handle synchronization and instantiation/destruction across clients.</p>
+
+<h3 id="server-side-game-state">Server-Side Game State</h3>
+<p>The server needs to maintain the authoritative game state.
+Touch Point: Server listens for player actions, updates the game state, and broadcasts the updated state to all connected clients.</p>
+
+<h3 id="synchronization">Synchronization</h3>
+<p>Ensure that all clients are synchronized with the server’s authoritative game state.
+Touch Point: Clients listen for updates from the server and adjust their local game state accordingly.</p>
+
+<h3 id="player-identification">Player Identification</h3>
+<p>Identify different players and associate their actions with their corresponding GameObjects.
+Touch Point: Add a player identifier to emitted actions and update GameObjects accordingly.</p>
+
+<h3 id="networking-websocket">Networking (WebSocket):</h3>
+<p>Establishing and handling WebSocket connections for real-time communication.
+Touch Point: Integrate WebSocket handling on both the client and server sides.</p>
+
+<h3 id="error-handling">Error Handling</h3>
+<p>Implement robust error handling to handle network failures and unexpected scenarios.
+Touch Point: Enhance error handling mechanisms on both the client and server sides.</p>
+
+<h3 id="single-player-layout">Single Player Layout</h3>
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GameEnv
+|   ├── Attributes:
+│   |   ├── levels
+│   |   ├── gameObjects
+|   │   └── ...
+|   |
+|   ├── Methods: 
+│   |    ├── update: update, draw
+│   |    ├── destroy: all gameObjects
+│   |    └── ...
+│
+├── GameObject
+│   ├── Player: sprite animation, wasd
+│   ├── Background: fit to screen, scrolling 
+│   ├── Platform: fixed to bottom, scrolling
+│   └── ...
+│
+├── GameLevel
+|   ├── Tag: key
+│   ├── Attributes:
+│   |   ├── playerAssets
+│   |   ├── backgroundAssets
+│   |   ├── platformAssets
+│   |   └── ...
+|   |
+│   └── Methods: 
+│   |    ├── load: "new" GameObject created from assets
+│   |    └── ...
+|
+└── GameControl
+│   ├── Methods: 
+|   |    ├── gameLoop: drive action of game level
+│   |    ├── transitionToLevel: destroys and creates objects for game level
+│   |    └── ...
+|   |
+│   └── ...
+</code></pre></div></div>
+
+<h2 id="game-states">Game States</h2>
+<p>Some of the definition above talk about “game state”.</p>
+
+<h3 id="positions-and-states-of-game-objects">Positions and States of Game Objects</h3>
+<p>The location, velocity, and state (e.g., alive, dead) of each game object (players, enemies, platforms, etc.).</p>
+
+<h3 id="player-scores-and-stats">Player Scores and Stats</h3>
+<p>Scores, achievements, or any other player-specific statistics.</p>
+
+<h3 id="level-information">Level Information</h3>
+<p>Details about the current level, such as the background, platform configuration, and any other level-specific attributes.</p>
+
+<h3 id="time-and-game-clock">Time and Game Clock</h3>
+<p>Information about the current time within the game, which is crucial for handling events, animations, and other time-dependent actions.</p>
+
+<h3 id="event-queue-or-log">Event Queue or Log</h3>
+<p>A log of events or actions that have occurred, which can be used for synchronization and debugging.</p>
+
+<h3 id="game-configuration">Game Configuration</h3>
+<p>Settings and configurations that affect the game’s behavior, such as gravity, game speed, or other global parameters.</p>
+
+<h3 id="player-identification-and-session-information">Player Identification and Session Information:</h3>
+<p>Unique identifiers for players, their session information, and any relevant details for tracking and managing player connections.</p>
+<h2 id="client--server-code">Client / Server Code</h2>
+
+<p>To make a game multiplayer or enable two machines to share the same GameLevel with different players, you would indeed need to introduce a mechanism for communication between the two instances. WebSockets are a commonly used technology for real-time bidirectional communication between clients and servers, and they can be a good choice for multiplayer games.</p>
+
+<ul>
+  <li>Server-Side Logic
+    <ul>
+      <li>Implement a server to manage the game state, including the current GameLevel, player positions, and other relevant data.</li>
+      <li>Use a WebSocket library on the server to handle communication with clients.</li>
+    </ul>
+  </li>
+  <li>Client-Side Logic
+    <ul>
+      <li>Modify the existing game code on the client to interact with the server via WebSockets.</li>
+      <li>When a player performs an action (e.g., moves the character), send that action to the server.</li>
+      <li>Receive updates from the server, such as the positions of other players, and update the local game state accordingly.</li>
+    </ul>
+  </li>
+  <li>Synchronization
+    <ul>
+      <li>Ensure that the server is the authority on the game state. All clients should receive updates from the server and synchronize their local state accordingly.</li>
+      <li>Implement mechanisms for handling latency and potential synchronization issues between clients.</li>
+    </ul>
+  </li>
+  <li>WebSockets:
+    <ul>
+      <li>Use WebSockets to establish a persistent connection between the clients and the server.</li>
+      <li>Send messages back and forth between the server and clients to keep them in sync.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="code-outlines">Code Outlines</h3>
+<p>Client Code Sample: JavaScript</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="dl">"</span><span class="s2">https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.3/socket.io.js</span><span class="dl">"</span><span class="o">&gt;&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span>
+<span class="c1">// Client-side using JavaScript and Socket.IO</span>
+<span class="kd">const</span> <span class="nx">socket</span> <span class="o">=</span> <span class="nx">io</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="dl">'</span><span class="s1">http://localhost:5000</span><span class="dl">'</span><span class="p">);</span>   <span class="c1">// change to server for multi player</span>
+
+<span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">gameState</span><span class="dl">'</span><span class="p">,</span> <span class="p">(</span><span class="nx">updatedGameState</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="c1">// Update the local game state based on the server updates</span>
+<span class="p">});</span>
+
+<span class="c1">// When the player performs an action</span>
+<span class="kd">function</span> <span class="nx">handlePlayerAction</span><span class="p">(</span><span class="nx">action</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// Send the action to the server</span>
+  <span class="nx">socket</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="dl">'</span><span class="s1">playerAction</span><span class="dl">'</span><span class="p">,</span> <span class="nx">action</span><span class="p">);</span>
+  <span class="c1">// Local client may update its state immediately, but the authoritative state comes from the server</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Server Code Sample: Python</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">render_template</span>
+<span class="kn">from</span> <span class="nn">flask_socketio</span> <span class="kn">import</span> <span class="n">SocketIO</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
+<span class="n">socketio</span> <span class="o">=</span> <span class="n">SocketIO</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
+
+<span class="o">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s">'/'</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s">'index.html'</span><span class="p">)</span>
+
+<span class="o">@</span><span class="n">socketio</span><span class="p">.</span><span class="n">on</span><span class="p">(</span><span class="s">'connect'</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">handle_connect</span><span class="p">():</span>
+    <span class="c1"># Handle new player connection
+</span>
+<span class="o">@</span><span class="n">socketio</span><span class="p">.</span><span class="n">on</span><span class="p">(</span><span class="s">'playerAction'</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">handle_player_action</span><span class="p">(</span><span class="n">action</span><span class="p">):</span>
+    <span class="c1"># Handle player actions and update the game state
+</span>    <span class="c1"># Broadcast the updated state to all connected clients
+</span>    <span class="n">socketio</span><span class="p">.</span><span class="n">emit</span><span class="p">(</span><span class="s">'gameState'</span><span class="p">,</span> <span class="n">updated_game_state</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="n">socketio</span><span class="p">.</span><span class="n">run</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="hacks">Hacks</h2>
+
+<p>An early step to building a multi player game requires thinking and structuring code so that data can be updated from server.</p>
+
+<h3 id="review-elements-and-data">Review Elements and Data</h3>
+
+<p>To abstract data to server, you must 1st study what that data might be.  Then, selializing data into JSON.  Inspecting on the browser enables developer to see some of the data describe in this article, here is Element data …</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;canvas</span> <span class="na">id=</span><span class="s">"background"</span> <span class="na">width=</span><span class="s">"754"</span> <span class="na">height=</span><span class="s">"331"</span> <span class="na">style=</span><span class="s">"width: 754px; height: 331px; position: absolute; left: 0px; top: 60px; filter: none;"</span><span class="nt">&gt;&lt;/canvas&gt;</span>
+
+<span class="nt">&lt;canvas</span> <span class="na">id=</span><span class="s">"platform"</span> <span class="na">width=</span><span class="s">"540"</span> <span class="na">height=</span><span class="s">"160"</span> <span class="na">style=</span><span class="s">"width: 754px; height: 44.6815px; position: absolute; left: 0px; top: 391px; filter: none;"</span><span class="nt">&gt;&lt;/canvas&gt;</span>
+
+<span class="nt">&lt;canvas</span> <span class="na">id=</span><span class="s">"character"</span> <span class="na">width=</span><span class="s">"74"</span> <span class="na">height=</span><span class="s">"74"</span> <span class="na">style=</span><span class="s">"filter: none; width: 74px; height: 74px; position: absolute; left: 0px; top: 316.481px;"</span><span class="nt">&gt;&lt;/canvas&gt;</span>
+</code></pre></div></div>
+
+<h3 id="serialize-data">Serialize Data</h3>
+
+<p>Objective is to log data in objects each time it is changed.  Since refresh rate is fast, it is probably a lot faster than change rate.  Logging should be assoicated with change rate.</p>
+
+<p>Sample of serializing Character data</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+    <span class="c1">// log Character element change</span>
+    <span class="nx">logElement</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">jsonifiedElement</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">stringifyElement</span><span class="p">();</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">jsonifiedElement</span> <span class="o">!==</span> <span class="k">this</span><span class="p">.</span><span class="nx">jsonifiedElement</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">jsonifiedElement</span><span class="p">);</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">jsonifiedElement</span> <span class="o">=</span> <span class="nx">jsonifiedElement</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="c1">// strigify Character key data</span>
+    <span class="nx">stringifyElement</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">element</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">canvas</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">element</span> <span class="o">&amp;&amp;</span> <span class="nx">element</span><span class="p">.</span><span class="nx">id</span><span class="p">)</span> <span class="p">{</span>
+            <span class="c1">// Convert the relevant properties of the element to a string for comparison</span>
+            <span class="k">return</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span>
+                <span class="na">id</span><span class="p">:</span> <span class="nx">element</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span>
+                <span class="na">width</span><span class="p">:</span> <span class="nx">element</span><span class="p">.</span><span class="nx">width</span><span class="p">,</span>
+                <span class="na">height</span><span class="p">:</span> <span class="nx">element</span><span class="p">.</span><span class="nx">height</span><span class="p">,</span>
+                <span class="na">style</span><span class="p">:</span> <span class="nx">element</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">cssText</span><span class="p">,</span>
+                <span class="na">position</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="na">left</span><span class="p">:</span> <span class="nx">element</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">left</span><span class="p">,</span>
+                    <span class="na">top</span><span class="p">:</span> <span class="nx">element</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">top</span>
+                <span class="p">},</span>
+                <span class="na">filter</span><span class="p">:</span> <span class="nx">element</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">filter</span>
+            <span class="p">});</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+</code></pre></div></div>
+
+  </div><a class="u-url" href="/teacher_portfolio/2023/12/04/CSSE-tri2-oop-multi-player.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+    <data class="u-url" href="/teacher_portfolio/"></data>
+  
+    <div class="wrapper">
+  
+      <div class="footer-col-wrapper">
+  
+        <div class="social-links"><ul class="social-media-list"><li>
+  <a rel="me" href="https://github.com/nighthawkcoders/teacher_portfolio" target="_blank" title="github">
+    <svg class="svg-icon grey">
+      <use xlink:href="/teacher_portfolio/assets/minima-social-icons.svg#github"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="https://x.com/NighthawkCoding/" target="_blank" title="x">
+    <svg class="svg-icon grey">
+      <use xlink:href="/teacher_portfolio/assets/minima-social-icons.svg#x"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="https://www.youtube.com/@nighthawkcodingsociety2868" target="_blank" title="youtube">
+    <svg class="svg-icon grey">
+      <use xlink:href="/teacher_portfolio/assets/minima-social-icons.svg#youtube"></use>
+    </svg>
+  </a>
+</li>
+</ul>
+</div>
+
+      </div>
+    </div>
+  
+  </footer></body>
+
+</html>

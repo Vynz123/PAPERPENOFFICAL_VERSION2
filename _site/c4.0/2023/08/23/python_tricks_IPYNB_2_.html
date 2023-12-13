@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Python Tricks! | Teacher 2.0</title>
+<meta name="generator" content="Jekyll v3.9.3" />
+<meta property="og:title" content="Python Tricks!" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Python is a versatile programming language that is widely used and thus it is supported by a wide range of libraries." />
+<meta property="og:description" content="Python is a versatile programming language that is widely used and thus it is supported by a wide range of libraries." />
+<link rel="canonical" href="http://localhost:4100/teacher_portfolio/c4.0/2023/08/23/python_tricks_IPYNB_2_.html" />
+<meta property="og:url" content="http://localhost:4100/teacher_portfolio/c4.0/2023/08/23/python_tricks_IPYNB_2_.html" />
+<meta property="og:site_name" content="Teacher 2.0" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-08-23T00:00:00-07:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Python Tricks!" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-08-23T00:00:00-07:00","datePublished":"2023-08-23T00:00:00-07:00","description":"Python is a versatile programming language that is widely used and thus it is supported by a wide range of libraries.","headline":"Python Tricks!","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4100/teacher_portfolio/c4.0/2023/08/23/python_tricks_IPYNB_2_.html"},"url":"http://localhost:4100/teacher_portfolio/c4.0/2023/08/23/python_tricks_IPYNB_2_.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/teacher_portfolio/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4100/teacher_portfolio/feed.xml" title="Teacher 2.0" /><link rel="shortcut icon" type="image/x-icon" href="/teacher_portfolio/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/teacher_portfolio/">Teacher 2.0</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/teacher_portfolio/blogs/">Blogs</a><a class="page-link" href="/teacher_portfolio/search/">Search</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Python Tricks!</h1><p class="page-description">Python is a versatile programming language that is widely used and thus it is supported by a wide range of libraries.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-08-23T00:00:00-07:00" itemprop="datePublished">
+        Aug 23, 2023
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      4 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+          <a class="category-tags-link" href="/teacher_portfolio/categories/cte#C4.0">C4.0</a>
+        
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody"><h3 id="emoji-print">Emoji Print</h3>
+<p>It is easy to add an emoji to a message in code.  However, using the emoji library or other libraries often requires you to install code on your machine.  Before using a library, that is not part of Python distribution, you must install with <code class="language-plaintext highlighter-rouge">pip</code></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># terminal command to install library</span>
+<span class="nv">$ </span>pip <span class="nb">install </span>emoji
+Collecting emoji
+  Downloading emoji-2.5.1.tar.gz <span class="o">(</span>356 kB<span class="o">)</span>
+...
+Successfully installed emoji-2.5.1
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!pip install emoji
+</span><span class="kn">from</span> <span class="nn">emoji</span> <span class="kn">import</span> <span class="n">emojize</span> 
+<span class="k">print</span><span class="p">(</span><span class="n">emojize</span><span class="p">(</span><span class="s">":thumbs_up: Python is awesome! :grinning_face:"</span><span class="p">))</span>
+</code></pre></div></div>
+
+<h3 id="extracting-data">Extracting Data</h3>
+<p>Web sites become a lot more interesting when you are working with data, not trying to create it.  Here is some code using a library called newspaper, this extracts a couple of writeups from the CNN Entertainment site.</p>
+<ul>
+  <li>Learn more on <a href="https://newspaper.readthedocs.io/en/latest/">newspaper3k</a></li>
+  <li>Learn about library for <a href="https://pypi.org/project/wikipedia/">wikipedia</a></li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!pip install newspaper3k
+</span><span class="kn">from</span> <span class="nn">newspaper</span> <span class="kn">import</span> <span class="n">Article</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">Markdown</span>
+
+
+<span class="n">urls</span> <span class="o">=</span> <span class="p">[</span><span class="s">"http://cnn.com/2023/03/29/entertainment/the-mandalorian-episode-5-recap/index.html"</span><span class="p">,</span> 
+        <span class="s">"https://www.cnn.com/2023/06/09/entertainment/jurassic-park-anniversary/index.html"</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">url</span> <span class="ow">in</span> <span class="n">urls</span><span class="p">:</span>
+    <span class="n">article</span> <span class="o">=</span> <span class="n">Article</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="n">article</span><span class="p">.</span><span class="n">download</span><span class="p">()</span>
+    <span class="n">article</span><span class="p">.</span><span class="n">parse</span><span class="p">()</span>
+    <span class="c1"># Jupyter Notebook Display
+</span>    <span class="c1"># print(article.title)
+</span>    <span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="n">article</span><span class="p">.</span><span class="n">title</span><span class="p">))</span> <span class="c1"># Jupyter display only
+</span>    <span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="n">article</span><span class="p">.</span><span class="n">text</span><span class="p">))</span> <span class="c1"># Jupyter display only
+</span>    <span class="k">print</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">)</span>
+
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!pip install wikipedia
+</span><span class="kn">import</span> <span class="nn">wikipedia</span> 
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">Markdown</span> <span class="c1"># add for Jupyter
+</span>
+<span class="n">terms</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Python (programming language)"</span><span class="p">,</span> <span class="s">"JavaScript"</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">term</span> <span class="ow">in</span> <span class="n">terms</span><span class="p">:</span>
+    <span class="c1"># Search for a page 
+</span>    <span class="n">result</span> <span class="o">=</span> <span class="n">wikipedia</span><span class="p">.</span><span class="n">search</span><span class="p">(</span><span class="n">term</span><span class="p">)</span>
+    <span class="c1"># Get the summary of the first result
+</span>    <span class="n">summary</span> <span class="o">=</span> <span class="n">wikipedia</span><span class="p">.</span><span class="n">summary</span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">term</span><span class="p">)</span> 
+    <span class="c1"># print(summary) # console display
+</span>    <span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="n">summary</span><span class="p">))</span> <span class="c1"># Jupyter display
+</span></code></pre></div></div>
+
+<h3 id="inspecting-a-function">Inspecting a Function</h3>
+<p>The inspect module can give you the output of what’s inside many Python functions/objects.  This can help you explore code behind what you are using.</p>
+<ul>
+  <li><a href="https://docs.python.org/3/library/inspect.html">Inspect</a> documentation.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">inspect</span> 
+<span class="kn">from</span> <span class="nn">newspaper</span> <span class="kn">import</span> <span class="n">Article</span>
+
+<span class="c1"># inspect newspaper Article function
+</span><span class="k">print</span><span class="p">(</span><span class="n">inspect</span><span class="p">.</span><span class="n">getsource</span><span class="p">(</span><span class="n">Article</span><span class="p">))</span>
+</code></pre></div></div>
+
+<h3 id="python-data-types">Python Data Types</h3>
+<p>Dynamic typing means that the type of the variable is determined only during runtime.  Strong typing means that variables do have a type and that the type matters when performing operations.  In the illustration below there are two functions</p>
+<ul>
+  <li>mean… shows types required prior to calling average function</li>
+  <li>average, average2… calculates the average of a list of numbers</li>
+</ul>
+
+<p>Python has types.  In the language you can use type hints, but most coders do not use them.  In other languages like Java and ‘C’ you must specify types.</p>
+<ul>
+  <li><a href="https://mypy.readthedocs.io/en/stable/cheat_sheet_py3.html">Python Types Cheat Sheet</a></li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Union</span>
+
+<span class="c1"># Define types for mean function, trying to analyze input possibilities
+</span><span class="n">Number</span> <span class="o">=</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span>  <span class="c1"># Number can be either int or float type
+</span><span class="n">Numbers</span> <span class="o">=</span> <span class="nb">list</span><span class="p">[</span><span class="n">Number</span><span class="p">]</span> <span class="c1"># Numbers is a list of Number types
+</span><span class="n">Scores</span> <span class="o">=</span> <span class="n">Union</span><span class="p">[</span><span class="n">Number</span><span class="p">,</span> <span class="n">Numbers</span><span class="p">]</span> <span class="c1"># Scores can be single or multiple 
+</span>
+<span class="k">def</span> <span class="nf">mean</span><span class="p">(</span><span class="n">scores</span><span class="p">:</span> <span class="n">Scores</span><span class="p">,</span> <span class="n">method</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+    <span class="s">"""
+    Calculate the mean of a list of scores.
+    
+    Average and Average2 are hidden functions performing mean algorithm
+
+    If a single score is provided in scores, it is returned as the mean.
+    If a list of scores is provided, the average is calculated and returned.
+    """</span>
+    
+    <span class="k">def</span> <span class="nf">average</span><span class="p">(</span><span class="n">scores</span><span class="p">):</span> 
+        <span class="s">"""Calculate the average of a list of scores using a Python for loop with rounding."""</span>
+        <span class="nb">sum</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="nb">len</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">score</span> <span class="ow">in</span> <span class="n">scores</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">score</span><span class="p">,</span> <span class="n">Number</span><span class="p">):</span>
+                <span class="nb">sum</span> <span class="o">+=</span> <span class="n">score</span>
+                <span class="nb">len</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">print</span><span class="p">(</span><span class="s">"Bad data: "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">score</span><span class="p">)</span> <span class="o">+</span> <span class="s">" in "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">scores</span><span class="p">))</span>
+                <span class="n">sys</span><span class="p">.</span><span class="nb">exit</span><span class="p">()</span>
+        <span class="k">return</span> <span class="nb">sum</span> <span class="o">/</span> <span class="nb">len</span>
+    
+    <span class="k">def</span> <span class="nf">average2</span><span class="p">(</span><span class="n">scores</span><span class="p">):</span>
+        <span class="s">"""Calculate the average of a list of scores using the built-in sum() function with rounding."""</span>
+        <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span>
+
+    <span class="c1"># test to see if scores is  a list of numbers
+</span>    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">scores</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">method</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>  
+            <span class="c1"># long method
+</span>            <span class="n">result</span> <span class="o">=</span> <span class="n">average</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># built in method
+</span>            <span class="n">result</span> <span class="o">=</span> <span class="n">average2</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">round</span><span class="p">(</span><span class="n">result</span> <span class="o">+</span> <span class="mf">0.005</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">scores</span> <span class="c1"># case where scores is a single valu
+</span>
+<span class="c1"># try with one number
+</span><span class="n">singleScore</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Print test data: "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">singleScore</span><span class="p">))</span>  <span class="c1"># concat data for single line
+</span><span class="k">print</span><span class="p">(</span><span class="s">"Mean of single number: "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">mean</span><span class="p">(</span><span class="n">singleScore</span><span class="p">)))</span>
+
+<span class="k">print</span><span class="p">()</span>
+
+<span class="c1"># define a list of numbers
+</span><span class="n">testScores</span> <span class="o">=</span> <span class="p">[</span><span class="mf">90.5</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mf">85.4</span><span class="p">,</span> <span class="mi">88</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Print test data: "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">testScores</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Average score, loop method: "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">mean</span><span class="p">(</span><span class="n">testScores</span><span class="p">)))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Average score, function method: "</span> <span class="o">+</span>  <span class="nb">str</span><span class="p">(</span><span class="n">mean</span><span class="p">(</span><span class="n">testScores</span><span class="p">,</span> <span class="mi">2</span><span class="p">)))</span>
+
+<span class="k">print</span><span class="p">()</span>
+
+<span class="n">badData</span> <span class="o">=</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="s">"NaN"</span><span class="p">,</span> <span class="mi">90</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Print test data: "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">badData</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Mean with bad data: "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">mean</span><span class="p">(</span><span class="n">badData</span><span class="p">)))</span>
+
+
+</code></pre></div></div>
+
+<h2 id="hacks">Hacks</h2>
+<p>Here is a summary of some of the things learned above.</p>
+<ul>
+  <li>Formatting messages with emoji</li>
+  <li>Exploring data with newspaper and wikipedia libraries</li>
+  <li>Finding code on how the library we used was made</li>
+  <li>Learning about data types while writing an algorithm for mean</li>
+</ul>
+
+<blockquote>
+  <p>Part of Project Based learning is the idea of combining concepts to form something more interesting.  Make a plan, form some ideas, brainstorm ideas with pair.  Produce something that is interesting and challenging.  Samples…</p>
+  <ul>
+    <li>Could I get input from user to look up wikipedia information? <a href="https://www.w3schools.com/python/ref_func_input.asp">Python input</a>, <a href="https://vegibit.com/python-input-function/">Article on Input</a></li>
+    <li>What could I learn in Python about Stats to get Machine Learning Read? <a href="https://docs.python.org/3/library/statistics.html">Stats Calculations</a></li>
+    <li>Could I add emoji to an extracted article?  <a href="https://www.w3schools.com/python/ref_string_find.asp">String Find</a>, <a href="https://www.w3schools.com/python/python_strings_methods.asp">String Methods</a></li>
+  </ul>
+</blockquote>
+
+
+  </div><a class="u-url" href="/teacher_portfolio/c4.0/2023/08/23/python_tricks_IPYNB_2_.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+    <data class="u-url" href="/teacher_portfolio/"></data>
+  
+    <div class="wrapper">
+  
+      <div class="footer-col-wrapper">
+  
+        <div class="social-links"><ul class="social-media-list"><li>
+  <a rel="me" href="https://github.com/nighthawkcoders/teacher_portfolio" target="_blank" title="github">
+    <svg class="svg-icon grey">
+      <use xlink:href="/teacher_portfolio/assets/minima-social-icons.svg#github"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="https://x.com/NighthawkCoding/" target="_blank" title="x">
+    <svg class="svg-icon grey">
+      <use xlink:href="/teacher_portfolio/assets/minima-social-icons.svg#x"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="https://www.youtube.com/@nighthawkcodingsociety2868" target="_blank" title="youtube">
+    <svg class="svg-icon grey">
+      <use xlink:href="/teacher_portfolio/assets/minima-social-icons.svg#youtube"></use>
+    </svg>
+  </a>
+</li>
+</ul>
+</div>
+
+      </div>
+    </div>
+  
+  </footer></body>
+
+</html>

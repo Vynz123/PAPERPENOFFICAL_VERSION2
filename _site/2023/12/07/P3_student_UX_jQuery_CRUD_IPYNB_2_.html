@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>jQuery P3 | Teacher 2.0</title>
+<meta name="generator" content="Jekyll v3.9.3" />
+<meta property="og:title" content="jQuery P3" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The Bestest Baddest Coders lesson on UX and jQuery CRUD" />
+<meta property="og:description" content="The Bestest Baddest Coders lesson on UX and jQuery CRUD" />
+<link rel="canonical" href="http://localhost:4100/teacher_portfolio/2023/12/07/P3_student_UX_jQuery_CRUD_IPYNB_2_.html" />
+<meta property="og:url" content="http://localhost:4100/teacher_portfolio/2023/12/07/P3_student_UX_jQuery_CRUD_IPYNB_2_.html" />
+<meta property="og:site_name" content="Teacher 2.0" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-12-07T00:00:00-08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="jQuery P3" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-12-07T00:00:00-08:00","datePublished":"2023-12-07T00:00:00-08:00","description":"The Bestest Baddest Coders lesson on UX and jQuery CRUD","headline":"jQuery P3","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4100/teacher_portfolio/2023/12/07/P3_student_UX_jQuery_CRUD_IPYNB_2_.html"},"url":"http://localhost:4100/teacher_portfolio/2023/12/07/P3_student_UX_jQuery_CRUD_IPYNB_2_.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/teacher_portfolio/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4100/teacher_portfolio/feed.xml" title="Teacher 2.0" /><link rel="shortcut icon" type="image/x-icon" href="/teacher_portfolio/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/teacher_portfolio/">Teacher 2.0</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/teacher_portfolio/blogs/">Blogs</a><a class="page-link" href="/teacher_portfolio/search/">Search</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">jQuery | P3</h1><p class="page-description">The Bestest Baddest Coders lesson on UX and jQuery|CRUD</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-12-07T00:00:00-08:00" itemprop="datePublished">
+        Dec 7, 2023
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      14 min read
+    
+</span></p>
+
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody"><ul><li><a href="#ux">UX</a><ul><li><a href="#intro-to-the-lesson">Intro to the lesson</a></li><li><a href="#what-is-ux">What is UX?</a></li></ul></li></ul></li><li><a href="#examples-of-bad-ux-but-good-ui">Examples of bad UX but Good UI</a></li><li><a href="#examples-of-good-ux-and-good-ui">Examples of Good UX and Good UI</a><ul><li><a href="#what-is-the-difference-between-ux-and-ui">What is the difference between UX and UI?</a></li><li><a href="#when-is-ux-used">When is UX Used?</a></li><li><a href="#how-is-ux-data-gathered">How is UX data gathered?</a></li><li><a href="#why-is-ux-important">Why is UX important?</a></li><li><a href="#what-is-jquery">What is jQuery?</a></li><li><a href="#the-implications-of-jquery">The implications of jQuery</a></li><li><a href="#jquery-syntax-and-how-to-use-it">jQuery syntax and how to use it</a></li><li><a href="#jquery-methods-and-event-handling">jQuery methods and event handling</a></li><li><a href="#making-requests-with-ajax">Making requests with AJAX</a></li><li><a href="#why-use-jquery-ajax-over-a-normal-async-request-or-ajax-request">Why use jQuery AJAX over a normal async request or AJAX request?</a><ul><li><a href="#normal-async-request">Normal async request</a></li><li><a href="#ajax-requests-without-any-library">Ajax requests without any library</a></li><li><a href="#ajax-requests-with-jquery">Ajax Requests with JQuery</a></li></ul></li></ul></li><li><a href="#jquerys-use-with-pbl">Jquery’s use with PBL</a></li><li>Post ' + post.id + '<ul><li><a href="#popcorn-hack-complete-the-jquery-and-javascript-code">Popcorn Hack: Complete the Jquery and JavaScript code</a></li></ul></li><li><a href="#animations-with-jquery">Animations with JQuery</a><ul><li><a href="#crud-principles">CRUD Principles:</a></li><li><a href="#create-c">Create (C):</a></li><li><a href="#read-r">Read (R):</a></li><li><a href="#update-u">Update (U):</a></li><li><a href="#delete-d">Delete (D):</a></li><li><a href="#demonstration-of-applying-crud-to-tables">Demonstration of Applying CRUD to Tables:</a><ul><li><a href="#create-c-1">Create (C):</a></li><li><a href="#read-r-1">Read (R):</a></li><li><a href="#update-u-1">Update (U):</a></li><li><a href="#delete-d-1">Delete (D):</a></li></ul></li></ul></li><li>jQuery CRUD Demo</li></ul></li><li><a href="#hacks">Hacks</a></li></ul><h1 id="ux">UX</h1>
+
+<h3 id="intro-to-the-lesson">Intro to the lesson</h3>
+<ul>
+  <li>Do you remember the first operating system you used?</li>
+  <li>What makes you remember that first interaction?</li>
+  <li>The first operating system that I used was Windows XP, and fun fact the XP stands for experience. This shows how important User Experience is.</li>
+</ul>
+
+<h3 id="what-is-ux">What is UX?</h3>
+<ul>
+  <li>
+    <p>UX is the shortform of <strong>__</strong><strong>__</strong><strong><em>; a standard of understanding the __</em></strong><strong>__</strong><strong>__</strong>__ of a product and optimise it based on data recived from users.</p>
+  </li>
+  <li>
+    <p>UX is a <strong>__</strong>__ in all industries since collecting UX and improving the product based on it increases the <strong>__</strong><em>__</em> of the product on the market, increasing profits of the company or collaboration.</p>
+  </li>
+</ul>
+
+<h1 id="examples-of-bad-ux-but-good-ui">Examples of bad UX but Good UI</h1>
+
+<ul>
+  <li>apple.com
+    <ul>
+      <li>the website lags on lower end devices.</li>
+      <li>renders the website useless on lower end devices
+  (demonstrate)</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img width="1912" alt="Screenshot 2023-12-06 at 8 37 54 PM" src="https://github.com/y2kcoders/skatepark.co/assets/111465192/0b959614-184b-4e04-8986-c687fe141102" /></p>
+
+<ul>
+  <li>microsoft.com
+    <ul>
+      <li>the website is very hard to navigate</li>
+      <li>very hard to find every feature</li>
+      <li>the first time i used it, i didn’t know where to change my password and eventually gave up</li>
+      <li>is it trying to sell me its products or is it trying to help me?</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img width="1912" alt="Screenshot 2023-12-06 at 8 41 13 PM" src="https://github.com/hsinaDitaM/Danish_Cookies/assets/111465192/37cdaa0a-0409-4980-a1f0-77dd03f3e749" /></p>
+
+<ul>
+  <li>controversial but true, github.com
+    <ul>
+      <li>veru hard to navigate</li>
+      <li>very hard to find every feature</li>
+      <li>too much is going on, mental stress 😩</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img width="1912" alt="Screenshot 2023-12-06 at 8 38 52 PM" src="https://github.com/hsinaDitaM/Danish_Cookies/assets/111465192/2d8a3e01-6e54-4c7f-adb6-c9d49e9c839c" /></p>
+
+<h1 id="examples-of-good-ux-and-good-ui">Examples of Good UX and Good UI</h1>
+
+<ul>
+  <li>discord.com
+    <ul>
+      <li>very easy to navigate</li>
+      <li>very easy to find every feature</li>
+      <li>everything is very well organized</li>
+      <li>the icons are very easy to understand</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="https://github.com/hsinaDitaM/Danish_Cookies/assets/111465192/54c2a731-428c-4fb2-8902-7688edc59b15" alt="image" /></p>
+
+<ul>
+  <li>google.com
+    <ul>
+      <li>it has a search bar, and that’s it</li>
+      <li>it is very easy to use, even for a 5 year old or a 90 year old</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img width="1912" alt="Screenshot 2023-12-06 at 8 45 05 PM" src="https://github.com/hsinaDitaM/Danish_Cookies/assets/111465192/954f81ab-345e-44ee-810f-e3e191f0b0ef" /></p>
+
+<p><img src="https://github.com/Soham360/refactored-engine/assets/111465192/5d3131ff-d717-4acd-a473-708a7936169a" alt="image" /></p>
+
+<h3 id="what-is-the-difference-between-ux-and-ui">What is the difference between UX and UI?</h3>
+<ul>
+  <li>The main difference between UX and UI is that UI focuses on how the website looks rather than how it works.</li>
+  <li>A website can have a great UI but a bad UX, but a website can’t have a great UX but a bad UI
+    <ul>
+      <li>If the website is bad to look at, the User Experience is going to be horrible.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="when-is-ux-used">When is UX Used?</h3>
+<ul>
+  <li>UX is used when a product, especially a new one, needs optimization or modification based on user prefrence. This helps with changing user perception of the product since the company producing it would have had no prior feedback and would have not known their user prefrences.</li>
+</ul>
+
+<h3 id="how-is-ux-data-gathered">How is UX data gathered?</h3>
+<ul>
+  <li>
+    <p>UX data is mainly gathered through internet forms or feedback discussion boards. Advertisments and websites such as Google forms or official company forums are some common methods. This data is used to make small or big quality kf life changes that make it more convineient anfor the user.</p>
+  </li>
+  <li>An example of UX data collection is the Minecraft Forums:
+<img src="https://github.com/Henerystone/ws2/assets/96998793/5cf2c8cf-ce18-46e7-a45a-3a9c9c6720cb" alt="image" /></li>
+  <li>An example of UX implementation is the Spotify Wrapped interface:
+<img src="https://github.com/Henerystone/ws2/assets/96998793/484ba60b-a16b-471e-85f1-3041ad615d22" alt="image" /></li>
+  <li>On one hand, the Minecraft Forums are a source of UX data and on the other hand, the Spotify Wrapped interface is an example of improving UX.</li>
+</ul>
+
+<h3 id="why-is-ux-important">Why is UX important?</h3>
+<ul>
+  <li>UX is vital for the quality of a product; if there is no quality control or optimisation of UX, demand for the product drops and it fades away. If the product keeps up with modern UX expectations, it grows in popularity, gains higher demand and profits.</li>
+  <li>
+    <p>An example is the contrast between old and new Mario games:
+<img src="https://github.com/Henerystone/ws2/assets/96998793/340763a8-c3c8-4efb-9ff0-30a16c47ada8" alt="image" /></p>
+  </li>
+  <li>Incredibly low resolution, very lackluster in terms of background and very simple design on the UI and the foreground/level.</li>
+</ul>
+
+<p><img src="https://github.com/Henerystone/ws2/assets/96998793/f085b3d8-f56c-4b47-9bb3-6b2ad723c844" alt="image" /></p>
+
+<ul>
+  <li>
+    <p>Incredibly detailed, amazing resolution, interesting levels and larger UI/interfaces.</p>
+  </li>
+  <li>
+    <p>As time has gone by, the user demands for higher resolution, higher detail, better quality, more game depth has translated into games as they strive to improve their UX to keep their products on top of the list.</p>
+  </li>
+</ul>
+
+<h3 id="what-is-jquery">What is jQuery?</h3>
+
+<p><strong>jQuery</strong> is a lightweight, “<strong>__</strong><strong>__</strong><strong>__</strong><em>”, JavaScript library. The purpose of jQuery is to make it much easier to use JavaScript on your site and it simplifies many tasks that require many lines of JavaScript code to accomplish, wraping them into <strong>__</strong></em> that you can call with a single line of code.</p>
+
+<p><strong>jQuery</strong> also simplifies a lot of the complicated things from JavaScript, like AJAX calls and DOM manipulation.</p>
+
+<h3 id="the-implications-of-jquery">The implications of jQuery</h3>
+
+<p>The jQuery library has the following features</p>
+
+<ol>
+  <li>HTML/DOM manipulation</li>
+  <li>CSS manipulation</li>
+  <li>HTML event methods</li>
+  <li>Effects and animations</li>
+  <li>AJAX (Asynchronous Javascript and XML)</li>
+  <li>Utilities</li>
+</ol>
+
+<ul>
+  <li>In addition, jQuery has plugins for almost any task out there.</li>
+</ul>
+
+<p>If you ever want to use jQuery, you can download it <a href="http://jquery.com/download/">here</a> or just use a CDN (Content Delivery Network) from Google!</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="err">!</span><span class="o">--</span> <span class="n">Downloaded</span> <span class="n">jQuery</span> <span class="o">--&gt;</span>
+<span class="o">&lt;</span><span class="n">head</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">script</span> <span class="n">src</span><span class="o">=</span><span class="s">"jquery-3.7.1.min.js"</span><span class="o">&gt;&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">head</span><span class="o">&gt;</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="err">!</span><span class="o">--</span> <span class="n">Google</span> <span class="n">CDN</span> <span class="n">which</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">more</span> <span class="n">common</span> <span class="n">method</span> <span class="n">of</span> <span class="n">getting</span> <span class="n">the</span> <span class="n">library</span> <span class="o">--&gt;</span>
+<span class="o">&lt;</span><span class="n">head</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">script</span> <span class="n">src</span><span class="o">=</span><span class="s">"https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"</span><span class="o">&gt;&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">head</span><span class="o">&gt;</span>
+</code></pre></div></div>
+
+<h3 id="jquery-syntax-and-how-to-use-it">jQuery syntax and how to use it</h3>
+
+<p>With jQuery you select (query) HTML elements and perform “<strong>__</strong>_” on them.</p>
+
+<p>Basic syntax is: $(selector).action()</p>
+
+<ul>
+  <li>A $ symbol to define/access jQuery</li>
+  <li>A (selector) to “query (or find)” HTML elements</li>
+  <li>A jQuery action() to be performed on the element(s)</li>
+</ul>
+
+<p>Examples:</p>
+
+<ul>
+  <li>
+    <p>$(this).hide() - hides the current element</p>
+  </li>
+  <li>
+    <p>$(“p”).hide() - hides all &lt;p&gt; elements</p>
+  </li>
+  <li>
+    <p>$(“.test”).hide() - hides all elements with class=”test”</p>
+  </li>
+  <li>
+    <p>$(“#test”).hide() - hides the element with id=”test”</p>
+  </li>
+</ul>
+
+<p>In the following example, write in one of the comments where the selector is (popcorn hack ~ raise hand when found)</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span><span class="p">(</span><span class="n">document</span><span class="p">).</span><span class="n">ready</span><span class="p">(</span><span class="n">function</span><span class="p">(){</span>     <span class="o">//</span> 
+    <span class="err">$</span><span class="p">(</span><span class="s">"button"</span><span class="p">).</span><span class="n">click</span><span class="p">(</span><span class="n">function</span><span class="p">(){</span> <span class="o">//</span>
+      <span class="err">$</span><span class="p">(</span><span class="s">"p"</span><span class="p">).</span><span class="n">hide</span><span class="p">();</span>              <span class="o">//</span>
+    <span class="p">});</span>                           <span class="o">//</span>
+  <span class="p">});</span>                             <span class="o">//</span>
+</code></pre></div></div>
+
+<p>The element Selector</p>
+<ul>
+  <li>$(“p”)
+The #id Selector</li>
+  <li>$(“#test”)
+The .class Selector</li>
+  <li>$(“.class”)</li>
+</ul>
+
+<p>The Document Ready Event</p>
+
+<p>All jQuery methods begin inside a document _____ event:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span><span class="p">(</span><span class="n">document</span><span class="p">).</span><span class="n">ready</span><span class="p">(</span><span class="n">function</span><span class="p">(){</span>
+
+    <span class="o">//</span> <span class="n">jQuery</span> <span class="n">methods</span> <span class="n">go</span> <span class="n">here</span><span class="p">...</span>
+  
+  <span class="p">});</span>
+</code></pre></div></div>
+
+<p>This is to prevent any jQuery code from running before the document is finished loading (is ready).</p>
+
+<p>It is good practice to wait for the document to be fully loaded and ready before working with it. This also allows you to have your JavaScript code before the body of your document, in the head section.</p>
+
+<p>Reason:</p>
+<ul>
+  <li>Trying to hide an element that is not created yet</li>
+  <li>Trying to get the size of an image that is not loaded yet</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span><span class="p">(</span><span class="n">function</span><span class="p">(){</span>
+    
+    <span class="o">//</span> <span class="n">An</span> <span class="n">even</span> <span class="n">quicker</span> <span class="n">way</span> <span class="n">to</span> <span class="n">do</span> <span class="n">it</span>
+    <span class="o">//</span> <span class="n">jQuery</span> <span class="n">methods</span> <span class="n">go</span> <span class="n">here</span><span class="p">...</span>
+  
+  <span class="p">});</span>
+</code></pre></div></div>
+
+<h3 id="jquery-methods-and-event-handling">jQuery methods and event handling</h3>
+
+<p>What are Events?</p>
+<ul>
+  <li>All the different visitors’ actions that a web page can respond to are called events</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>Mouse Events</th>
+      <th>Keyboard Events</th>
+      <th>Form Events</th>
+      <th>Document/Window Events</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>click</td>
+      <td>keypress</td>
+      <td>submit</td>
+      <td>load</td>
+    </tr>
+    <tr>
+      <td>dblclick</td>
+      <td>keydown</td>
+      <td>change</td>
+      <td>resize</td>
+    </tr>
+    <tr>
+      <td>mouseenter</td>
+      <td>keyup</td>
+      <td>focus</td>
+      <td>scroll</td>
+    </tr>
+    <tr>
+      <td>mouseleave</td>
+      <td> </td>
+      <td>blur</td>
+      <td>unload</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Popcorn Hack: Name 3 other event HTML events</p>
+<ol>
+  <li></li>
+  <li></li>
+  <li></li>
+</ol>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">onclick</span><span class="o">=</span><span class="n">JavaScript</span>
+<span class="o">//</span> <span class="n">The</span> <span class="n">infamous</span> <span class="n">onclick</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">html</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="n">html</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">head</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">script</span> <span class="n">src</span><span class="o">=</span><span class="s">"https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"</span><span class="o">&gt;&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">script</span><span class="o">&gt;</span>
+<span class="err">$</span><span class="p">(</span><span class="n">document</span><span class="p">).</span><span class="n">ready</span><span class="p">(</span><span class="n">function</span><span class="p">(){</span>
+  <span class="err">$</span><span class="p">(</span><span class="s">"p"</span><span class="p">).</span><span class="n">click</span><span class="p">(</span><span class="n">function</span><span class="p">(){</span>
+    <span class="err">$</span><span class="p">(</span><span class="n">this</span><span class="p">).</span><span class="n">hide</span><span class="p">();</span>
+  <span class="p">});</span>
+<span class="p">});</span>
+<span class="o">&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">head</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">body</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">If</span> <span class="n">you</span> <span class="n">click</span> <span class="n">on</span> <span class="n">me</span><span class="p">,</span> <span class="n">I</span> <span class="n">will</span> <span class="n">disappear</span><span class="p">.</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">Click</span> <span class="n">me</span> <span class="n">away</span><span class="err">!</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">Click</span> <span class="n">me</span> <span class="n">too</span><span class="err">!</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+
+<span class="o">&lt;/</span><span class="n">body</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">html</span><span class="o">&gt;</span>
+</code></pre></div></div>
+
+<p>Final example, look at it <a href="https://soham360.github.io/refactored-engine/dissapear.html">here</a></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="n">html</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">head</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">script</span> <span class="n">src</span><span class="o">=</span><span class="s">"https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"</span><span class="o">&gt;&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">script</span><span class="o">&gt;</span>
+<span class="err">$</span><span class="p">(</span><span class="n">document</span><span class="p">).</span><span class="n">ready</span><span class="p">(</span><span class="n">function</span><span class="p">(){</span>
+  <span class="err">$</span><span class="p">(</span><span class="s">"#hide"</span><span class="p">).</span><span class="n">click</span><span class="p">(</span><span class="n">function</span><span class="p">(){</span>
+    <span class="err">$</span><span class="p">(</span><span class="s">"p"</span><span class="p">).</span><span class="n">hide</span><span class="p">();</span>
+  <span class="p">});</span>
+  <span class="err">$</span><span class="p">(</span><span class="s">"#show"</span><span class="p">).</span><span class="n">click</span><span class="p">(</span><span class="n">function</span><span class="p">(){</span>
+    <span class="err">$</span><span class="p">(</span><span class="s">"p"</span><span class="p">).</span><span class="n">show</span><span class="p">();</span>
+  <span class="p">});</span>
+<span class="p">});</span>
+<span class="o">&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">head</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">body</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">If</span> <span class="n">you</span> <span class="n">click</span> <span class="n">on</span> <span class="n">the</span> <span class="s">"Hide"</span> <span class="n">button</span><span class="p">,</span> <span class="n">I</span> <span class="n">will</span> <span class="n">disappear</span><span class="p">.</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="n">button</span> <span class="nb">id</span><span class="o">=</span><span class="s">"hide"</span><span class="o">&gt;</span><span class="n">Hide</span><span class="o">&lt;/</span><span class="n">button</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">button</span> <span class="nb">id</span><span class="o">=</span><span class="s">"show"</span><span class="o">&gt;</span><span class="n">Show</span><span class="o">&lt;/</span><span class="n">button</span><span class="o">&gt;</span>
+
+<span class="o">&lt;/</span><span class="n">body</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">html</span><span class="o">&gt;</span>
+</code></pre></div></div>
+
+<p>Final example, look at it <a href="https://soham360.github.io/refactored-engine/show.html">here</a></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="n">html</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">head</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">script</span> <span class="n">src</span><span class="o">=</span><span class="s">"https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"</span><span class="o">&gt;&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">script</span><span class="o">&gt;</span>
+<span class="err">$</span><span class="p">(</span><span class="n">document</span><span class="p">).</span><span class="n">ready</span><span class="p">(</span><span class="n">function</span><span class="p">(){</span>
+    <span class="o">//</span> <span class="n">Challenge</span><span class="err">!</span> <span class="n">Make</span> <span class="n">it</span> <span class="n">so</span> <span class="n">the</span> <span class="n">text</span> <span class="n">appears</span> <span class="k">with</span> <span class="n">an</span> <span class="n">animation</span><span class="p">,</span> <span class="n">causing</span> <span class="n">it</span> <span class="n">to</span> <span class="n">slowly</span> <span class="n">fade</span> <span class="ow">in</span> <span class="ow">and</span> <span class="n">out</span><span class="err">!</span>
+<span class="p">});</span>
+<span class="o">&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">head</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">body</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="n">button</span> <span class="nb">id</span><span class="o">=</span><span class="s">"hide"</span><span class="o">&gt;</span><span class="n">Hide</span><span class="o">&lt;/</span><span class="n">button</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">button</span> <span class="nb">id</span><span class="o">=</span><span class="s">"show"</span><span class="o">&gt;</span><span class="n">Show</span><span class="o">&lt;/</span><span class="n">button</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">Points</span> <span class="o">&lt;</span> <span class="n">Indicators</span> <span class="p">:</span><span class="n">D</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">This</span> <span class="ow">is</span> <span class="n">another</span> <span class="n">small</span> <span class="n">paragraph</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="p">(</span><span class="k">if</span> <span class="n">you</span> <span class="n">put</span> <span class="n">a</span> <span class="n">cool</span> <span class="n">joke</span> <span class="n">here</span> <span class="n">you</span> <span class="n">get</span> <span class="p">.</span><span class="mi">01</span> <span class="n">extra</span> <span class="n">points</span><span class="p">)</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="s">"ew who wrote that?"</span> <span class="o">^^^&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+
+<span class="o">&lt;/</span><span class="n">body</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">html</span><span class="o">&gt;</span>
+</code></pre></div></div>
+
+<p>Final example, look at it <a href="https://soham360.github.io/refactored-engine/showtime.html">here</a></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="n">html</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">head</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">script</span> <span class="n">src</span><span class="o">=</span><span class="s">"https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"</span><span class="o">&gt;&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">script</span><span class="o">&gt;</span>
+<span class="err">$</span><span class="p">(</span><span class="n">document</span><span class="p">).</span><span class="n">ready</span><span class="p">(</span><span class="n">function</span><span class="p">(){</span>
+  <span class="err">$</span><span class="p">(</span><span class="s">"button"</span><span class="p">).</span><span class="n">click</span><span class="p">(</span><span class="n">function</span><span class="p">(){</span>
+    <span class="err">$</span><span class="p">(</span><span class="s">"#div1"</span><span class="p">).</span><span class="n">fadeIn</span><span class="p">();</span>
+    <span class="err">$</span><span class="p">(</span><span class="s">"#div2"</span><span class="p">).</span><span class="n">fadeIn</span><span class="p">(</span><span class="s">"slow"</span><span class="p">);</span>
+    <span class="err">$</span><span class="p">(</span><span class="s">"#div3"</span><span class="p">).</span><span class="n">fadeIn</span><span class="p">(</span><span class="mi">3000</span><span class="p">);</span>
+  <span class="p">});</span>
+<span class="p">});</span>
+<span class="o">&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">head</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">body</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">Demonstrate</span> <span class="n">fadeIn</span><span class="p">()</span> <span class="k">with</span> <span class="n">different</span> <span class="n">parameters</span><span class="p">.</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="n">button</span><span class="o">&gt;</span><span class="n">Click</span> <span class="n">to</span> <span class="n">fade</span> <span class="ow">in</span> <span class="n">boxes</span><span class="o">&lt;/</span><span class="n">button</span><span class="o">&gt;&lt;</span><span class="n">br</span><span class="o">&gt;&lt;</span><span class="n">br</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="n">div</span> <span class="nb">id</span><span class="o">=</span><span class="s">"div1"</span> <span class="n">style</span><span class="o">=</span><span class="s">"width:80px;height:80px;display:none;background-color:red;"</span><span class="o">&gt;&lt;/</span><span class="n">div</span><span class="o">&gt;&lt;</span><span class="n">br</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">div</span> <span class="nb">id</span><span class="o">=</span><span class="s">"div2"</span> <span class="n">style</span><span class="o">=</span><span class="s">"width:80px;height:80px;display:none;background-color:green;"</span><span class="o">&gt;&lt;/</span><span class="n">div</span><span class="o">&gt;&lt;</span><span class="n">br</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">div</span> <span class="nb">id</span><span class="o">=</span><span class="s">"div3"</span> <span class="n">style</span><span class="o">=</span><span class="s">"width:80px;height:80px;display:none;background-color:blue;"</span><span class="o">&gt;&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+
+<span class="o">&lt;/</span><span class="n">body</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">html</span><span class="o">&gt;</span>
+</code></pre></div></div>
+
+<p>Final example, look at it <a href="https://soham360.github.io/refactored-engine/box.html">here</a></p>
+
+<h3 id="making-requests-with-ajax">Making requests with AJAX</h3>
+
+<p><strong>AJAX</strong> stands for Asynchronous JavaScript and XML. It allows web pages to be updated asynchronously in a easier way and is promise based. A <strong>Promise</strong> in JavaScript represents the eventual completion (or failure) of an asynchronous request.</p>
+
+<h3 id="why-use-jquery-ajax-over-a-normal-async-request-or-ajax-request">Why use jQuery AJAX over a normal async request or AJAX request?</h3>
+
+<p>Against a normal async request AJAX has a lot of advantages:</p>
+
+<ol>
+  <li>
+    <p><strong>Easier Error Handling</strong>: Promises are much easier to deal with than callbacks. If an error occurs in a promise, it will be passed down to the next <code class="language-plaintext highlighter-rouge">catch()</code> clause.</p>
+  </li>
+  <li>
+    <p><strong>Simpler API Chaining</strong>: If you want to wait for one operation to finish before starting another one you can simply use <code class="language-plaintext highlighter-rouge">.then()</code>.</p>
+  </li>
+</ol>
+
+<h4 id="normal-async-request">Normal async request</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">getUserLocation</span><span class="p">(</span><span class="n">function</span><span class="p">(</span><span class="n">error</span><span class="p">,</span> <span class="n">location</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">console</span><span class="p">.</span><span class="n">error</span><span class="p">(</span><span class="s">'Error:'</span><span class="p">,</span> <span class="n">error</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="n">getForecast</span><span class="p">(</span><span class="n">location</span><span class="p">,</span> <span class="n">function</span><span class="p">(</span><span class="n">error</span><span class="p">,</span> <span class="n">forecast</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">console</span><span class="p">.</span><span class="n">error</span><span class="p">(</span><span class="s">'Error:'</span><span class="p">,</span> <span class="n">error</span><span class="p">);</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="n">console</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="s">'Forecast:'</span><span class="p">,</span> <span class="n">forecast</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">});</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<h4 id="ajax-requests-without-any-library">Ajax requests without any library</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">fetch</span><span class="p">(</span><span class="s">'api/location'</span><span class="p">)</span>
+<span class="p">.</span><span class="n">then</span><span class="p">(</span><span class="n">response</span> <span class="o">=&gt;</span> <span class="n">response</span><span class="p">.</span><span class="n">json</span><span class="p">())</span>
+<span class="p">.</span><span class="n">then</span><span class="p">(</span><span class="n">location</span> <span class="o">=&gt;</span> <span class="n">fetch</span><span class="p">(</span><span class="s">'api/forecast/'</span> <span class="o">+</span> <span class="n">location</span><span class="p">))</span>
+<span class="p">.</span><span class="n">then</span><span class="p">(</span><span class="n">response</span> <span class="o">=&gt;</span> <span class="n">response</span><span class="p">.</span><span class="n">json</span><span class="p">())</span>
+<span class="p">.</span><span class="n">then</span><span class="p">(</span><span class="n">forecast</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="n">console</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="s">'Forecast:'</span><span class="p">,</span> <span class="n">forecast</span><span class="p">);</span>
+<span class="p">})</span>
+<span class="p">.</span><span class="n">catch</span><span class="p">(</span><span class="n">error</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="n">console</span><span class="p">.</span><span class="n">error</span><span class="p">(</span><span class="s">'Error:'</span><span class="p">,</span> <span class="n">error</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<h4 id="ajax-requests-with-jquery">Ajax Requests with JQuery</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span><span class="p">.</span><span class="n">ajax</span><span class="p">({</span> <span class="n">url</span><span class="p">:</span> <span class="s">'api/location'</span><span class="p">,</span> <span class="n">method</span><span class="p">:</span> <span class="s">'GET'</span><span class="p">,</span> <span class="n">dataType</span><span class="p">:</span> <span class="s">'json'</span> <span class="p">})</span>
+<span class="p">.</span><span class="n">then</span><span class="p">(</span><span class="n">function</span><span class="p">(</span><span class="n">location</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="err">$</span><span class="p">.</span><span class="n">ajax</span><span class="p">({</span> <span class="n">url</span><span class="p">:</span> <span class="s">'api/forecast/'</span> <span class="o">+</span> <span class="n">location</span><span class="p">,</span> <span class="n">method</span><span class="p">:</span> <span class="s">'GET'</span><span class="p">,</span> <span class="n">dataType</span><span class="p">:</span> <span class="s">'json'</span> <span class="p">});</span>
+<span class="p">})</span>
+<span class="p">.</span><span class="n">then</span><span class="p">(</span><span class="n">function</span><span class="p">(</span><span class="n">forecast</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">console</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="s">'Forecast:'</span><span class="p">,</span> <span class="n">forecast</span><span class="p">);</span>
+<span class="p">})</span>
+<span class="p">.</span><span class="n">catch</span><span class="p">(</span><span class="n">function</span><span class="p">(</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">console</span><span class="p">.</span><span class="n">error</span><span class="p">(</span><span class="s">'Error:'</span><span class="p">,</span> <span class="n">error</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<p>You can see using ajax is much easier to read than callback system. However when it comes to using jquery ajax vs javascript’s version there are less differences. It is up to you which syntax you like more.</p>
+
+<p>As mentioned earlier, jQuery ajax also builds on top of the old javascript version so it can support older browser versions.</p>
+
+<h2 id="jquerys-use-with-pbl">Jquery’s use with PBL</h2>
+
+<p>Jquery’s most important use is making you site dynamic and update from user input. The most important part of this for our projects is <strong>taking the data from the backend and building html from it</strong>.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">%%</span><span class="n">html</span>
+<span class="o">&lt;</span><span class="n">head</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">script</span> <span class="n">src</span><span class="o">=</span><span class="s">"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"</span><span class="o">&gt;&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">style</span><span class="o">&gt;</span>
+        <span class="p">.</span><span class="n">post</span> <span class="p">{</span>
+            <span class="n">border</span><span class="p">:</span> <span class="mi">1</span><span class="n">px</span> <span class="n">solid</span> <span class="c1">#ddd;
+</span>            <span class="n">margin</span><span class="o">-</span><span class="n">bottom</span><span class="p">:</span> <span class="mi">20</span><span class="n">px</span><span class="p">;</span>
+            <span class="n">padding</span><span class="p">:</span> <span class="mi">20</span><span class="n">px</span><span class="p">;</span>
+            <span class="n">border</span><span class="o">-</span><span class="n">radius</span><span class="p">:</span> <span class="mi">5</span><span class="n">px</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="p">.</span><span class="n">like</span><span class="o">-</span><span class="n">count</span> <span class="p">{</span>
+            <span class="n">color</span><span class="p">:</span> <span class="c1">#007BFF;
+</span>        <span class="p">}</span>
+    <span class="o">&lt;/</span><span class="n">style</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">head</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">body</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="n">div</span> <span class="nb">id</span><span class="o">=</span><span class="s">"posts"</span><span class="o">&gt;&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="n">script</span><span class="o">&gt;</span>
+<span class="o">//</span> <span class="n">Fake</span> <span class="n">API</span> <span class="n">function</span>
+<span class="n">function</span> <span class="n">getAPI</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">[</span>
+        <span class="p">{</span><span class="nb">id</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="n">content</span><span class="p">:</span> <span class="s">'Dogs are man</span><span class="se">\'</span><span class="s">s best friend.'</span><span class="p">,</span> <span class="n">likes</span><span class="p">:</span> <span class="mi">10</span><span class="p">},</span>
+        <span class="p">{</span><span class="nb">id</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="n">content</span><span class="p">:</span> <span class="s">'Dogs have an exceptional sense of smell.'</span><span class="p">,</span> <span class="n">likes</span><span class="p">:</span> <span class="mi">20</span><span class="p">},</span>
+        <span class="p">{</span><span class="nb">id</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="n">content</span><span class="p">:</span> <span class="s">'There are hundreds of different dog breeds.'</span><span class="p">,</span> <span class="n">likes</span><span class="p">:</span> <span class="mi">30</span><span class="p">}</span>
+    <span class="p">];</span>
+<span class="p">}</span>
+
+<span class="err">$</span><span class="p">(</span><span class="n">document</span><span class="p">).</span><span class="n">ready</span><span class="p">(</span><span class="n">function</span><span class="p">(){</span>
+    <span class="n">var</span> <span class="n">posts</span> <span class="o">=</span> <span class="n">getAPI</span><span class="p">();</span>
+    <span class="err">$</span><span class="p">.</span><span class="n">each</span><span class="p">(</span><span class="n">posts</span><span class="p">,</span> <span class="n">function</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">post</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">var</span> <span class="n">postHtml</span> <span class="o">=</span> <span class="s">'&lt;div class="post"&gt;&lt;h2&gt;Post '</span> <span class="o">+</span> <span class="n">post</span><span class="p">.</span><span class="nb">id</span> <span class="o">+</span> <span class="s">'&lt;/h2&gt;&lt;p&gt;'</span> <span class="o">+</span> <span class="n">post</span><span class="p">.</span><span class="n">content</span> <span class="o">+</span> <span class="s">'&lt;/p&gt;&lt;p class="like-count"&gt;'</span> <span class="o">+</span> <span class="n">post</span><span class="p">.</span><span class="n">likes</span> <span class="o">+</span> <span class="s">' likes&lt;/p&gt;&lt;/div&gt;'</span><span class="p">;</span>
+        <span class="err">$</span><span class="p">(</span><span class="s">'#posts'</span><span class="p">).</span><span class="n">append</span><span class="p">(</span><span class="n">postHtml</span><span class="p">);</span>
+    <span class="p">});</span>
+<span class="p">});</span>
+<span class="o">&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+
+<span class="o">&lt;/</span><span class="n">body</span><span class="o">&gt;</span>
+</code></pre></div></div>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        .post {
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .like-count {
+            color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+
+<div id="posts"></div>
+
+<script>
+// Fake API function
+function getAPI() {
+    return [
+        {id: 1, content: 'Dogs are man\'s best friend.', likes: 10},
+        {id: 2, content: 'Dogs have an exceptional sense of smell.', likes: 20},
+        {id: 3, content: 'There are hundreds of different dog breeds.', likes: 30}
+    ];
+}
+
+$(document).ready(function(){
+    var posts = getAPI();
+    $.each(posts, function(i, post) {
+        var postHtml = '<div class="post"><h2>Post ' + post.id + '</h2><p>' + post.content + '</p><p class="like-count">' + post.likes + ' likes</p></div>';
+        $('#posts').append(postHtml);
+    });
+});
+</script>
+
+</body>
+
+<h3 id="popcorn-hack-complete-the-jquery-and-javascript-code">Popcorn Hack: Complete the Jquery and JavaScript code</h3>
+
+<p>This represents a website for buying dogs. The API contains an id, name, price, and breed for each dog. Display them all as html using jQuery.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">%%</span><span class="n">html</span>
+<span class="o">&lt;</span><span class="n">head</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">script</span> <span class="n">src</span><span class="o">=</span><span class="s">"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"</span><span class="o">&gt;&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">style</span><span class="o">&gt;</span>
+        <span class="p">.</span><span class="n">dog</span> <span class="p">{</span>
+            <span class="n">border</span><span class="p">:</span> <span class="mi">1</span><span class="n">px</span> <span class="n">solid</span> <span class="c1">#ddd;
+</span>            <span class="n">margin</span><span class="o">-</span><span class="n">bottom</span><span class="p">:</span> <span class="mi">20</span><span class="n">px</span><span class="p">;</span>
+            <span class="n">padding</span><span class="p">:</span> <span class="mi">20</span><span class="n">px</span><span class="p">;</span>
+            <span class="n">border</span><span class="o">-</span><span class="n">radius</span><span class="p">:</span> <span class="mi">5</span><span class="n">px</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="p">.</span><span class="n">price</span> <span class="p">{</span>
+            <span class="n">color</span><span class="p">:</span> <span class="c1">#007BFF;
+</span>        <span class="p">}</span>
+    <span class="o">&lt;/</span><span class="n">style</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">head</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">body</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="n">div</span> <span class="nb">id</span><span class="o">=</span><span class="s">"dogs"</span><span class="o">&gt;&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="n">script</span><span class="o">&gt;</span>
+<span class="o">//</span> <span class="n">Fake</span> <span class="n">API</span> <span class="n">function</span>
+<span class="n">function</span> <span class="n">getAPI</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">[</span>
+        <span class="p">{</span><span class="nb">id</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="s">'Max'</span><span class="p">,</span> <span class="n">price</span><span class="p">:</span> <span class="s">'$1000'</span><span class="p">,</span> <span class="n">breed</span><span class="p">:</span> <span class="s">'Golden Retriever'</span><span class="p">},</span>
+        <span class="p">{</span><span class="nb">id</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="s">'Bella'</span><span class="p">,</span> <span class="n">price</span><span class="p">:</span> <span class="s">'$800'</span><span class="p">,</span> <span class="n">breed</span><span class="p">:</span> <span class="s">'Labrador Retriever'</span><span class="p">},</span>
+        <span class="p">{</span><span class="nb">id</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="s">'Charlie'</span><span class="p">,</span> <span class="n">price</span><span class="p">:</span> <span class="s">'$1200'</span><span class="p">,</span> <span class="n">breed</span><span class="p">:</span> <span class="s">'German Shepherd'</span><span class="p">}</span>
+    <span class="p">];</span>
+<span class="p">}</span>
+
+<span class="err">$</span><span class="p">(</span><span class="n">document</span><span class="p">).</span><span class="n">ready</span><span class="p">(</span><span class="n">function</span><span class="p">(){</span>
+    <span class="n">var</span> <span class="n">dogs</span> <span class="o">=</span> <span class="n">getAPI</span><span class="p">();</span>
+    <span class="o">//</span><span class="n">Write</span> <span class="n">code</span> <span class="n">here</span>
+<span class="p">});</span>
+<span class="o">&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+
+<span class="o">&lt;/</span><span class="n">body</span><span class="o">&gt;</span>
+</code></pre></div></div>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        .dog {
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .price {
+            color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+
+<div id="dogs"></div>
+
+<script>
+// Fake API function
+function getAPI() {
+    return [
+        {id: 1, name: 'Max', price: '$1000', breed: 'Golden Retriever'},
+        {id: 2, name: 'Bella', price: '$800', breed: 'Labrador Retriever'},
+        {id: 3, name: 'Charlie', price: '$1200', breed: 'German Shepherd'}
+    ];
+}
+
+$(document).ready(function(){
+    var dogs = getAPI();
+    //Write code here
+});
+</script>
+
+</body>
+
+<h2 id="animations-with-jquery">Animations with JQuery</h2>
+<p>You can also create animations in JQuery.</p>
+
+<ul>
+  <li>styles: Specifies the CSS properties to animate.</li>
+  <li>speed: Optional and specifies the speed of the animation, by default it is 400 milliseconds.</li>
+  <li>easing: Optional and Specifies the animation pattern.
+    <ul>
+      <li>“swing” - moves slower at the beginning/end, but faster in the middle</li>
+      <li>“linear” - moves in a constant speed</li>
+    </ul>
+  </li>
+  <li>callback: Optional, a function to be executed after the animation completes.
+    <ul>
+      <li>By default it is “swing”.</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p>Animations glitch out jupyter notebooks so this example can’t be in runnable code.</p>
+</blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;html&gt;
+&lt;head&gt;
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+$(document).ready(function(){
+  // Reset CSS properties to their original values
+  $("div").css({
+    left: '0px',
+    opacity: '1',
+    height: '100px',
+    width: '100%'
+  });
+
+  $("button").click(function(){
+    $("div").animate({
+      left: '250px',
+      opacity: '0.5',
+      height: '150px',
+      width: '100%'
+    });
+  });
+});
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;button&gt;Start&lt;/button&gt;
+
+&lt;div style="background:#98bf21;height:100px;width:100px;position:absolute;"&gt;&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<p>Look at the animation <a href="https://soham360.github.io/refactored-engine/animation.html">here</a></p>
+
+<h3 id="crud-principles">CRUD Principles:</h3>
+
+<p><strong>What Does CRUD Stand For?</strong></p>
+<ul>
+  <li>Answer this as a Popcorn Hack</li>
+</ul>
+
+<p><strong>What Does CRUD Do?</strong></p>
+<ul>
+  <li>These four basic operations represent the fundamental actions that can be performed on data in a computer system or a database.</li>
+</ul>
+
+<p><strong>How Can CRUD Be Applied to jQuery and Beyond?</strong></p>
+<ul>
+  <li><strong>jQuery:</strong> jQuery is a JavaScript library that simplifies HTML document traversal and manipulation. You can use jQuery to perform CRUD operations on the client side, interacting with the DOM. Here’s a brief overview:</li>
+</ul>
+
+<h3 id="create-c">Create (C):</h3>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Create a new element and append it to a table</span>
+<span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#myTable</span><span class="dl">'</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="dl">'</span><span class="s1">&lt;tr&gt;&lt;td&gt;New Data&lt;/td&gt;&lt;/tr&gt;</span><span class="dl">'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h3 id="read-r">Read (R):</h3>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Read data from a table</span>
+<span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#myTable tr</span><span class="dl">'</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">text</span><span class="p">());</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<h3 id="update-u">Update (U):</h3>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Update data in a table</span>
+<span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#myTable td:contains("Old Data")</span><span class="dl">'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="dl">'</span><span class="s1">Updated Data</span><span class="dl">'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h3 id="delete-d">Delete (D):</h3>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Delete a row from a table</span>
+<span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#myTable td:contains("Data to Delete")</span><span class="dl">'</span><span class="p">).</span><span class="nx">closest</span><span class="p">(</span><span class="dl">'</span><span class="s1">tr</span><span class="dl">'</span><span class="p">).</span><span class="nx">remove</span><span class="p">();</span>
+</code></pre></div></div>
+
+<ul>
+  <li><strong>Beyond jQuery:</strong> In more advanced web development scenarios, CRUD operations are often performed using server-side technologies and databases. Technologies like Node.js, Express, Django, Flask, and others are commonly used for server-side development. Databases such as MySQL, MongoDB, and PostgreSQL store and manage the data.</li>
+</ul>
+
+<h3 id="demonstration-of-applying-crud-to-tables">Demonstration of Applying CRUD to Tables:</h3>
+
+<p>Assuming a simple HTML table with the ID “myTable”:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;table</span> <span class="na">id=</span><span class="s">"myTable"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;tr&gt;</span>
+    <span class="nt">&lt;th&gt;</span>Data<span class="nt">&lt;/th&gt;</span>
+  <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;tr&gt;</span>
+    <span class="nt">&lt;td&gt;</span>Row 1<span class="nt">&lt;/td&gt;</span>
+  <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;tr&gt;</span>
+    <span class="nt">&lt;td&gt;</span>Row 2<span class="nt">&lt;/td&gt;</span>
+  <span class="nt">&lt;/tr&gt;</span>
+<span class="nt">&lt;/table&gt;</span>
+</code></pre></div></div>
+
+<h4 id="create-c-1">Create (C):</h4>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Create a new row and append it to the table</span>
+<span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#myTable</span><span class="dl">'</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="dl">'</span><span class="s1">&lt;tr&gt;&lt;td&gt;New Row&lt;/td&gt;&lt;/tr&gt;</span><span class="dl">'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h4 id="read-r-1">Read (R):</h4>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Read and log data from the table</span>
+<span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#myTable tr</span><span class="dl">'</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">text</span><span class="p">());</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<h4 id="update-u-1">Update (U):</h4>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Update data in the first row of the table</span>
+<span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#myTable tr:first-child td</span><span class="dl">'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="dl">'</span><span class="s1">Updated Row</span><span class="dl">'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h4 id="delete-d-1">Delete (D):</h4>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Delete the second row from the table</span>
+<span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#myTable tr:nth-child(2)</span><span class="dl">'</span><span class="p">).</span><span class="nx">remove</span><span class="p">();</span>
+</code></pre></div></div>
+
+<p>These examples demonstrate how CRUD operations can be applied using jQuery to manipulate a simple HTML table on the client side. In more complex applications, these operations are often handled on the server side with the help of backend frameworks and databases.</p>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery CRUD Demo</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h2>jQuery CRUD Demo</h2>
+    <label for="nameInput">Name:</label>
+    <input type="text" id="nameInput" />
+    <label for="reviewInput">Review:</label>
+    <input type="text" id="reviewInput" />
+    <button id="addBtn">Add Row</button>
+    <table id="myTable">
+        <tr>
+            <th>Name</th>
+            <th>Review</th>
+            <th>Action</th>
+        </tr>
+        <tr>
+            <td>John Mortensen</td>
+            <td>Great lesson! Explained UX and CRUD principles as well as usage of jQuery very nicely. +3 indicators! </td>
+            <td><button class="editBtn">Edit</button> <button class="deleteBtn">Delete</button></td>
+        </tr>
+        <tr>
+            <td>Sean Yeung</td>
+            <td>Very interactive teaching! Covered all the topic but should have made more Taylor Swift references. </td>
+            <td><button class="editBtn">Edit</button> <button class="deleteBtn">Delete</button></td>
+        </tr>
+    </table>
+    <script>
+        $(document).ready(function() {
+            // Add Row
+            $('#addBtn').on('click', function() {
+                var name = $('#nameInput').val();
+                var review = $('#reviewInput').val();
+                $('#myTable').append('<tr><td>' + name + '</td><td>' + review + '</td><td><button class="editBtn">Edit</button> <button class="deleteBtn">Delete</button></td></tr>');
+            });
+            // Edit Row
+            $(document).on('click', '.editBtn', function() {
+                var currentRow = $(this).closest('tr');
+                var name = currentRow.find('td:eq(0)').text();
+                var review = currentRow.find('td:eq(1)').text();
+                $('#nameInput').val(name);
+                $('#reviewInput').val(review);
+                currentRow.remove();
+            });
+            // Delete Row
+            $(document).on('click', '.deleteBtn', function() {
+                $(this).closest('tr').remove();
+            });
+        });
+    </script>
+</body>
+</html>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">popcorn</span> <span class="n">hack</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">%%</span><span class="n">html</span>
+
+<span class="o">&lt;</span><span class="err">!</span><span class="o">--</span> <span class="n">Head</span> <span class="n">contains</span> <span class="n">information</span> <span class="n">to</span> <span class="n">Support</span> <span class="n">the</span> <span class="n">Document</span> <span class="o">--&gt;</span>
+<span class="o">&lt;</span><span class="n">head</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="err">!</span><span class="o">--</span> <span class="n">load</span> <span class="n">jQuery</span> <span class="ow">and</span> <span class="n">DataTables</span> <span class="n">output</span> <span class="n">style</span> <span class="ow">and</span> <span class="n">scripts</span> <span class="o">--&gt;</span>
+    <span class="o">&lt;</span><span class="n">link</span> <span class="n">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="nb">type</span><span class="o">=</span><span class="s">"text/css"</span> <span class="n">href</span><span class="o">=</span><span class="s">"https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">script</span> <span class="nb">type</span><span class="o">=</span><span class="s">"text/javascript"</span> <span class="n">language</span><span class="o">=</span><span class="s">"javascript"</span> <span class="n">src</span><span class="o">=</span><span class="s">"https://code.jquery.com/jquery-3.6.0.min.js"</span><span class="o">&gt;&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">script</span><span class="o">&gt;</span><span class="n">var</span> <span class="n">define</span> <span class="o">=</span> <span class="n">null</span><span class="p">;</span><span class="o">&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">script</span> <span class="nb">type</span><span class="o">=</span><span class="s">"text/javascript"</span> <span class="n">language</span><span class="o">=</span><span class="s">"javascript"</span> <span class="n">src</span><span class="o">=</span><span class="s">"https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"</span><span class="o">&gt;&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">head</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="err">!</span><span class="o">--</span> <span class="n">Body</span> <span class="n">contains</span> <span class="n">the</span> <span class="n">contents</span> <span class="n">of</span> <span class="n">the</span> <span class="n">Document</span> <span class="o">--&gt;</span>
+<span class="o">&lt;</span><span class="n">body</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">table</span> <span class="nb">id</span><span class="o">=</span><span class="s">"xdemo"</span> <span class="n">class</span><span class="o">=</span><span class="s">"table"</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">thead</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">tr</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">th</span><span class="o">&gt;</span><span class="n">Make</span><span class="o">&lt;/</span><span class="n">th</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">th</span><span class="o">&gt;</span><span class="n">Model</span><span class="o">&lt;/</span><span class="n">th</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">th</span><span class="o">&gt;</span><span class="n">Year</span><span class="o">&lt;/</span><span class="n">th</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">th</span><span class="o">&gt;</span><span class="n">Color</span><span class="o">&lt;/</span><span class="n">th</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">th</span><span class="o">&gt;</span><span class="n">Price</span><span class="o">&lt;/</span><span class="n">th</span><span class="o">&gt;</span>
+            <span class="o">&lt;/</span><span class="n">tr</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">thead</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">tbody</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">tr</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="n">Ford</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="n">Mustang</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="mi">2022</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="n">Red</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="err">$</span><span class="mi">35</span><span class="p">,</span><span class="mi">000</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+            <span class="o">&lt;/</span><span class="n">tr</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">tr</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="n">Toyota</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="n">Camry</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="mi">2022</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="n">Silver</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="err">$</span><span class="mi">25</span><span class="p">,</span><span class="mi">000</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+            <span class="o">&lt;/</span><span class="n">tr</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">tr</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="n">Tesla</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="n">Model</span> <span class="n">S</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="mi">2022</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="n">White</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="err">$</span><span class="mi">80</span><span class="p">,</span><span class="mi">000</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+            <span class="o">&lt;/</span><span class="n">tr</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">tr</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="n">Cadillac</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="n">Broughan</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="mi">1969</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="n">Black</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="err">$</span><span class="mi">10</span><span class="p">,</span><span class="mi">000</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+            <span class="o">&lt;/</span><span class="n">tr</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">tr</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="n">Ford</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="n">F</span><span class="o">-</span><span class="mi">350</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="mi">1997</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="n">Green</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="err">$</span><span class="mi">15</span><span class="p">,</span><span class="mi">000</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+            <span class="o">&lt;/</span><span class="n">tr</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">tr</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="n">Ford</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="n">Excursion</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="mi">2003</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="n">Green</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="err">$</span><span class="mi">25</span><span class="p">,</span><span class="mi">000</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+            <span class="o">&lt;/</span><span class="n">tr</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">tr</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="n">Ford</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="n">Ranger</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="mi">2012</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="n">Red</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="err">$</span><span class="mi">8</span><span class="p">,</span><span class="mi">000</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+            <span class="o">&lt;/</span><span class="n">tr</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">tr</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="n">Kuboto</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="n">L3301</span> <span class="n">Tractor</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="mi">2015</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="n">Orange</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="err">$</span><span class="mi">12</span><span class="p">,</span><span class="mi">000</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+            <span class="o">&lt;/</span><span class="n">tr</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">tr</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="n">Ford</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="n">Fusion</span> <span class="n">Energi</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="mi">2015</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="n">Guard</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="err">$</span><span class="mi">25</span><span class="p">,</span><span class="mi">000</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+            <span class="o">&lt;/</span><span class="n">tr</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">tr</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="n">Acura</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="n">XL</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="mi">2006</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="n">Grey</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="err">$</span><span class="mi">10</span><span class="p">,</span><span class="mi">000</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+            <span class="o">&lt;/</span><span class="n">tr</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">tr</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="n">Ford</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="n">F150</span> <span class="n">Lightning</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="mi">2024</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="n">Guard</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="err">$</span><span class="mi">70</span><span class="p">,</span><span class="mi">000</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+            <span class="o">&lt;/</span><span class="n">tr</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">tbody</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">table</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">body</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="err">!</span><span class="o">--</span> <span class="n">Script</span> <span class="ow">is</span> <span class="n">used</span> <span class="n">to</span> <span class="n">embed</span> <span class="n">executable</span> <span class="n">code</span> <span class="o">--&gt;</span>
+<span class="o">&lt;</span><span class="n">script</span><span class="o">&gt;</span>
+    <span class="err">$</span><span class="p">(</span><span class="s">"#xdemo"</span><span class="p">).</span><span class="n">DataTable</span><span class="p">();</span>
+<span class="o">&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+</code></pre></div></div>
+
+<!-- Head contains information to Support the Document -->
+<head>
+    <!-- load jQuery and DataTables output style and scripts -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css" />
+    <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>var define = null;</script>
+    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+</head>
+
+<!-- Body contains the contents of the Document -->
+<body>
+    <table id="xdemo" class="table">
+        <thead>
+            <tr>
+                <th>Make</th>
+                <th>Model</th>
+                <th>Year</th>
+                <th>Color</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ford</td>
+                <td>Mustang</td>
+                <td>2022</td>
+                <td>Red</td>
+                <td>$35,000</td>
+            </tr>
+            <tr>
+                <td>Toyota</td>
+                <td>Camry</td>
+                <td>2022</td>
+                <td>Silver</td>
+                <td>$25,000</td>
+            </tr>
+            <tr>
+                <td>Tesla</td>
+                <td>Model S</td>
+                <td>2022</td>
+                <td>White</td>
+                <td>$80,000</td>
+            </tr>
+            <tr>
+                <td>Cadillac</td>
+                <td>Broughan</td>
+                <td>1969</td>
+                <td>Black</td>
+                <td>$10,000</td>
+            </tr>
+            <tr>
+                <td>Ford</td>
+                <td>F-350</td>
+                <td>1997</td>
+                <td>Green</td>
+                <td>$15,000</td>
+            </tr>
+            <tr>
+                <td>Ford</td>
+                <td>Excursion</td>
+                <td>2003</td>
+                <td>Green</td>
+                <td>$25,000</td>
+            </tr>
+            <tr>
+                <td>Ford</td>
+                <td>Ranger</td>
+                <td>2012</td>
+                <td>Red</td>
+                <td>$8,000</td>
+            </tr>
+            <tr>
+                <td>Kuboto</td>
+                <td>L3301 Tractor</td>
+                <td>2015</td>
+                <td>Orange</td>
+                <td>$12,000</td>
+            </tr>
+            <tr>
+                <td>Ford</td>
+                <td>Fusion Energi</td>
+                <td>2015</td>
+                <td>Guard</td>
+                <td>$25,000</td>
+            </tr>
+            <tr>
+                <td>Acura</td>
+                <td>XL</td>
+                <td>2006</td>
+                <td>Grey</td>
+                <td>$10,000</td>
+            </tr>
+            <tr>
+                <td>Ford</td>
+                <td>F150 Lightning</td>
+                <td>2024</td>
+                <td>Guard</td>
+                <td>$70,000</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+<!-- Script is used to embed executable code -->
+<script>
+    $("#xdemo").DataTable();
+</script>
+
+<h1 id="hacks">Hacks</h1>
+
+<p>Combine all aspects taught throughout this lesson.</p>
+<ul>
+  <li>Store data on the frontend with CRUD functionality. +0.25</li>
+  <li>You should create a frontend which can displays data with JQuery. Make sure to use event handling on each item stored to use the CRUD functionality. +0.25</li>
+  <li>And make it look good using UX design techniques. + 0.2</li>
+</ul>
+
+<p>In addition:</p>
+<ul>
+  <li>Complete all popcorn hacks + 0.2</li>
+  <li>Do something extra +0.1. Some good ideas are adding JQuery animations to your hacks, use extra JQuery events, or do anything else extra.</li>
+</ul>
+
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="nighthawkcoders/teacher_portfolio"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/teacher_portfolio/2023/12/07/P3_student_UX_jQuery_CRUD_IPYNB_2_.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+    <data class="u-url" href="/teacher_portfolio/"></data>
+  
+    <div class="wrapper">
+  
+      <div class="footer-col-wrapper">
+  
+        <div class="social-links"><ul class="social-media-list"><li>
+  <a rel="me" href="https://github.com/nighthawkcoders/teacher_portfolio" target="_blank" title="github">
+    <svg class="svg-icon grey">
+      <use xlink:href="/teacher_portfolio/assets/minima-social-icons.svg#github"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="https://x.com/NighthawkCoding/" target="_blank" title="x">
+    <svg class="svg-icon grey">
+      <use xlink:href="/teacher_portfolio/assets/minima-social-icons.svg#x"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="https://www.youtube.com/@nighthawkcodingsociety2868" target="_blank" title="youtube">
+    <svg class="svg-icon grey">
+      <use xlink:href="/teacher_portfolio/assets/minima-social-icons.svg#youtube"></use>
+    </svg>
+  </a>
+</li>
+</ul>
+</div>
+
+      </div>
+    </div>
+  
+  </footer></body>
+
+</html>

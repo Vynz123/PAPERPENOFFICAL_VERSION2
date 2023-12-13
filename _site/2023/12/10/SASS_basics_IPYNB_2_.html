@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>SASS basics | Teacher 2.0</title>
+<meta name="generator" content="Jekyll v3.9.3" />
+<meta property="og:title" content="SASS basics" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Understanding the fundamental aspects of SASS" />
+<meta property="og:description" content="Understanding the fundamental aspects of SASS" />
+<link rel="canonical" href="http://localhost:4100/teacher_portfolio/2023/12/10/SASS_basics_IPYNB_2_.html" />
+<meta property="og:url" content="http://localhost:4100/teacher_portfolio/2023/12/10/SASS_basics_IPYNB_2_.html" />
+<meta property="og:site_name" content="Teacher 2.0" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-12-10T00:00:00-08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="SASS basics" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-12-10T00:00:00-08:00","datePublished":"2023-12-10T00:00:00-08:00","description":"Understanding the fundamental aspects of SASS","headline":"SASS basics","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4100/teacher_portfolio/2023/12/10/SASS_basics_IPYNB_2_.html"},"url":"http://localhost:4100/teacher_portfolio/2023/12/10/SASS_basics_IPYNB_2_.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/teacher_portfolio/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4100/teacher_portfolio/feed.xml" title="Teacher 2.0" /><link rel="shortcut icon" type="image/x-icon" href="/teacher_portfolio/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/teacher_portfolio/">Teacher 2.0</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/teacher_portfolio/blogs/">Blogs</a><a class="page-link" href="/teacher_portfolio/search/">Search</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">SASS basics</h1><p class="page-description">Understanding the fundamental aspects of SASS</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-12-10T00:00:00-08:00" itemprop="datePublished">
+        Dec 10, 2023
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      6 min read
+    
+</span></p>
+
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody"><ul><li><a href="#what-is-sass">What is SASS?</a></li><li><a href="#scss-vs-css">SCSS vs. CSS</a><ul><li><a href="#what-is-css">What is CSS</a><ul><li><a href="#css-example">CSS Example</a></li></ul></li><li><a href="#what-is-scss">What is SCSS</a><ul><li><a href="#sass-code-example">Sass Code Example</a></li><li><a href="#so-which-one-is-better-to-use">So which one is better to use?</a></li></ul></li><li><a href="#benefits-of-sass-over-traditional-css">Benefits Of SASS Over Traditional CSS</a><ul><li><a href="#improved-code-organization">Improved Code Organization</a></li><li><a href="#maintainability">Maintainability</a></li><li><a href="#advanced-features">Advanced Features</a></li></ul></li></ul></li><li><a href="#modular-scss">Modular SCSS</a><ul><li><a href="#file-1-_variablescss">File 1 _variable.scss</a></li><li><a href="#file-2-stylescss">File 2 style.scss</a></li></ul></li><li><a href="#nesting">Nesting</a><ul><li><a href="#sass-nesting">Sass Nesting</a></li><li><a href="#css---lack-of-nesting">CSS - Lack of Nesting</a></li></ul></li><li><a href="#variables">Variables</a><ul><li><a href="#variable-example-syntax">Variable Example Syntax</a></li></ul></li></ul><h1 id="what-is-sass">What is SASS?</h1>
+
+<blockquote>
+  <p>Sass is a preprocessor language that’s interpreted into CSS. A preprocessor language takes input data and converts it to an output that’s used as input by another program. This means when you run Sass code, you’re actually converting your code to CSS. That CSS code output is then used directly by a browser.
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMd7eiGMX9FwRLC0uJTDewSjw_7_WvCF4ABLdwztLrCnPEXrqW0gG-pH8eT-fYPLlghjY&amp;usqp=CAU" alt="" /></p>
+</blockquote>
+
+<h1 id="scss-vs-css">SCSS vs. CSS</h1>
+<blockquote>
+  <p>Understanding the differences between SCSS and CSS</p>
+</blockquote>
+
+<h2 id="what-is-css">What is CSS</h2>
+<ul>
+  <li>
+    <p>CSS is the default technology that most programmers use when styling webpages. It is one of the 3 fundamental web technologies along with HTML and JavaScript. HTML manages the structure, JavaScript makes pages interactive, and CSS changes the style by taking a markup language like HTML and describes how it should be presented to the user.</p>
+  </li>
+  <li>
+    <p>However, CSS is not very easy to work with lacking a lot features often making using CSS very confusing and difficult or hard to work with on lengthy projects. This is why there are tools like Bootstrap, Sass, and Tailwind that make styling a lot easier and more efficient. We will be using Sass in this course.</p>
+  </li>
+</ul>
+
+<h3 id="css-example">CSS Example</h3>
+<ul>
+  <li>This is an example of CSS that can be used to change body text of an HTML document</li>
+  <li>Hack Question: Can you guess what its changing style of the text to?</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>body{
+color: #0000FF;
+font-family: Ariel, sans-serif;
+font-size: 16px;
+}
+</code></pre></div></div>
+
+<h2 id="what-is-scss">What is SCSS</h2>
+<p>SASS (Syntactically Awesome Stylesheets) is a powerful preprocessor scripting language that enhances CSS with advanced features. It’s compiled into standard CSS, making it a robust tool for modern web development.</p>
+
+<h3 id="sass-code-example">Sass Code Example</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$blue: #0000FF;
+body{
+color: $blue;
+font-family: Ariel, sans-serif;
+font-size: 16px;
+}
+</code></pre></div></div>
+
+<ul>
+  <li>This example is doing the same thing as the other code segment above but the difference being that here we defined the color as $blue which makes it much easier for us to recall later on. In fact, we have done this before, if you have been using the dark mode/midnight theme then go ahead and navigate your your _sass folder and check out the dark-mode.scss and you’ll see something similar to the example above</li>
+</ul>
+
+<h3 id="so-which-one-is-better-to-use">So which one is better to use?</h3>
+<ul>
+  <li>CSS tends to be better for really simple styling where not many complex or nested styles are required and in small projects that don’t require a lot of customization.</li>
+  <li>SCSS on the other hand is very good for more complex styling and working with a project with more than one page where a lot of customization may be needed.</li>
+</ul>
+
+<h2 id="benefits-of-sass-over-traditional-css">Benefits Of SASS Over Traditional CSS</h2>
+
+<h3 id="improved-code-organization">Improved Code Organization</h3>
+<ul>
+  <li><strong>Nesting Capabilities</strong>: SASS allows you to nest your CSS selectors in a way that follows the same visual hierarchy of your HTML.</li>
+  <li><strong>Modular Approach</strong>: You can split your CSS into multiple files (partials) and import them into a main file, making your project more organized.</li>
+</ul>
+
+<h3 id="maintainability">Maintainability</h3>
+<ul>
+  <li><strong>Use of Variables</strong>: Define colors, fonts, and other CSS values as variables for easy updates and consistency across the project.</li>
+  <li><strong>Mixins for Reusable Code</strong>: Create reusable pieces of code for things like buttons, forms, which can be included wherever needed.</li>
+  <li><strong>Extend/Inheritance</strong>: Share a set of CSS properties from one selector to another, reducing the amount of code you need to write and maintain.</li>
+</ul>
+
+<h3 id="advanced-features">Advanced Features</h3>
+<ul>
+  <li><strong>Control Directives</strong>: Use if/else statements and for/each loops in your CSS, which are not possible in plain CSS.</li>
+  <li><strong>Built-in Functions</strong>: SASS offers functions for color manipulation, mathematics and more, enhancing the functionality of CSS.</li>
+  <li><strong>Compatibility</strong>: Automatically handles browser prefixing, ensuring that your styles work across different browsers without extra code.</li>
+</ul>
+
+<h1 id="modular-scss">Modular SCSS</h1>
+<blockquote>
+  <p>Understanding how to use modular SCSS</p>
+  <ul>
+    <li>Modular SCSS allows you to break your SCSS files into multiple files and compile them into a single CSS file.</li>
+    <li>How do you do this? Well all you need to do is have _filenames.scss so that is compiled into its own file.</li>
+    <li>Now after adding the _ before the file name you can import it into you file without the _ and all the styles will be carried over.</li>
+    <li>The benefits of a partial is that it allows you to break up the code of multiple components for larger websites. This way you can easiliy organize and make changes to components using these separate files instead of having to go through one massive file.</li>
+    <li>All styles in the partial will be added to and can be used in the main file as if they were defined in the main file itself.</li>
+  </ul>
+</blockquote>
+
+<h2 id="file-1-_variablescss">File 1 _variable.scss</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$primary-button-color: #009494;
+$hover-color: black;
+$menu-color: #f2f2f2;
+</code></pre></div></div>
+
+<h2 id="file-2-stylescss">File 2 style.scss</h2>
+<ul>
+  <li>We can see the importing of the .scss file’s content into the other main .scss file style.scss</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{@import 'variables';
+@import "minima";}
+/* "row style" is flexible size and aligns pictures in center */
+.row {
+    align-items: center;
+    display: flex;
+  }
+  
+  /* "column style" is one-third of the width with padding */
+  .column {
+    flex: 33.33%;
+    padding: 5px;
+  }
+
+.menu a {
+  // float: left;
+  display: block;
+  color: $menu-color;
+  text-align: center;
+  // padding: 14px 16px;
+  text-decoration: none;
+}
+.menu a:hover {
+  background: $primary-button-color;
+    color: $hover-color;
+}
+</code></pre></div></div>
+
+<h1 id="nesting">Nesting</h1>
+
+<ul>
+  <li>Nesting is a way to organize your code and make it easier to read.</li>
+  <li>Nesting is when you put one selector inside another selector.</li>
+  <li>When we make HTML we often nest different elements within each other to have a clear structure when we look at it.</li>
+  <li>
+    <p>The problem is that in regular CSS we don’t have that so we need to use SASS to help us organize our code.</p>
+  </li>
+  <li>Warning: Don’t nest too much as when the CSS is processed it can make overqualified selectors which can be hard to read and maintain. Which means that it would only target that specific element type and not any other elements that have the same class name.</li>
+</ul>
+
+<h2 id="sass-nesting">Sass Nesting</h2>
+<ul>
+  <li>Through nesting the ul, li, and a selectors within the nav selector makes your CSS better and increases its readability overall.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li { display: inline-block; }
+
+  a {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+  }
+}
+</code></pre></div></div>
+
+<h2 id="css---lack-of-nesting">CSS - Lack of Nesting</h2>
+<ul>
+  <li>We can see that through the lack of nesting the CSS is not as organized and needs extra information to be able to make it more clear exactly what is being targeted.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav li {
+  display: inline-block;
+}
+nav a {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+}
+</code></pre></div></div>
+
+<h1 id="variables">Variables</h1>
+<blockquote>
+  <p>What is a variable?</p>
+  <ul>
+    <li>A variable is a container that stores a value so when you have multiple places that refer to one value you can just use the variable name instead of the value.</li>
+    <li>This is valuable in SASS because it allows you to reuse that value in multiple places throughout your stylesheet.</li>
+    <li>The $ symbol is used in Sass to designate a variable.</li>
+  </ul>
+</blockquote>
+
+<h2 id="variable-example-syntax">Variable Example Syntax</h2>
+<ul>
+  <li>$variable-name: value;</li>
+  <li>Once the sass is processed the variable name is replaced with the value throughout the program.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$main-font: Calibri, sans-serif;
+$main-color: #000;
+$main-color-hover: #000;
+</code></pre></div></div>
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="nighthawkcoders/teacher_portfolio"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/teacher_portfolio/2023/12/10/SASS_basics_IPYNB_2_.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+    <data class="u-url" href="/teacher_portfolio/"></data>
+  
+    <div class="wrapper">
+  
+      <div class="footer-col-wrapper">
+  
+        <div class="social-links"><ul class="social-media-list"><li>
+  <a rel="me" href="https://github.com/nighthawkcoders/teacher_portfolio" target="_blank" title="github">
+    <svg class="svg-icon grey">
+      <use xlink:href="/teacher_portfolio/assets/minima-social-icons.svg#github"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="https://x.com/NighthawkCoding/" target="_blank" title="x">
+    <svg class="svg-icon grey">
+      <use xlink:href="/teacher_portfolio/assets/minima-social-icons.svg#x"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="https://www.youtube.com/@nighthawkcodingsociety2868" target="_blank" title="youtube">
+    <svg class="svg-icon grey">
+      <use xlink:href="/teacher_portfolio/assets/minima-social-icons.svg#youtube"></use>
+    </svg>
+  </a>
+</li>
+</ul>
+</div>
+
+      </div>
+    </div>
+  
+  </footer></body>
+
+</html>

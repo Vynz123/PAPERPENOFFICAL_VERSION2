@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>jQuery P3 | Teacher 2.0</title>
+<meta name="generator" content="Jekyll v3.9.3" />
+<meta property="og:title" content="jQuery P3" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Our lesson on jQuery and CRUD!" />
+<meta property="og:description" content="Our lesson on jQuery and CRUD!" />
+<link rel="canonical" href="http://localhost:4100/teacher_portfolio/2023/12/07/P1_student_jQuerry_CRUD_IPYNB_2_.html" />
+<meta property="og:url" content="http://localhost:4100/teacher_portfolio/2023/12/07/P1_student_jQuerry_CRUD_IPYNB_2_.html" />
+<meta property="og:site_name" content="Teacher 2.0" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-12-07T00:00:00-08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="jQuery P3" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-12-07T00:00:00-08:00","datePublished":"2023-12-07T00:00:00-08:00","description":"Our lesson on jQuery and CRUD!","headline":"jQuery P3","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4100/teacher_portfolio/2023/12/07/P1_student_jQuerry_CRUD_IPYNB_2_.html"},"url":"http://localhost:4100/teacher_portfolio/2023/12/07/P1_student_jQuerry_CRUD_IPYNB_2_.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/teacher_portfolio/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4100/teacher_portfolio/feed.xml" title="Teacher 2.0" /><link rel="shortcut icon" type="image/x-icon" href="/teacher_portfolio/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/teacher_portfolio/">Teacher 2.0</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/teacher_portfolio/blogs/">Blogs</a><a class="page-link" href="/teacher_portfolio/search/">Search</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">jQuery | P3</h1><p class="page-description">Our lesson on jQuery and CRUD!</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-12-07T00:00:00-08:00" itemprop="datePublished">
+        Dec 7, 2023
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      12 min read
+    
+</span></p>
+
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody"><ul><li><a href="#what-is-jquery">What is jQuery?</a><ul><li><a href="#benefits-of-jquery">Benefits of jQuery</a></li><li><a href="#basic-syntax">Basic Syntax</a><ul><li><a href="#comparison">Comparison</a></li></ul></li></ul></li><li><a href="#introduction-to-dom">Introduction to DOM</a></li><li><a href="#overview-of-dom">Overview of DOM</a><ul><li><a href="#jquery-get-methods">jQuery Get Methods</a><ul><li><a href="#text-method">text() method</a></li><li><a href="#html-method">html() method</a></li><li><a href="#example">Example</a><ul><li><a href="#text-method-use">text() method use</a></li><li><a href="#html-method-use">html() method use</a></li></ul></li></ul></li></ul></li><li><a href="#event-handling">Event Handling</a><ul><li><a href="#events">Events</a><ul><li><a href="#examples">Examples</a><ul><li><a href="#event-handler-for-clicking-a-button">Event Handler for Clicking a Button</a></li><li><a href="#event-handler-for-form-submit">Event Handler for Form Submit</a></li><li><a href="#event-handler-for-mouse-enterleave">Event Handler for Mouse Enter/Leave</a></li></ul></li></ul></li></ul></li><li><a href="#what-is-crud">What is CRUD?</a><ul><li><a href="#popcorn-hack">popcorn hack</a></li><li><a href="#simple-example-of-crud">simple example of CRUD</a></li></ul></li></ul></li><li><a href="#crud--jquery-connection">CRUD + jQuery Connection</a><ul><li><a href="#example-with-disney-characters">Example with Disney Characters</a></li></ul></li></ul><h1 id="what-is-jquery">What is jQuery?</h1>
+
+<p>Essentially, jQuery is a library that allows us to use some of JavaScript’s built in functions</p>
+
+<h2 id="benefits-of-jquery">Benefits of jQuery</h2>
+
+<p>Benefits of jQuery include:</p>
+
+<ul>
+  <li>Makes it easier for us to write JavaScript and HTML code</li>
+  <li>Very flexible in terms of which browsers it can work on</li>
+  <li>Simplifies some of the most common JavaScript functions into fewer lines of code</li>
+</ul>
+
+<p><strong>Question:</strong> What are some real life applications of jQuery? Name at least two you can think of.</p>
+<ul>
+  <li>Web pages, used to make dropdown menus appear smoothly</li>
+  <li>Simplifies implementation of AJAX, allows developers to make asynchronous requests to a server and update parts of a web page without requiring a full page reload</li>
+</ul>
+
+<h2 id="basic-syntax">Basic Syntax</h2>
+
+<p>Whenever you are working with jQuery, the most basic format you will you use is the following:</p>
+
+<p>(selector).action()</p>
+
+<ul>
+  <li>The selector refers to the HTML element/target elements (ie. class or ID)</li>
+</ul>
+
+<p>Some examples include:</p>
+
+<p>(this).hide() - hides the current element.</p>
+
+<p>(“p”).hide() - hides all &lt;p&gt; elements.</p>
+
+<p>(“.test”).hide() - hides all elements with class=”test”.</p>
+
+<p>(“#test”).hide() - hides the element with id=”test”.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="n">html</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">head</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">link</span> <span class="n">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="nb">type</span><span class="o">=</span><span class="s">"text/css"</span> <span class="n">href</span><span class="o">=</span><span class="s">"https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css"</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">head</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">body</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="n">Movie</span> <span class="n">Search</span><span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+
+  <span class="o">&lt;</span><span class="n">h2</span><span class="o">&gt;</span><span class="n">Search</span> <span class="k">for</span> <span class="n">a</span> <span class="n">Movie</span> <span class="n">Series</span><span class="o">&lt;/</span><span class="n">h2</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">form</span> <span class="nb">id</span><span class="o">=</span><span class="s">"seriesForm"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nb">input</span> <span class="nb">type</span><span class="o">=</span><span class="s">"text"</span> <span class="nb">id</span><span class="o">=</span><span class="s">"seriesInput"</span> <span class="n">placeholder</span><span class="o">=</span><span class="s">"Enter series title"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">button</span> <span class="nb">type</span><span class="o">=</span><span class="s">"submit"</span><span class="o">&gt;</span><span class="n">Search</span><span class="o">&lt;/</span><span class="n">button</span><span class="o">&gt;</span>
+  <span class="o">&lt;/</span><span class="n">form</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">div</span> <span class="nb">id</span><span class="o">=</span><span class="s">"seriesContainer"</span><span class="o">&gt;&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+
+  <span class="o">&lt;</span><span class="n">script</span> <span class="n">src</span><span class="o">=</span><span class="s">"https://code.jquery.com/jquery-3.6.0.min.js"</span><span class="o">&gt;&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">script</span> <span class="n">src</span><span class="o">=</span><span class="s">"https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"</span><span class="o">&gt;&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">script</span><span class="o">&gt;</span>
+    <span class="n">function</span> <span class="n">fetchMovieSeriesData</span><span class="p">(</span><span class="n">seriesTitle</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">var</span> <span class="n">apiUrl</span> <span class="o">=</span> <span class="s">"https://api.themoviedb.org/3/search/movie?api_key=5f87798890b72c6ac53b262ba43ed8c6&amp;query="</span> <span class="o">+</span> <span class="n">encodeURIComponent</span><span class="p">(</span><span class="n">seriesTitle</span><span class="p">);</span> 
+      <span class="n">var</span> <span class="n">request</span> <span class="o">=</span> <span class="n">new</span> <span class="n">XMLHttpRequest</span><span class="p">();</span> <span class="o">//</span> <span class="n">requests</span> <span class="n">data</span>
+      <span class="n">request</span><span class="p">.</span><span class="nb">open</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span> <span class="n">apiUrl</span><span class="p">,</span> <span class="n">true</span><span class="p">);</span> <span class="o">//</span> <span class="n">fetches</span> <span class="n">the</span> <span class="n">data</span> <span class="k">from</span> <span class="n">the</span> <span class="n">url</span>
+      <span class="n">request</span><span class="p">.</span><span class="n">onload</span> <span class="o">=</span> <span class="n">function</span><span class="p">()</span> <span class="p">{</span> 
+        <span class="k">if</span> <span class="p">(</span><span class="n">request</span><span class="p">.</span><span class="n">status</span> <span class="o">===</span> <span class="mi">200</span><span class="p">)</span> <span class="p">{</span> <span class="o">//</span> <span class="k">if</span> <span class="n">request</span> <span class="ow">is</span> <span class="n">successful</span> <span class="o">-</span> <span class="n">more</span> <span class="n">specific</span> <span class="n">than</span> <span class="n">before</span>
+          <span class="n">var</span> <span class="n">data</span> <span class="o">=</span> <span class="n">JSON</span><span class="p">.</span><span class="n">parse</span><span class="p">(</span><span class="n">request</span><span class="p">.</span><span class="n">responseText</span><span class="p">);</span> <span class="o">//</span> <span class="n">JS</span> <span class="n">variable</span> <span class="k">from</span> <span class="n">JSON</span> <span class="n">data</span>
+          <span class="n">fetchSeriesMovieData</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+          <span class="n">document</span><span class="p">.</span><span class="n">getElementById</span><span class="p">(</span><span class="s">"seriesContainer"</span><span class="p">).</span><span class="n">textContent</span> <span class="o">=</span> <span class="s">"Error fetching movie series data."</span><span class="p">;</span>
+        <span class="p">}</span>
+      <span class="p">};</span>
+      <span class="n">request</span><span class="p">.</span><span class="n">onerror</span> <span class="o">=</span> <span class="n">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">document</span><span class="p">.</span><span class="n">getElementById</span><span class="p">(</span><span class="s">"seriesContainer"</span><span class="p">).</span><span class="n">textContent</span> <span class="o">=</span> <span class="s">"Error fetching movie series data."</span><span class="p">;</span>
+      <span class="p">};</span>
+      <span class="n">request</span><span class="p">.</span><span class="n">send</span><span class="p">();</span>
+    <span class="p">}</span>
+    <span class="n">function</span> <span class="n">fetchSeriesMovieData</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">results</span> <span class="o">&amp;&amp;</span> <span class="n">data</span><span class="p">.</span><span class="n">results</span><span class="p">.</span><span class="n">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span> <span class="o">//</span> <span class="n">checks</span> <span class="n">that</span> <span class="n">data</span> <span class="n">contains</span> <span class="n">info</span> <span class="ow">and</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">empty</span>
+        <span class="n">var</span> <span class="n">movieSeries</span> <span class="o">=</span> <span class="n">data</span><span class="p">.</span><span class="n">results</span><span class="p">;</span>
+        <span class="n">var</span> <span class="n">creditsDataPromises</span> <span class="o">=</span> <span class="n">movieSeries</span><span class="p">.</span><span class="nb">map</span><span class="p">(</span><span class="n">function</span><span class="p">(</span><span class="n">movie</span><span class="p">)</span> <span class="p">{</span> <span class="o">//</span> <span class="n">creates</span> <span class="n">an</span> <span class="n">array</span> <span class="n">of</span> <span class="n">promises</span><span class="p">,</span> <span class="n">which</span> <span class="n">each</span> <span class="n">fetch</span> <span class="n">data</span> <span class="k">for</span> <span class="n">a</span> <span class="n">movie</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">series</span> <span class="n">through</span> <span class="n">a</span> <span class="n">separate</span> <span class="n">API</span> <span class="n">request</span>
+          <span class="n">var</span> <span class="n">apiUrl</span> <span class="o">=</span> <span class="s">"https://api.themoviedb.org/3/movie/"</span> <span class="o">+</span> <span class="n">movie</span><span class="p">.</span><span class="nb">id</span> <span class="o">+</span> <span class="s">"/credits?api_key=5f87798890b72c6ac53b262ba43ed8c6"</span><span class="p">;</span>
+          <span class="k">return</span> <span class="n">fetch</span><span class="p">(</span><span class="n">apiUrl</span><span class="p">).</span><span class="n">then</span><span class="p">(</span><span class="n">function</span><span class="p">(</span><span class="n">response</span><span class="p">)</span> <span class="p">{</span> <span class="o">//</span> <span class="n">each</span> <span class="n">request</span> <span class="k">from</span> <span class="n">each</span> <span class="n">promise</span>
+            <span class="k">return</span> <span class="n">response</span><span class="p">.</span><span class="n">json</span><span class="p">();</span>
+          <span class="p">});</span>
+        <span class="p">});</span>
+        <span class="n">Promise</span><span class="p">.</span><span class="nb">all</span><span class="p">(</span><span class="n">creditsDataPromises</span><span class="p">).</span><span class="n">then</span><span class="p">(</span><span class="n">function</span><span class="p">(</span><span class="n">creditsData</span><span class="p">)</span> <span class="p">{</span> <span class="o">//</span> <span class="n">All</span> <span class="n">promises</span> <span class="n">are</span> <span class="n">resolved</span> <span class="ow">and</span> <span class="n">a</span> <span class="n">new</span> <span class="n">function</span> <span class="ow">is</span> <span class="n">called</span> <span class="k">with</span> <span class="n">the</span> <span class="n">movies</span> <span class="n">series</span> <span class="ow">and</span> <span class="n">the</span> <span class="n">data</span>
+          <span class="n">displayMovieSeriesData</span><span class="p">(</span><span class="n">movieSeries</span><span class="p">,</span> <span class="n">creditsData</span><span class="p">);</span>  
+        <span class="p">}).</span><span class="n">catch</span><span class="p">(</span><span class="n">function</span><span class="p">(</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span> <span class="o">//</span> <span class="k">if</span> <span class="n">an</span> <span class="n">error</span> <span class="n">appears</span>
+          <span class="n">document</span><span class="p">.</span><span class="n">getElementById</span><span class="p">(</span><span class="s">"seriesContainer"</span><span class="p">).</span><span class="n">textContent</span> <span class="o">=</span> <span class="s">"Error fetching movie series data."</span><span class="p">;</span>
+        <span class="p">});</span>
+      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="n">document</span><span class="p">.</span><span class="n">getElementById</span><span class="p">(</span><span class="s">"seriesContainer"</span><span class="p">).</span><span class="n">textContent</span> <span class="o">=</span> <span class="s">"No movie series found."</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="n">function</span> <span class="n">displayMovieSeriesData</span><span class="p">(</span><span class="n">movieSeries</span><span class="p">,</span> <span class="n">creditsData</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">var</span> <span class="n">table</span> <span class="o">=</span> <span class="n">document</span><span class="p">.</span><span class="n">createElement</span><span class="p">(</span><span class="s">"table"</span><span class="p">);</span>
+      <span class="n">var</span> <span class="n">tableHeader</span> <span class="o">=</span> <span class="n">table</span><span class="p">.</span><span class="n">createTHead</span><span class="p">();</span> <span class="o">//</span> <span class="n">a</span> <span class="n">header</span> <span class="ow">is</span> <span class="n">created</span> 
+      <span class="n">var</span> <span class="n">headerRow</span> <span class="o">=</span> <span class="n">tableHeader</span><span class="p">.</span><span class="n">insertRow</span><span class="p">();</span> <span class="o">//</span> <span class="n">Rows</span> <span class="n">are</span> <span class="n">added</span> <span class="n">to</span> <span class="n">the</span> <span class="n">table</span>
+      <span class="n">var</span> <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Title"</span><span class="p">,</span> <span class="s">"Popularity"</span><span class="p">,</span> <span class="s">"Vote Count"</span><span class="p">,</span> <span class="s">"Vote Average"</span><span class="p">,</span> <span class="s">"Poster"</span><span class="p">];</span> <span class="o">//</span> <span class="n">column</span> <span class="n">titles</span>
+      <span class="k">for</span> <span class="p">(</span><span class="n">var</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">columns</span><span class="p">.</span><span class="n">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="o">//</span> <span class="n">iterates</span> <span class="n">through</span> <span class="n">column</span> <span class="n">array</span> <span class="ow">and</span> <span class="n">continues</span> <span class="n">until</span> <span class="n">i</span> <span class="ow">is</span> <span class="n">greater</span> <span class="n">than</span> <span class="n">length</span> <span class="n">of</span> <span class="n">columns</span>
+      <span class="o">//</span> <span class="n">basically</span><span class="p">,</span> <span class="n">rows</span> <span class="n">are</span> <span class="n">created</span> <span class="k">for</span> <span class="n">every</span> <span class="n">column</span>
+        <span class="n">var</span> <span class="n">th</span> <span class="o">=</span> <span class="n">document</span><span class="p">.</span><span class="n">createElement</span><span class="p">(</span><span class="s">"th"</span><span class="p">);</span> <span class="o">//</span> <span class="n">rows</span> <span class="n">are</span> <span class="n">added</span> <span class="n">underneath</span> <span class="n">the</span> <span class="n">headers</span>
+        <span class="n">th</span><span class="p">.</span><span class="n">textContent</span> <span class="o">=</span> <span class="n">columns</span><span class="p">[</span><span class="n">i</span><span class="p">];</span> <span class="o">//</span> <span class="n">data</span> <span class="ow">is</span> <span class="n">added</span> <span class="n">to</span> <span class="n">the</span> <span class="n">rows</span>
+        <span class="n">headerRow</span><span class="p">.</span><span class="n">appendChild</span><span class="p">(</span><span class="n">th</span><span class="p">);</span> <span class="o">//</span> <span class="n">the</span> <span class="n">rows</span> <span class="n">are</span> <span class="n">displayed</span>
+      <span class="p">}</span>
+      <span class="n">var</span> <span class="n">tableBody</span> <span class="o">=</span> <span class="n">table</span><span class="p">.</span><span class="n">createTBody</span><span class="p">();</span> <span class="o">//</span> <span class="n">the</span> <span class="n">body</span> <span class="n">of</span> <span class="n">the</span> <span class="n">table</span> <span class="ow">is</span> <span class="n">created</span>
+      <span class="k">for</span> <span class="p">(</span><span class="n">var</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">movieSeries</span><span class="p">.</span><span class="n">length</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="o">//</span> <span class="n">another</span> <span class="k">for</span> <span class="n">loop</span> <span class="n">but</span> <span class="n">iterates</span> <span class="n">through</span> <span class="n">the</span> <span class="n">data</span>
+      <span class="o">//</span> <span class="n">this</span> <span class="n">way</span><span class="p">,</span> <span class="n">every</span> <span class="n">single</span> <span class="n">row</span> <span class="k">with</span> <span class="n">contain</span> <span class="n">data</span> <span class="n">since</span> <span class="n">the</span> <span class="n">loop</span> <span class="n">stops</span> <span class="n">once</span> <span class="nb">all</span> <span class="n">the</span> <span class="n">data</span> <span class="ow">is</span> <span class="n">iterated</span> <span class="n">through</span>
+        <span class="n">var</span> <span class="n">movie</span> <span class="o">=</span> <span class="n">movieSeries</span><span class="p">[</span><span class="n">j</span><span class="p">];</span> <span class="o">//</span> <span class="n">the</span> <span class="n">data</span> <span class="ow">is</span> <span class="n">assigned</span> <span class="n">to</span> <span class="n">a</span> <span class="n">variable</span>
+        <span class="n">var</span> <span class="n">row</span> <span class="o">=</span> <span class="n">tableBody</span><span class="p">.</span><span class="n">insertRow</span><span class="p">();</span> <span class="o">//</span> <span class="n">rows</span> <span class="n">are</span> <span class="n">added</span> <span class="n">to</span> <span class="n">the</span> <span class="n">body</span>
+        <span class="n">var</span> <span class="n">titleCell</span> <span class="o">=</span> <span class="n">row</span><span class="p">.</span><span class="n">insertCell</span><span class="p">();</span> 
+        <span class="n">titleCell</span><span class="p">.</span><span class="n">textContent</span> <span class="o">=</span> <span class="n">movie</span><span class="p">.</span><span class="n">title</span><span class="p">;</span> <span class="o">//</span> <span class="n">the</span> <span class="n">title</span> <span class="ow">is</span> <span class="n">displayed</span> <span class="ow">in</span> <span class="n">new</span> <span class="n">cells</span> <span class="n">at</span> <span class="n">the</span> <span class="n">rows</span>
+        <span class="n">var</span> <span class="n">popularityCell</span> <span class="o">=</span> <span class="n">row</span><span class="p">.</span><span class="n">insertCell</span><span class="p">();</span>
+        <span class="n">popularityCell</span><span class="p">.</span><span class="n">textContent</span> <span class="o">=</span> <span class="n">movie</span><span class="p">.</span><span class="n">popularity</span><span class="p">;</span> <span class="o">//</span> <span class="n">the</span> <span class="n">popularity</span> <span class="ow">is</span> <span class="n">displayed</span>
+        <span class="n">var</span> <span class="n">voteCountCell</span> <span class="o">=</span> <span class="n">row</span><span class="p">.</span><span class="n">insertCell</span><span class="p">();</span>
+        <span class="n">voteCountCell</span><span class="p">.</span><span class="n">textContent</span> <span class="o">=</span> <span class="n">movie</span><span class="p">.</span><span class="n">vote_count</span><span class="p">;</span> <span class="o">//</span> <span class="n">the</span> <span class="n">vote</span> <span class="n">count</span> <span class="ow">is</span> <span class="n">displayed</span>
+        <span class="n">var</span> <span class="n">voteAverageCell</span> <span class="o">=</span> <span class="n">row</span><span class="p">.</span><span class="n">insertCell</span><span class="p">();</span>
+        <span class="n">voteAverageCell</span><span class="p">.</span><span class="n">textContent</span> <span class="o">=</span> <span class="n">movie</span><span class="p">.</span><span class="n">vote_average</span><span class="p">;</span> <span class="o">//</span> <span class="n">the</span> <span class="n">vote</span> <span class="n">average</span> <span class="ow">is</span> <span class="n">displayed</span>
+        <span class="n">var</span> <span class="n">posterCell</span> <span class="o">=</span> <span class="n">row</span><span class="p">.</span><span class="n">insertCell</span><span class="p">();</span>
+        <span class="n">var</span> <span class="n">posterImage</span> <span class="o">=</span> <span class="err">$</span><span class="p">(</span><span class="s">"&lt;img&gt;"</span><span class="p">)</span>
+          <span class="p">.</span><span class="n">attr</span><span class="p">(</span><span class="s">"src"</span><span class="p">,</span> <span class="s">"https://image.tmdb.org/t/p/w200"</span> <span class="o">+</span> <span class="n">movie</span><span class="p">.</span><span class="n">poster_path</span><span class="p">)</span>
+          <span class="p">.</span><span class="n">attr</span><span class="p">(</span><span class="s">"alt"</span><span class="p">,</span> <span class="s">"Movie Poster"</span><span class="p">);</span>
+        <span class="n">posterCell</span><span class="p">.</span><span class="n">appendChild</span><span class="p">(</span><span class="n">posterImage</span><span class="p">);</span>
+      <span class="p">}</span>
+      <span class="n">document</span><span class="p">.</span><span class="n">getElementById</span><span class="p">(</span><span class="s">"seriesContainer"</span><span class="p">).</span><span class="n">appendChild</span><span class="p">(</span><span class="n">table</span><span class="p">);</span>
+      <span class="err">$</span><span class="p">(</span><span class="s">'.movie-series-table'</span><span class="p">).</span><span class="n">DataTable</span><span class="p">();</span>
+    <span class="p">}</span> 
+    <span class="n">document</span><span class="p">.</span><span class="n">getElementById</span><span class="p">(</span><span class="s">"seriesForm"</span><span class="p">).</span><span class="n">addEventListener</span><span class="p">(</span><span class="s">"submit"</span><span class="p">,</span> <span class="n">function</span><span class="p">(</span><span class="n">event</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">event</span><span class="p">.</span><span class="n">preventDefault</span><span class="p">();</span>
+      <span class="n">var</span> <span class="n">seriesTitle</span> <span class="o">=</span> <span class="n">document</span><span class="p">.</span><span class="n">getElementById</span><span class="p">(</span><span class="s">"seriesInput"</span><span class="p">).</span><span class="n">value</span><span class="p">;</span>
+      <span class="n">fetchMovieSeriesData</span><span class="p">(</span><span class="n">seriesTitle</span><span class="p">);</span>
+    <span class="p">});</span>
+  <span class="o">&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">body</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">html</span><span class="o">&gt;</span>
+</code></pre></div></div>
+
+<p>As you can see, JQuery can be used with APIs to create a more user friendly output and also makes it easier to work with API’s and code. It also allows for DOM manipulation and event handling (to be covered later). Overall, JQuery is a very powerful tool that can be used to help with coding and ensure better user experience.</p>
+
+<h3 id="comparison">Comparison</h3>
+
+<p>Without JQuery:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="n">script</span><span class="o">&gt;</span>
+    <span class="n">var</span> <span class="n">posterImage</span> <span class="o">=</span> <span class="n">document</span><span class="p">.</span><span class="n">createElement</span><span class="p">(</span><span class="s">"img"</span><span class="p">);</span>
+    <span class="n">posterImage</span><span class="p">.</span><span class="n">src</span> <span class="o">=</span> <span class="s">"https://image.tmdb.org/t/p/w200"</span> <span class="o">+</span> <span class="n">movie</span><span class="p">.</span><span class="n">poster_path</span><span class="p">;</span>
+    <span class="n">posterImage</span><span class="p">.</span><span class="n">alt</span> <span class="o">=</span> <span class="s">"Movie Poster"</span><span class="p">;</span>
+<span class="o">&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+</code></pre></div></div>
+
+<p>With JQuery:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="n">script</span><span class="o">&gt;</span>
+    <span class="n">var</span> <span class="n">posterImage</span> <span class="o">=</span> <span class="err">$</span><span class="p">(</span><span class="s">"&lt;img&gt;"</span><span class="p">)</span>
+      <span class="p">.</span><span class="n">attr</span><span class="p">(</span><span class="s">"src"</span><span class="p">,</span> <span class="s">"https://image.tmdb.org/t/p/w200"</span> <span class="o">+</span> <span class="n">movie</span><span class="p">.</span><span class="n">poster_path</span><span class="p">)</span>
+      <span class="p">.</span><span class="n">attr</span><span class="p">(</span><span class="s">"alt"</span><span class="p">,</span> <span class="s">"Movie Poster"</span><span class="p">);</span>
+    <span class="n">posterCell</span><span class="p">.</span><span class="n">appendChild</span><span class="p">(</span><span class="n">posterImage</span><span class="p">);</span>
+<span class="o">&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+</code></pre></div></div>
+
+<h1 id="introduction-to-dom">Introduction to DOM</h1>
+
+<p>One of the most useful abilities of JavaScript (and thus jQuery) is its ability to manipulate the DOM. But what is the DOM?</p>
+
+<h1 id="overview-of-dom">Overview of DOM</h1>
+
+<p>The DOM, short for Document Object Model, is a standard that allows us to create, change, or remove elements from HTML or XML documents.</p>
+
+<p>Some operations that you can perform on DOM elements include…</p>
+
+<ul>
+  <li>Extracting the content of an element</li>
+  <li>Changing the content of an element</li>
+  <li>Adding an element before or after an existing element</li>
+  <li>Replacing an existing element with another element</li>
+  <li>Deleting an element</li>
+  <li>And many more!</li>
+</ul>
+
+<h2 id="jquery-get-methods">jQuery Get Methods</h2>
+
+<h3 id="text-method">text() method</h3>
+
+<p>The jQuery text method, as its name implies, simply returns the plain text value of the content.</p>
+
+<p>Below is an example of an application of the text() method:</p>
+
+<h3 id="html-method">html() method</h3>
+
+<p>The jQuery html method returns the plain text value of the content too, but it also returns it with HTML tags.</p>
+
+<h3 id="example">Example</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="o">&lt;</span><span class="n">div</span> <span class="nb">id</span><span class="o">=</span><span class="s">"info"</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">p</span> <span class="n">class</span><span class="o">=</span><span class="s">"name"</span><span class="o">&gt;</span><span class="n">John</span> <span class="n">Doe</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">p</span> <span class="n">class</span><span class="o">=</span><span class="s">"description"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">span</span><span class="o">&gt;</span><span class="n">Web</span> <span class="n">Developer</span><span class="o">&lt;/</span><span class="n">span</span><span class="o">&gt;</span> <span class="n">at</span> <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s">"#"</span><span class="o">&gt;</span><span class="n">TechCorp</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span>
+  <span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+</code></pre></div></div>
+
+<h4 id="text-method-use">text() method use</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">var</span> <span class="n">descriptionText</span> <span class="o">=</span> <span class="err">$</span><span class="p">(</span><span class="s">".description"</span><span class="p">).</span><span class="n">text</span><span class="p">();</span>
+<span class="n">console</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="n">descriptionText</span><span class="p">);</span>
+
+<span class="o">//</span> <span class="k">with</span> <span class="n">the</span> <span class="n">text</span><span class="p">()</span> <span class="n">method</span><span class="p">,</span> <span class="n">this</span> <span class="n">would</span> <span class="n">output</span> <span class="n">the</span> <span class="n">plain</span> <span class="n">text</span> <span class="n">value</span> <span class="n">of</span> <span class="n">description</span> 
+<span class="o">//</span> <span class="n">output</span><span class="p">:</span> <span class="s">'Developer at TechCorp'</span>
+</code></pre></div></div>
+
+<ul>
+  <li>jQuery .text() method is used to retrieve the plain text content from the element with the class description (‘Developer at TechCorp’)</li>
+  <li>The $(“.description”).text() part selects the element with class description and then gets its textual content without any HTML tags.</li>
+</ul>
+
+<h4 id="html-method-use">html() method use</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">var</span> <span class="n">descriptionHTML</span> <span class="o">=</span> <span class="err">$</span><span class="p">(</span><span class="s">".description"</span><span class="p">).</span><span class="n">html</span><span class="p">();</span>
+<span class="n">console</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="n">descriptionHTML</span><span class="p">);</span>
+
+<span class="o">//</span> <span class="k">with</span> <span class="n">the</span> <span class="n">html</span><span class="p">()</span> <span class="n">method</span><span class="p">,</span> <span class="n">this</span> <span class="n">would</span> <span class="n">output</span> <span class="n">the</span> <span class="n">HTML</span> <span class="n">content</span> <span class="n">of</span> <span class="n">the</span> <span class="n">element</span> <span class="k">with</span> <span class="nb">all</span> <span class="n">the</span> <span class="n">HTML</span> <span class="n">tags</span>
+<span class="o">//</span> <span class="n">output</span><span class="p">:</span><span class="s">'&lt;span&gt;Web Developer&lt;/span&gt; at &lt;a href="#"&gt;TechCorp&lt;/a&gt;'</span>
+</code></pre></div></div>
+
+<ul>
+  <li>The .html() method is used to fetch the HTML content from the same description element</li>
+  <li>$(“.description”).html() selects the description element and also its inner HTML content, including the HTML tags like <span> and <a></a></span></li>
+</ul>
+
+<h1 id="event-handling">Event Handling</h1>
+
+<h2 id="events">Events</h2>
+
+<p>Events refer to the various actions or occurrences that happen in the web browser, which can be detected and responded to with JavaScript</p>
+
+<p>Some types of events include…</p>
+<ul>
+  <li>keyboard events (keypress, keyup, etc.)</li>
+  <li>form events (ex. submit)</li>
+  <li>document/window events (resize, load, etc.)</li>
+</ul>
+
+<h3 id="examples">Examples</h3>
+
+<h4 id="event-handler-for-clicking-a-button">Event Handler for Clicking a Button</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="n">button</span> <span class="nb">id</span><span class="o">=</span><span class="s">"clickButton"</span><span class="o">&gt;</span><span class="n">Click</span> <span class="n">Me</span><span class="err">!</span><span class="o">&lt;/</span><span class="n">button</span><span class="o">&gt;</span>
+
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span><span class="p">(</span><span class="s">"#clickButton"</span><span class="p">).</span><span class="n">click</span><span class="p">(</span><span class="n">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">alert</span><span class="p">(</span><span class="s">"Button was clicked!"</span><span class="p">);</span>
+  <span class="p">});</span>
+</code></pre></div></div>
+
+<p>Breakdown:</p>
+
+<ul>
+  <li>In this first example, the jQuery code sets up an event handler for the click event on the button with the ID <code class="language-plaintext highlighter-rouge">clickButton</code></li>
+  <li>When the button is clicked, an alert box displays the message, “Button was clicked!”</li>
+</ul>
+
+<h4 id="event-handler-for-form-submit">Event Handler for Form Submit</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="n">form</span> <span class="nb">id</span><span class="o">=</span><span class="s">"myForm"</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="nb">input</span> <span class="nb">type</span><span class="o">=</span><span class="s">"text"</span> <span class="n">placeholder</span><span class="o">=</span><span class="s">"Enter text"</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="nb">input</span> <span class="nb">type</span><span class="o">=</span><span class="s">"submit"</span> <span class="n">value</span><span class="o">=</span><span class="s">"Submit"</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">form</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">div</span> <span class="nb">id</span><span class="o">=</span><span class="s">"formOutput"</span><span class="o">&gt;&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span><span class="p">(</span><span class="s">"#myForm"</span><span class="p">).</span><span class="n">submit</span><span class="p">(</span><span class="n">function</span><span class="p">(</span><span class="n">event</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">event</span><span class="p">.</span><span class="n">preventDefault</span><span class="p">();</span> 
+    <span class="n">var</span> <span class="n">enteredText</span> <span class="o">=</span> <span class="err">$</span><span class="p">(</span><span class="n">this</span><span class="p">).</span><span class="n">find</span><span class="p">(</span><span class="s">"input[type='text']"</span><span class="p">).</span><span class="n">val</span><span class="p">();</span>
+    <span class="err">$</span><span class="p">(</span><span class="s">"#formOutput"</span><span class="p">).</span><span class="n">text</span><span class="p">(</span><span class="s">"You entered: "</span> <span class="o">+</span> <span class="n">enteredText</span><span class="p">);</span>
+  <span class="p">});</span>
+  
+</code></pre></div></div>
+
+<p>Breakdown:</p>
+
+<ul>
+  <li>In this code segment, the jQuery script handles the submit event of the form with the ID <code class="language-plaintext highlighter-rouge">myForm</code>.</li>
+  <li>The event.preventDefault() method stops the form from being submitted in the traditional way (clicking the submit button), which prevents the page from reloading.</li>
+  <li>It gets the text entered in the text input field and displays it in a div with the ID <code class="language-plaintext highlighter-rouge">formOutput</code>.</li>
+</ul>
+
+<h4 id="event-handler-for-mouse-enterleave">Event Handler for Mouse Enter/Leave</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="n">div</span> <span class="nb">id</span><span class="o">=</span><span class="s">"hoverDiv"</span><span class="o">&gt;</span><span class="n">Hover</span> <span class="n">over</span> <span class="n">me</span><span class="err">!</span><span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span><span class="p">(</span><span class="s">"#hoverDiv"</span><span class="p">).</span><span class="n">mouseenter</span><span class="p">(</span><span class="n">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="err">$</span><span class="p">(</span><span class="n">this</span><span class="p">).</span><span class="n">css</span><span class="p">(</span><span class="s">"background-color"</span><span class="p">,</span> <span class="s">"green"</span><span class="p">);</span>
+  <span class="p">}).</span><span class="n">mouseleave</span><span class="p">(</span><span class="n">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="err">$</span><span class="p">(</span><span class="n">this</span><span class="p">).</span><span class="n">css</span><span class="p">(</span><span class="s">"background-color"</span><span class="p">,</span> <span class="s">"red"</span><span class="p">);</span>
+  <span class="p">});</span>
+</code></pre></div></div>
+
+<p>Breakdown:</p>
+<ul>
+  <li>The code attaches two event handlers to the div with ID hoverDiv. (for when the mouse enters and leaves the div)</li>
+  <li>When the mouse hovers over the div (mouseenter event), the background color changes to green.</li>
+  <li>When the mouse leaves the div (mouseleave event), the background color changes to red.</li>
+</ul>
+
+<h1 id="what-is-crud">What is CRUD?</h1>
+
+<p><strong>Create (C):</strong></p>
+
+<p>GOAL: create records or objects in a database, like creating records in SQLITE database in SPRING java project.</p>
+
+<p><strong>Read (R):</strong></p>
+
+<p>GOAL: retrieve data from our database for display or for interaction</p>
+
+<p><strong>Update (U):</strong></p>
+
+<p>GOAL: Update our data in our database, such as changing attributes like name</p>
+
+<p><strong>Delete (D):</strong></p>
+
+<p>GOAL: remove data from our database, like removing objects from our database</p>
+
+<h3 id="popcorn-hack">popcorn hack</h3>
+
+<p>talk about usage of one of four elements of CRUD from your project in tri 1. Focus on how CRUD was implemented.</p>
+
+<h3 id="simple-example-of-crud">simple example of CRUD</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.util.ArrayList</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.util.List</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="p">;</span>
+<span class="k">class</span> <span class="nc">Person</span> <span class="p">{</span>
+    <span class="n">private</span> <span class="nb">int</span> <span class="nb">id</span><span class="p">;</span>
+    <span class="n">private</span> <span class="n">String</span> <span class="n">name</span><span class="p">;</span>
+    <span class="n">public</span> <span class="n">Person</span><span class="p">(</span><span class="nb">int</span> <span class="nb">id</span><span class="p">,</span> <span class="n">String</span> <span class="n">name</span><span class="p">)</span> <span class="p">{</span><span class="n">this</span><span class="p">.</span><span class="nb">id</span> <span class="o">=</span> <span class="nb">id</span><span class="p">;</span> <span class="n">this</span><span class="p">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span><span class="p">;}</span>
+    <span class="n">public</span> <span class="nb">int</span> <span class="n">getId</span><span class="p">()</span> <span class="p">{</span><span class="k">return</span> <span class="nb">id</span><span class="p">;}</span>
+    <span class="n">public</span> <span class="n">String</span> <span class="n">getName</span><span class="p">()</span> <span class="p">{</span><span class="k">return</span> <span class="n">name</span><span class="p">;}</span>
+    <span class="n">public</span> <span class="n">void</span> <span class="n">setName</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">)</span> <span class="p">{</span><span class="n">this</span><span class="p">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span><span class="p">;}</span>
+<span class="p">}</span>
+<span class="n">public</span> <span class="k">class</span> <span class="nc">CrudExample</span> <span class="p">{</span>
+    <span class="n">private</span> <span class="n">static</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Person</span><span class="o">&gt;</span> <span class="n">people</span> <span class="o">=</span> <span class="n">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+    <span class="n">private</span> <span class="n">static</span> <span class="nb">int</span> <span class="n">nextId</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="n">public</span> <span class="n">static</span> <span class="n">void</span> <span class="n">main</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Scanner</span> <span class="n">scanner</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="ow">in</span><span class="p">);</span>
+        <span class="k">while</span> <span class="p">(</span><span class="n">true</span><span class="p">)</span> <span class="p">{</span> <span class="n">System</span><span class="p">.</span><span class="n">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"1. Create</span><span class="se">\n</span><span class="s">2. Read</span><span class="se">\n</span><span class="s">3. Update</span><span class="se">\n</span><span class="s">4. Delete</span><span class="se">\n</span><span class="s">5. Exit</span><span class="se">\n</span><span class="s">Enter your choice: "</span><span class="p">);</span>
+            <span class="nb">int</span> <span class="n">choice</span> <span class="o">=</span> <span class="n">scanner</span><span class="p">.</span><span class="n">nextInt</span><span class="p">();</span>
+            <span class="n">switch</span> <span class="p">(</span><span class="n">choice</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">case</span> <span class="mi">1</span><span class="p">:</span> <span class="n">createPerson</span><span class="p">(</span><span class="n">scanner</span><span class="p">);</span> <span class="k">break</span><span class="p">;</span>
+                <span class="n">case</span> <span class="mi">2</span><span class="p">:</span> <span class="n">readPeople</span><span class="p">();</span> <span class="k">break</span><span class="p">;</span>
+                <span class="n">case</span> <span class="mi">3</span><span class="p">:</span> <span class="n">updatePerson</span><span class="p">(</span><span class="n">scanner</span><span class="p">);</span> <span class="k">break</span><span class="p">;</span>
+                <span class="n">case</span> <span class="mi">4</span><span class="p">:</span> <span class="n">deletePerson</span><span class="p">(</span><span class="n">scanner</span><span class="p">);</span> <span class="k">break</span><span class="p">;</span>
+                <span class="n">case</span> <span class="mi">5</span><span class="p">:</span> <span class="n">System</span><span class="p">.</span><span class="n">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Exiting program."</span><span class="p">);</span> <span class="k">return</span><span class="p">;</span>
+                <span class="n">default</span><span class="p">:</span> <span class="n">System</span><span class="p">.</span><span class="n">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Invalid choice. Please try again."</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="o">//</span><span class="n">CREATE</span>
+    <span class="n">private</span> <span class="n">static</span> <span class="n">void</span> <span class="n">createPerson</span><span class="p">(</span><span class="n">Scanner</span> <span class="n">scanner</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="n">out</span><span class="p">.</span><span class="k">print</span><span class="p">(</span><span class="s">"Enter person name: "</span><span class="p">);</span> <span class="n">String</span> <span class="n">name</span> <span class="o">=</span> <span class="n">scanner</span><span class="p">.</span><span class="nb">next</span><span class="p">();</span>
+        <span class="n">Person</span> <span class="n">person</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Person</span><span class="p">(</span><span class="n">nextId</span><span class="o">++</span><span class="p">,</span> <span class="n">name</span><span class="p">);</span> <span class="n">people</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">person</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="n">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Person created with ID: "</span> <span class="o">+</span> <span class="n">person</span><span class="p">.</span><span class="n">getId</span><span class="p">());</span>
+    <span class="p">}</span>
+    <span class="o">//</span><span class="n">READ</span>
+    <span class="n">private</span> <span class="n">static</span> <span class="n">void</span> <span class="n">readPeople</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="n">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"People:"</span><span class="p">);</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">Person</span> <span class="n">person</span> <span class="p">:</span> <span class="n">people</span><span class="p">)</span> <span class="p">{</span><span class="n">System</span><span class="p">.</span><span class="n">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"ID: "</span> <span class="o">+</span> <span class="n">person</span><span class="p">.</span><span class="n">getId</span><span class="p">()</span> <span class="o">+</span> <span class="s">", Name: "</span> <span class="o">+</span> <span class="n">person</span><span class="p">.</span><span class="n">getName</span><span class="p">());}</span>
+    <span class="p">}</span>
+    <span class="o">//</span><span class="n">UPDATE</span>
+    <span class="n">private</span> <span class="n">static</span> <span class="n">void</span> <span class="n">updatePerson</span><span class="p">(</span><span class="n">Scanner</span> <span class="n">scanner</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="n">out</span><span class="p">.</span><span class="k">print</span><span class="p">(</span><span class="s">"Enter person ID to update: "</span><span class="p">);</span> <span class="nb">int</span> <span class="n">idToUpdate</span> <span class="o">=</span> <span class="n">scanner</span><span class="p">.</span><span class="n">nextInt</span><span class="p">();</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">Person</span> <span class="n">person</span> <span class="p">:</span> <span class="n">people</span><span class="p">)</span> <span class="p">{</span><span class="k">if</span> <span class="p">(</span><span class="n">person</span><span class="p">.</span><span class="n">getId</span><span class="p">()</span> <span class="o">==</span> <span class="n">idToUpdate</span><span class="p">)</span> <span class="p">{</span><span class="n">System</span><span class="p">.</span><span class="n">out</span><span class="p">.</span><span class="k">print</span><span class="p">(</span><span class="s">"Enter new name: "</span><span class="p">);</span> <span class="n">String</span> <span class="n">newName</span> <span class="o">=</span> <span class="n">scanner</span><span class="p">.</span><span class="nb">next</span><span class="p">();</span> <span class="n">person</span><span class="p">.</span><span class="n">setName</span><span class="p">(</span><span class="n">newName</span><span class="p">);</span> <span class="n">System</span><span class="p">.</span><span class="n">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Person updated successfully."</span><span class="p">);</span> <span class="k">return</span><span class="p">;}}</span>
+        <span class="n">System</span><span class="p">.</span><span class="n">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Person with ID "</span> <span class="o">+</span> <span class="n">idToUpdate</span> <span class="o">+</span> <span class="s">" not found."</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="o">//</span><span class="n">DELETE</span> 
+    <span class="n">private</span> <span class="n">static</span> <span class="n">void</span> <span class="n">deletePerson</span><span class="p">(</span><span class="n">Scanner</span> <span class="n">scanner</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="n">out</span><span class="p">.</span><span class="k">print</span><span class="p">(</span><span class="s">"Enter person ID to delete: "</span><span class="p">);</span> <span class="nb">int</span> <span class="n">idToDelete</span> <span class="o">=</span> <span class="n">scanner</span><span class="p">.</span><span class="n">nextInt</span><span class="p">();</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">Person</span> <span class="n">person</span> <span class="p">:</span> <span class="n">people</span><span class="p">)</span> <span class="p">{</span><span class="k">if</span> <span class="p">(</span><span class="n">person</span><span class="p">.</span><span class="n">getId</span><span class="p">()</span> <span class="o">==</span> <span class="n">idToDelete</span><span class="p">)</span> <span class="p">{</span><span class="n">people</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">person</span><span class="p">);</span> <span class="n">System</span><span class="p">.</span><span class="n">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Person deleted successfully."</span><span class="p">);</span> <span class="k">return</span><span class="p">;}}</span>
+        <span class="n">System</span><span class="p">.</span><span class="n">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Person with ID "</span> <span class="o">+</span> <span class="n">idToDelete</span> <span class="o">+</span> <span class="s">" not found."</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">CrudExample</span><span class="p">.</span><span class="n">main</span><span class="p">(</span><span class="n">null</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h1 id="crud--jquery-connection">CRUD + jQuery Connection</h1>
+
+<h2 id="example-with-disney-characters">Example with Disney Characters</h2>
+
+<!-- Include jQuery library -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+<style>
+    /* Set background color, font, and remove default margins and padding for the body */
+    body {
+        background-color: #a8c0ff; /* Disney Blue */
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Style for the table */
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    /* Style for table header and cells */
+    th, td {
+        border: 1px solid #70a9ff; /* Disney Blue */
+        padding: 10px;
+        text-align: left;
+    }
+
+    /* Style for table header */
+    th {
+        background-color: #3d5af1; /* Disney Blue */
+        color: white;
+    }
+
+    /* Style for buttons */
+    button {
+        background-color: #3d5af1; /* Disney Blue */
+        color: white;
+        border: none;
+        padding: 8px 12px;
+        cursor: pointer;
+    }
+
+    /* Style for button hover effect */
+    button:hover {
+        background-color: #1c3faa; /* Lighter Disney Blue */
+    }
+</style>
+
+<!-- HTML table structure with an empty tbody for dynamic data -->
+<table id="data-table">
+    <thead>
+        <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Initial data will be dynamically added here -->
+    </tbody>
+</table>
+
+<!-- Button to trigger the creation of a new Disney character -->
+<p><button id="create-btn">Create Disney Character</button></p>
+
+<script>
+    // Initial data for Disney characters
+    const initialData = [
+        { id: 1, name: 'Mickey Mouse', email: 'mickey@example.com' },
+        { id: 2, name: 'Donald Duck', email: 'donald@example.com' }
+    ];
+
+    // Dynamic data that can be updated or modified
+    let dynamicData = [...initialData];
+
+    // Function to remove rows with duplicate IDs
+    function removeDuplicateIds(data) {
+        const uniqueIds = new Set();
+        return data.filter(item => {
+            if (uniqueIds.has(item.id)) {
+                return false; // Duplicate ID, exclude this item
+            }
+            uniqueIds.add(item.id);
+            return true;
+        });
+    }
+
+    // Function to render data into the table
+    function renderData(data) {
+        const tableBody = $('#data-table tbody');
+        tableBody.empty();
+
+        // Loop through the data and create table rows dynamically
+        data.forEach(item => {
+            const row = `
+                <tr>
+                    <td>${item.id}</td>
+                    <td>${item.name}</td>
+                    <td>${item.email}</td>
+                    <td>
+                        <button class="update-btn" data-id="${item.id}">Update</button>
+                        <button class="delete-btn" data-id="${item.id}">Delete</button>
+                    </td>
+                </tr>
+            `;
+            tableBody.append(row);
+        });
+    }
+
+    // Function to create a new Disney character
+    function createDisneyCharacter() {
+        const newName = prompt('Enter the name of the Disney character:');
+        const newEmail = prompt('Enter the email of the Disney character:');
+
+        // Check if there are multiple rows with the same ID
+        const existingIds = [...initialData, ...dynamicData].map(item => item.id);
+        const newId = existingIds.length > 0 ? Math.max(...existingIds) + 1 : 1;
+
+        // Add the new character to the dynamic data array
+        dynamicData = [...dynamicData, { id: newId, name: newName, email: newEmail }];
+
+        // Render only the dynamic data
+        renderData(removeDuplicateIds(dynamicData));
+    }
+
+    // Event handler for the "Create Disney Character" button click
+    $('#create-btn').on('click', createDisneyCharacter);
+
+    // Event handler for the "Delete" and "Update" buttons inside the table
+    $('#data-table').on('click', '.delete-btn', function () {
+        // Get the ID of the item to delete
+        const idToDelete = $(this).data('id');
+        // Filter out the item with the specified ID from the dynamic data
+        dynamicData = dynamicData.filter(item => item.id !== idToDelete);
+        // Render only the dynamic data
+        renderData(removeDuplicateIds(dynamicData));
+    });
+
+    // Event handler for the "Update" button inside the table
+    $('#data-table').on('click', '.update-btn', function () {
+        // Get the ID of the item to update
+        const idToEdit = $(this).data('id');
+        // Find the index of the item in the dynamic data array
+        const updateIndex = dynamicData.findIndex(item => item.id === idToEdit);
+
+        // Check if the item was found
+        if (updateIndex !== -1) {
+            // Prompt the user for the new name and email
+            const updateName = prompt('Enter the new name of the Disney character:');
+            const updateEmail = prompt('Enter the new email of the Disney character:');
+
+            // Update the item in the dynamic data array
+            dynamicData[updateIndex] = { id: idToEdit, name: updateName, email: updateEmail };
+
+            // Render only the dynamic data
+            renderData(removeDuplicateIds(dynamicData));
+        }
+    });
+
+    // Initial rendering of the table with the initial data
+    renderData(removeDuplicateIds(initialData));
+</script>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="err">!</span><span class="o">--</span> <span class="n">Include</span> <span class="n">jQuery</span> <span class="n">library</span> <span class="o">--&gt;</span>
+<span class="o">&lt;</span><span class="n">script</span> <span class="n">src</span><span class="o">=</span><span class="s">"https://code.jquery.com/jquery-3.6.4.min.js"</span><span class="o">&gt;&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="n">style</span><span class="o">&gt;</span>
+    <span class="o">/*</span> <span class="n">Set</span> <span class="n">background</span> <span class="n">color</span><span class="p">,</span> <span class="n">font</span><span class="p">,</span> <span class="ow">and</span> <span class="n">remove</span> <span class="n">default</span> <span class="n">margins</span> <span class="ow">and</span> <span class="n">padding</span> <span class="k">for</span> <span class="n">the</span> <span class="n">body</span> <span class="o">*/</span>
+    <span class="n">body</span> <span class="p">{</span>
+        <span class="n">background</span><span class="o">-</span><span class="n">color</span><span class="p">:</span> <span class="c1">#a8c0ff; /* Disney Blue */
+</span>        <span class="n">font</span><span class="o">-</span><span class="n">family</span><span class="p">:</span> <span class="s">'Arial'</span><span class="p">,</span> <span class="n">sans</span><span class="o">-</span><span class="n">serif</span><span class="p">;</span>
+        <span class="n">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="n">padding</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="o">/*</span> <span class="n">Style</span> <span class="k">for</span> <span class="n">the</span> <span class="n">table</span> <span class="o">*/</span>
+    <span class="n">table</span> <span class="p">{</span>
+        <span class="n">border</span><span class="o">-</span><span class="n">collapse</span><span class="p">:</span> <span class="n">collapse</span><span class="p">;</span>
+        <span class="n">width</span><span class="p">:</span> <span class="mi">100</span><span class="o">%</span><span class="p">;</span>
+        <span class="n">margin</span><span class="o">-</span><span class="n">top</span><span class="p">:</span> <span class="mi">20</span><span class="n">px</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="o">/*</span> <span class="n">Style</span> <span class="k">for</span> <span class="n">table</span> <span class="n">header</span> <span class="ow">and</span> <span class="n">cells</span> <span class="o">*/</span>
+    <span class="n">th</span><span class="p">,</span> <span class="n">td</span> <span class="p">{</span>
+        <span class="n">border</span><span class="p">:</span> <span class="mi">1</span><span class="n">px</span> <span class="n">solid</span> <span class="c1">#70a9ff; /* Disney Blue */
+</span>        <span class="n">padding</span><span class="p">:</span> <span class="mi">10</span><span class="n">px</span><span class="p">;</span>
+        <span class="n">text</span><span class="o">-</span><span class="n">align</span><span class="p">:</span> <span class="n">left</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="o">/*</span> <span class="n">Style</span> <span class="k">for</span> <span class="n">table</span> <span class="n">header</span> <span class="o">*/</span>
+    <span class="n">th</span> <span class="p">{</span>
+        <span class="n">background</span><span class="o">-</span><span class="n">color</span><span class="p">:</span> <span class="c1">#3d5af1; /* Disney Blue */
+</span>        <span class="n">color</span><span class="p">:</span> <span class="n">white</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="o">/*</span> <span class="n">Style</span> <span class="k">for</span> <span class="n">buttons</span> <span class="o">*/</span>
+    <span class="n">button</span> <span class="p">{</span>
+        <span class="n">background</span><span class="o">-</span><span class="n">color</span><span class="p">:</span> <span class="c1">#3d5af1; /* Disney Blue */
+</span>        <span class="n">color</span><span class="p">:</span> <span class="n">white</span><span class="p">;</span>
+        <span class="n">border</span><span class="p">:</span> <span class="n">none</span><span class="p">;</span>
+        <span class="n">padding</span><span class="p">:</span> <span class="mi">8</span><span class="n">px</span> <span class="mi">12</span><span class="n">px</span><span class="p">;</span>
+        <span class="n">cursor</span><span class="p">:</span> <span class="n">pointer</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="o">/*</span> <span class="n">Style</span> <span class="k">for</span> <span class="n">button</span> <span class="n">hover</span> <span class="n">effect</span> <span class="o">*/</span>
+    <span class="n">button</span><span class="p">:</span><span class="n">hover</span> <span class="p">{</span>
+        <span class="n">background</span><span class="o">-</span><span class="n">color</span><span class="p">:</span> <span class="c1">#1c3faa; /* Lighter Disney Blue */
+</span>    <span class="p">}</span>
+<span class="o">&lt;/</span><span class="n">style</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="err">!</span><span class="o">--</span> <span class="n">HTML</span> <span class="n">table</span> <span class="n">structure</span> <span class="k">with</span> <span class="n">an</span> <span class="n">empty</span> <span class="n">tbody</span> <span class="k">for</span> <span class="n">dynamic</span> <span class="n">data</span> <span class="o">--&gt;</span>
+<span class="o">&lt;</span><span class="n">table</span> <span class="nb">id</span><span class="o">=</span><span class="s">"data-table"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">thead</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">tr</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">th</span><span class="o">&gt;</span><span class="n">ID</span><span class="o">&lt;/</span><span class="n">th</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">th</span><span class="o">&gt;</span><span class="n">Name</span><span class="o">&lt;/</span><span class="n">th</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">th</span><span class="o">&gt;</span><span class="n">Email</span><span class="o">&lt;/</span><span class="n">th</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">th</span><span class="o">&gt;</span><span class="n">Actions</span><span class="o">&lt;/</span><span class="n">th</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">tr</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">thead</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">tbody</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="err">!</span><span class="o">--</span> <span class="n">Initial</span> <span class="n">data</span> <span class="n">will</span> <span class="n">be</span> <span class="n">dynamically</span> <span class="n">added</span> <span class="n">here</span> <span class="o">--&gt;</span>
+    <span class="o">&lt;/</span><span class="n">tbody</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">table</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="err">!</span><span class="o">--</span> <span class="n">Button</span> <span class="n">to</span> <span class="n">trigger</span> <span class="n">the</span> <span class="n">creation</span> <span class="n">of</span> <span class="n">a</span> <span class="n">new</span> <span class="n">Disney</span> <span class="n">character</span> <span class="o">--&gt;</span>
+<span class="o">&lt;</span><span class="n">button</span> <span class="nb">id</span><span class="o">=</span><span class="s">"create-btn"</span><span class="o">&gt;</span><span class="n">Create</span> <span class="n">Disney</span> <span class="n">Character</span><span class="o">&lt;/</span><span class="n">button</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="n">script</span><span class="o">&gt;</span>
+    <span class="o">//</span> <span class="n">Initial</span> <span class="n">data</span> <span class="k">for</span> <span class="n">Disney</span> <span class="n">characters</span>
+    <span class="n">const</span> <span class="n">initialData</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">{</span> <span class="nb">id</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="s">'Mickey Mouse'</span><span class="p">,</span> <span class="n">email</span><span class="p">:</span> <span class="s">'mickey@example.com'</span> <span class="p">},</span>
+        <span class="p">{</span> <span class="nb">id</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="s">'Donald Duck'</span><span class="p">,</span> <span class="n">email</span><span class="p">:</span> <span class="s">'donald@example.com'</span> <span class="p">}</span>
+    <span class="p">];</span>
+
+    <span class="o">//</span> <span class="n">Dynamic</span> <span class="n">data</span> <span class="n">that</span> <span class="n">can</span> <span class="n">be</span> <span class="n">updated</span> <span class="ow">or</span> <span class="n">modified</span>
+    <span class="n">let</span> <span class="n">dynamicData</span> <span class="o">=</span> <span class="p">[...</span><span class="n">initialData</span><span class="p">];</span>
+
+    <span class="o">//</span> <span class="n">Function</span> <span class="n">to</span> <span class="n">remove</span> <span class="n">rows</span> <span class="k">with</span> <span class="n">duplicate</span> <span class="n">IDs</span>
+    <span class="n">function</span> <span class="n">removeDuplicateIds</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">const</span> <span class="n">uniqueIds</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Set</span><span class="p">();</span>
+        <span class="k">return</span> <span class="n">data</span><span class="p">.</span><span class="nb">filter</span><span class="p">(</span><span class="n">item</span> <span class="o">=&gt;</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">uniqueIds</span><span class="p">.</span><span class="n">has</span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="nb">id</span><span class="p">))</span> <span class="p">{</span>
+                <span class="k">return</span> <span class="n">false</span><span class="p">;</span> <span class="o">//</span> <span class="n">Duplicate</span> <span class="n">ID</span><span class="p">,</span> <span class="n">exclude</span> <span class="n">this</span> <span class="n">item</span>
+            <span class="p">}</span>
+            <span class="n">uniqueIds</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="nb">id</span><span class="p">);</span>
+            <span class="k">return</span> <span class="n">true</span><span class="p">;</span>
+        <span class="p">});</span>
+    <span class="p">}</span>
+
+    <span class="o">//</span> <span class="n">Function</span> <span class="n">to</span> <span class="n">render</span> <span class="n">data</span> <span class="n">into</span> <span class="n">the</span> <span class="n">table</span>
+    <span class="n">function</span> <span class="n">renderData</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">const</span> <span class="n">tableBody</span> <span class="o">=</span> <span class="err">$</span><span class="p">(</span><span class="s">'#data-table tbody'</span><span class="p">);</span>
+        <span class="n">tableBody</span><span class="p">.</span><span class="n">empty</span><span class="p">();</span>
+
+        <span class="o">//</span> <span class="n">Loop</span> <span class="n">through</span> <span class="n">the</span> <span class="n">data</span> <span class="ow">and</span> <span class="n">create</span> <span class="n">table</span> <span class="n">rows</span> <span class="n">dynamically</span>
+        <span class="n">data</span><span class="p">.</span><span class="n">forEach</span><span class="p">(</span><span class="n">item</span> <span class="o">=&gt;</span> <span class="p">{</span>
+            <span class="n">const</span> <span class="n">row</span> <span class="o">=</span> <span class="err">`</span>
+                <span class="o">&lt;</span><span class="n">tr</span><span class="o">&gt;</span>
+                    <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="err">$</span><span class="p">{</span><span class="n">item</span><span class="p">.</span><span class="nb">id</span><span class="p">}</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+                    <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="err">$</span><span class="p">{</span><span class="n">item</span><span class="p">.</span><span class="n">name</span><span class="p">}</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+                    <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="err">$</span><span class="p">{</span><span class="n">item</span><span class="p">.</span><span class="n">email</span><span class="p">}</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+                    <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span>
+                        <span class="o">&lt;</span><span class="n">button</span> <span class="n">class</span><span class="o">=</span><span class="s">"update-btn"</span> <span class="n">data</span><span class="o">-</span><span class="nb">id</span><span class="o">=</span><span class="s">"${item.id}"</span><span class="o">&gt;</span><span class="n">Update</span><span class="o">&lt;/</span><span class="n">button</span><span class="o">&gt;</span>
+                        <span class="o">&lt;</span><span class="n">button</span> <span class="n">class</span><span class="o">=</span><span class="s">"delete-btn"</span> <span class="n">data</span><span class="o">-</span><span class="nb">id</span><span class="o">=</span><span class="s">"${item.id}"</span><span class="o">&gt;</span><span class="n">Delete</span><span class="o">&lt;/</span><span class="n">button</span><span class="o">&gt;</span>
+                    <span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+                <span class="o">&lt;/</span><span class="n">tr</span><span class="o">&gt;</span>
+            <span class="err">`</span><span class="p">;</span>
+            <span class="n">tableBody</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">);</span>
+        <span class="p">});</span>
+    <span class="p">}</span>
+
+    <span class="o">//</span> <span class="n">Function</span> <span class="n">to</span> <span class="n">create</span> <span class="n">a</span> <span class="n">new</span> <span class="n">Disney</span> <span class="n">character</span>
+    <span class="n">function</span> <span class="n">createDisneyCharacter</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">const</span> <span class="n">newName</span> <span class="o">=</span> <span class="n">prompt</span><span class="p">(</span><span class="s">'Enter the name of the Disney character:'</span><span class="p">);</span>
+        <span class="n">const</span> <span class="n">newEmail</span> <span class="o">=</span> <span class="n">prompt</span><span class="p">(</span><span class="s">'Enter the email of the Disney character:'</span><span class="p">);</span>
+
+        <span class="o">//</span> <span class="n">Check</span> <span class="k">if</span> <span class="n">there</span> <span class="n">are</span> <span class="n">multiple</span> <span class="n">rows</span> <span class="k">with</span> <span class="n">the</span> <span class="n">same</span> <span class="n">ID</span>
+        <span class="n">const</span> <span class="n">existingIds</span> <span class="o">=</span> <span class="p">[...</span><span class="n">initialData</span><span class="p">,</span> <span class="p">...</span><span class="n">dynamicData</span><span class="p">].</span><span class="nb">map</span><span class="p">(</span><span class="n">item</span> <span class="o">=&gt;</span> <span class="n">item</span><span class="p">.</span><span class="nb">id</span><span class="p">);</span>
+        <span class="n">const</span> <span class="n">newId</span> <span class="o">=</span> <span class="n">existingIds</span><span class="p">.</span><span class="n">length</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="err">?</span> <span class="n">Math</span><span class="p">.</span><span class="nb">max</span><span class="p">(...</span><span class="n">existingIds</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">:</span> <span class="mi">1</span><span class="p">;</span>
+
+        <span class="o">//</span> <span class="n">Add</span> <span class="n">the</span> <span class="n">new</span> <span class="n">character</span> <span class="n">to</span> <span class="n">the</span> <span class="n">dynamic</span> <span class="n">data</span> <span class="n">array</span>
+        <span class="n">dynamicData</span> <span class="o">=</span> <span class="p">[...</span><span class="n">dynamicData</span><span class="p">,</span> <span class="p">{</span> <span class="nb">id</span><span class="p">:</span> <span class="n">newId</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">newName</span><span class="p">,</span> <span class="n">email</span><span class="p">:</span> <span class="n">newEmail</span> <span class="p">}];</span>
+
+        <span class="o">//</span> <span class="n">Render</span> <span class="n">only</span> <span class="n">the</span> <span class="n">dynamic</span> <span class="n">data</span>
+        <span class="n">renderData</span><span class="p">(</span><span class="n">removeDuplicateIds</span><span class="p">(</span><span class="n">dynamicData</span><span class="p">));</span>
+    <span class="p">}</span>
+
+    <span class="o">//</span> <span class="n">Event</span> <span class="n">handler</span> <span class="k">for</span> <span class="n">the</span> <span class="s">"Create Disney Character"</span> <span class="n">button</span> <span class="n">click</span>
+    <span class="err">$</span><span class="p">(</span><span class="s">'#create-btn'</span><span class="p">).</span><span class="n">on</span><span class="p">(</span><span class="s">'click'</span><span class="p">,</span> <span class="n">createDisneyCharacter</span><span class="p">);</span>
+
+    <span class="o">//</span> <span class="n">Event</span> <span class="n">handler</span> <span class="k">for</span> <span class="n">the</span> <span class="s">"Delete"</span> <span class="ow">and</span> <span class="s">"Update"</span> <span class="n">buttons</span> <span class="n">inside</span> <span class="n">the</span> <span class="n">table</span>
+    <span class="err">$</span><span class="p">(</span><span class="s">'#data-table'</span><span class="p">).</span><span class="n">on</span><span class="p">(</span><span class="s">'click'</span><span class="p">,</span> <span class="s">'.delete-btn'</span><span class="p">,</span> <span class="n">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="o">//</span> <span class="n">Get</span> <span class="n">the</span> <span class="n">ID</span> <span class="n">of</span> <span class="n">the</span> <span class="n">item</span> <span class="n">to</span> <span class="n">delete</span>
+        <span class="n">const</span> <span class="n">idToDelete</span> <span class="o">=</span> <span class="err">$</span><span class="p">(</span><span class="n">this</span><span class="p">).</span><span class="n">data</span><span class="p">(</span><span class="s">'id'</span><span class="p">);</span>
+        <span class="o">//</span> <span class="n">Filter</span> <span class="n">out</span> <span class="n">the</span> <span class="n">item</span> <span class="k">with</span> <span class="n">the</span> <span class="n">specified</span> <span class="n">ID</span> <span class="k">from</span> <span class="n">the</span> <span class="n">dynamic</span> <span class="n">data</span>
+        <span class="n">dynamicData</span> <span class="o">=</span> <span class="n">dynamicData</span><span class="p">.</span><span class="nb">filter</span><span class="p">(</span><span class="n">item</span> <span class="o">=&gt;</span> <span class="n">item</span><span class="p">.</span><span class="nb">id</span> <span class="o">!==</span> <span class="n">idToDelete</span><span class="p">);</span>
+        <span class="o">//</span> <span class="n">Render</span> <span class="n">only</span> <span class="n">the</span> <span class="n">dynamic</span> <span class="n">data</span>
+        <span class="n">renderData</span><span class="p">(</span><span class="n">removeDuplicateIds</span><span class="p">(</span><span class="n">dynamicData</span><span class="p">));</span>
+    <span class="p">});</span>
+
+    <span class="o">//</span> <span class="n">Event</span> <span class="n">handler</span> <span class="k">for</span> <span class="n">the</span> <span class="s">"Update"</span> <span class="n">button</span> <span class="n">inside</span> <span class="n">the</span> <span class="n">table</span>
+    <span class="err">$</span><span class="p">(</span><span class="s">'#data-table'</span><span class="p">).</span><span class="n">on</span><span class="p">(</span><span class="s">'click'</span><span class="p">,</span> <span class="s">'.update-btn'</span><span class="p">,</span> <span class="n">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="o">//</span> <span class="n">Get</span> <span class="n">the</span> <span class="n">ID</span> <span class="n">of</span> <span class="n">the</span> <span class="n">item</span> <span class="n">to</span> <span class="n">update</span>
+        <span class="n">const</span> <span class="n">idToEdit</span> <span class="o">=</span> <span class="err">$</span><span class="p">(</span><span class="n">this</span><span class="p">).</span><span class="n">data</span><span class="p">(</span><span class="s">'id'</span><span class="p">);</span>
+        <span class="o">//</span> <span class="n">Find</span> <span class="n">the</span> <span class="n">index</span> <span class="n">of</span> <span class="n">the</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">dynamic</span> <span class="n">data</span> <span class="n">array</span>
+        <span class="n">const</span> <span class="n">updateIndex</span> <span class="o">=</span> <span class="n">dynamicData</span><span class="p">.</span><span class="n">findIndex</span><span class="p">(</span><span class="n">item</span> <span class="o">=&gt;</span> <span class="n">item</span><span class="p">.</span><span class="nb">id</span> <span class="o">===</span> <span class="n">idToEdit</span><span class="p">);</span>
+
+        <span class="o">//</span> <span class="n">Check</span> <span class="k">if</span> <span class="n">the</span> <span class="n">item</span> <span class="n">was</span> <span class="n">found</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">updateIndex</span> <span class="o">!==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+            <span class="o">//</span> <span class="n">Prompt</span> <span class="n">the</span> <span class="n">user</span> <span class="k">for</span> <span class="n">the</span> <span class="n">new</span> <span class="n">name</span> <span class="ow">and</span> <span class="n">email</span>
+            <span class="n">const</span> <span class="n">updateName</span> <span class="o">=</span> <span class="n">prompt</span><span class="p">(</span><span class="s">'Enter the new name of the Disney character:'</span><span class="p">);</span>
+            <span class="n">const</span> <span class="n">updateEmail</span> <span class="o">=</span> <span class="n">prompt</span><span class="p">(</span><span class="s">'Enter the new email of the Disney character:'</span><span class="p">);</span>
+
+            <span class="o">//</span> <span class="n">Update</span> <span class="n">the</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">dynamic</span> <span class="n">data</span> <span class="n">array</span>
+            <span class="n">dynamicData</span><span class="p">[</span><span class="n">updateIndex</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span> <span class="nb">id</span><span class="p">:</span> <span class="n">idToEdit</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">updateName</span><span class="p">,</span> <span class="n">email</span><span class="p">:</span> <span class="n">updateEmail</span> <span class="p">};</span>
+
+            <span class="o">//</span> <span class="n">Render</span> <span class="n">only</span> <span class="n">the</span> <span class="n">dynamic</span> <span class="n">data</span>
+            <span class="n">renderData</span><span class="p">(</span><span class="n">removeDuplicateIds</span><span class="p">(</span><span class="n">dynamicData</span><span class="p">));</span>
+        <span class="p">}</span>
+    <span class="p">});</span>
+
+    <span class="o">//</span> <span class="n">Initial</span> <span class="n">rendering</span> <span class="n">of</span> <span class="n">the</span> <span class="n">table</span> <span class="k">with</span> <span class="n">the</span> <span class="n">initial</span> <span class="n">data</span>
+    <span class="n">renderData</span><span class="p">(</span><span class="n">removeDuplicateIds</span><span class="p">(</span><span class="n">initialData</span><span class="p">));</span>
+<span class="o">&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+
+</code></pre></div></div>
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="nighthawkcoders/teacher_portfolio"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/teacher_portfolio/2023/12/07/P1_student_jQuerry_CRUD_IPYNB_2_.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+    <data class="u-url" href="/teacher_portfolio/"></data>
+  
+    <div class="wrapper">
+  
+      <div class="footer-col-wrapper">
+  
+        <div class="social-links"><ul class="social-media-list"><li>
+  <a rel="me" href="https://github.com/nighthawkcoders/teacher_portfolio" target="_blank" title="github">
+    <svg class="svg-icon grey">
+      <use xlink:href="/teacher_portfolio/assets/minima-social-icons.svg#github"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="https://x.com/NighthawkCoding/" target="_blank" title="x">
+    <svg class="svg-icon grey">
+      <use xlink:href="/teacher_portfolio/assets/minima-social-icons.svg#x"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="https://www.youtube.com/@nighthawkcodingsociety2868" target="_blank" title="youtube">
+    <svg class="svg-icon grey">
+      <use xlink:href="/teacher_portfolio/assets/minima-social-icons.svg#youtube"></use>
+    </svg>
+  </a>
+</li>
+</ul>
+</div>
+
+      </div>
+    </div>
+  
+  </footer></body>
+
+</html>

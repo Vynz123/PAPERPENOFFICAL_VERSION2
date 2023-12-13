@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>P4 Data Abstraction | Teacher 2.0</title>
+<meta name="generator" content="Jekyll v3.9.3" />
+<meta property="og:title" content="P4 Data Abstraction" />
+<meta name="author" content="Nikki, Ankit, Monika, Varun" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="College Board topics 3.1-3.2" />
+<meta property="og:description" content="College Board topics 3.1-3.2" />
+<link rel="canonical" href="http://localhost:4100/teacher_portfolio/2023/10/02/P4_Data_Abstractions_IPYNB_2_.html" />
+<meta property="og:url" content="http://localhost:4100/teacher_portfolio/2023/10/02/P4_Data_Abstractions_IPYNB_2_.html" />
+<meta property="og:site_name" content="Teacher 2.0" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-10-02T00:00:00-07:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="P4 Data Abstraction" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Nikki, Ankit, Monika, Varun"},"dateModified":"2023-10-02T00:00:00-07:00","datePublished":"2023-10-02T00:00:00-07:00","description":"College Board topics 3.1-3.2","headline":"P4 Data Abstraction","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4100/teacher_portfolio/2023/10/02/P4_Data_Abstractions_IPYNB_2_.html"},"url":"http://localhost:4100/teacher_portfolio/2023/10/02/P4_Data_Abstractions_IPYNB_2_.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/teacher_portfolio/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4100/teacher_portfolio/feed.xml" title="Teacher 2.0" /><link rel="shortcut icon" type="image/x-icon" href="/teacher_portfolio/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/teacher_portfolio/">Teacher 2.0</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/teacher_portfolio/blogs/">Blogs</a><a class="page-link" href="/teacher_portfolio/search/">Search</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">P4 Data Abstraction</h1><p class="page-description">College Board topics 3.1-3.2</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-10-02T00:00:00-07:00" itemprop="datePublished">
+        Oct 2, 2023
+      </time>• 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">Nikki, Ankit, Monika, Varun</span></span>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      5 min read
+    
+</span></p>
+
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody"><h1 id="31-variables-and-assignments">3.1 Variables and Assignments</h1>
+
+<h3 id="variables">Variables</h3>
+
+<p>What is a variable?</p>
+<ul>
+  <li>An abstraction inside a program that can hold value/store information</li>
+  <li>Note: a variable should be concise but not too short (i.e. one letter), and it shouldn’t have spaces or any special characters
+    <ul>
+      <li>Ex: “highScore” is more concise than “highestscoreinthegame”</li>
+      <li>Ex: “name” is more specific than “n”</li>
+      <li>Ex: “isitraining” doesn’t have spaces in between the words</li>
+      <li>Ex: “phonenumber” doesn’t have a hyphen like “555-number”</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="examples">Examples</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">numStudents</span> <span class="o">=</span> <span class="mi">26</span>
+<span class="k">print</span><span class="p">(</span><span class="n">numStudents</span><span class="p">)</span>
+
+<span class="n">car</span> <span class="o">=</span> <span class="s">"Tesla"</span>
+<span class="k">print</span><span class="p">(</span><span class="n">car</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>26
+Tesla
+</code></pre></div></div>
+
+<h4 id="-popcorn-hack-1-"><font color="4895EF"> Popcorn Hack 1 </font></h4>
+
+<font color="4895EF"> Define your own variable and print it in a separate code cell using Python. Make it relate to one of your hobbies or interests. </font>
+
+<h3 id="data-types">Data Types</h3>
+
+<p>A data type is a type of variable, and these are 3 of the 4 main types:</p>
+<ul>
+  <li>integer: a mathematical number</li>
+  <li>boolean: a yes/no or true/false statement</li>
+  <li>text (or string): for any text-based variable (including phone numbers)</li>
+</ul>
+
+<h4 id="examples-1">Examples</h4>
+<ul>
+  <li>Note that for Python you need to classify anything other than a string as a string (or “str”) in order to print</li>
+  <li>the following examples represent the storing of data within a variable</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">highScore</span> <span class="o">=</span> <span class="mi">9</span> 
+<span class="n">isRaining</span> <span class="o">=</span> <span class="bp">False</span>
+<span class="n">firstName</span> <span class="o">=</span> <span class="s">"Nikki"</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">highScore</span><span class="p">)</span> <span class="o">+</span> <span class="s">" is an integer"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">isRaining</span><span class="p">)</span> <span class="o">+</span> <span class="s">" is a boolean"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">firstName</span> <span class="o">+</span> <span class="s">" is a string"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>9 is an integer
+False is a boolean
+Nikki is a string
+</code></pre></div></div>
+
+<h4 id="-popcorn-hack-2-"><font color="4895EF"> Popcorn Hack 2 </font></h4>
+
+<font color="4895EF"> Define a string, boolean, and integer. Print all 3 together like so. </font>
+
+<h3 id="changing-values">Changing Values</h3>
+
+<p>A variable itself isn’t static, so you can change it to give different or more updated information. An example of this is having a variable that calculates changing age.</p>
+
+<h4 id="examples-2">Examples</h4>
+<p>The following examples shows how you can replace one variable with another. See if you can figure out what data will be printed out before it runs!</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">currentScore</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">highScore</span> <span class="o">=</span> <span class="n">currentScore</span>
+<span class="n">currentScore</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">highScore</span><span class="p">))</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>10
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">num1</span> <span class="o">=</span> <span class="mi">25</span>
+<span class="n">num2</span> <span class="o">=</span> <span class="mi">15</span>
+<span class="n">num3</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="n">num2</span> <span class="o">=</span> <span class="n">num3</span> 
+<span class="n">num3</span> <span class="o">=</span> <span class="n">num1</span>
+<span class="n">num1</span> <span class="o">=</span> <span class="n">num2</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">num1</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">num2</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">num3</span><span class="p">))</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>30
+30
+25
+</code></pre></div></div>
+
+<h4 id="-popcorn-hack-3-"><font color="4895EF"> Popcorn Hack 3 </font></h4>
+
+<font color="4895EF"> Write a program to equate the value of a first variable to a second variable. Print the second variable, and you should see the same content as the first variable. </font>
+
+<h1 id="32-data-abstraction">3.2 Data Abstraction</h1>
+
+<h3 id="new-types-of-variables">New Types of Variables</h3>
+<ul>
+  <li>Strings
+    <ul>
+      <li>an ordered sequence of characters</li>
+      <li>may contain letters, numbers, and all other special characters</li>
+      <li>Ex: words, phrases, sentences, ID numbers</li>
+    </ul>
+  </li>
+  <li>Lists
+    <ul>
+      <li>an ordered sequence of elements</li>
+      <li>each element is a variable</li>
+      <li>Ex: playlist of songs, names of students in a class, contacts in your phone</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="list-index">List Index</h3>
+<ul>
+  <li>Each element of a string is referenced by an index</li>
+  <li>For the AP test an index will start at 1 (example image below), but in actuality it starts at 0 (the following examples)</li>
+</ul>
+
+<p><img src="listindex.png" alt="listindex.png" /></p>
+
+<h4 id="examples-3">Examples</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">groupNames</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Nikki"</span><span class="p">,</span> <span class="s">"Ankit"</span><span class="p">,</span> <span class="s">"Varun"</span><span class="p">,</span> <span class="s">"Monika"</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">groupNames</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="n">groupNames</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="n">groupNames</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="n">groupNames</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Nikki
+Ankit
+Varun
+Monika
+</code></pre></div></div>
+
+<h4 id="-popcorn-hack-4-"><font color="4895EF"> Popcorn Hack 4 </font></h4>
+
+<font color="4895EF"> Create a list with your current schedule of classes. Print only the 2nd class in your schedule. </font>
+
+<h3 id="data-abstraction---lists">Data Abstraction - Lists</h3>
+<ul>
+  <li>lists allow for data abstraction
+    <ul>
+      <li>bundle variables together
+        <ul>
+          <li>strings, numbers, characters, etc.</li>
+        </ul>
+      </li>
+      <li>give one name to a set of memory cells
+        <ul>
+          <li>do not need to know how many variables will be needed</li>
+        </ul>
+      </li>
+      <li>do not need to know how the elements are stored together</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="examples-4">Examples</h4>
+<p>The following example showcases the concept of changing values but with lists instead.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">scores1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">89</span><span class="p">,</span> <span class="mi">72</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="mi">83</span><span class="p">]</span>
+<span class="n">scores2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">23</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">96</span><span class="p">,</span> <span class="mi">55</span><span class="p">]</span>
+<span class="n">scores1</span> <span class="o">=</span> <span class="n">scores2</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">scores1</span><span class="p">))</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[23, 25, 96, 55]
+</code></pre></div></div>
+
+<h3 id="how-lists-manage-complexity-of-a-program">How Lists Manage Complexity of a Program</h3>
+<ul>
+  <li>May not need as many variables (improves readability)
+    <ul>
+      <li>Ex: variable for each student is more tedious than one variable that holds all students</li>
+    </ul>
+  </li>
+  <li>Change the number of variables
+    <ul>
+      <li>Ex: if a student transfers in/out of school, you won’t need to add/delete an entire variable (you’re just deleting one element from a list)</li>
+    </ul>
+  </li>
+  <li>Consistent computations
+    <ul>
+      <li>Ex: a list of test scores can be curved with the same calculation for all scores (you can do it to everything all at once)</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="examples-5">Examples</h4>
+<p>The following example showcases the convenience a list offers. The first series of scores would require more time to print out versus the second version (in list form). We would be able to curve the scores of a class all at once more easily using the second version.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">score1</span> <span class="o">=</span> <span class="mi">23</span>
+<span class="n">score2</span> <span class="o">=</span> <span class="mi">35</span>
+<span class="n">score3</span> <span class="o">=</span> <span class="mi">25</span>
+<span class="n">score4</span> <span class="o">=</span> <span class="mi">44</span>
+<span class="n">score5</span> <span class="o">=</span> <span class="mi">56</span>
+<span class="n">score6</span> <span class="o">=</span> <span class="mi">78</span>
+<span class="n">score7</span> <span class="o">=</span> <span class="mi">62</span>
+<span class="n">score8</span> <span class="o">=</span> <span class="mi">92</span>
+<span class="n">score9</span> <span class="o">=</span> <span class="mi">94</span>
+<span class="n">score10</span> <span class="o">=</span> <span class="mi">47</span>
+
+<span class="n">scores</span> <span class="o">=</span> <span class="p">[</span><span class="mi">23</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="mi">62</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">94</span><span class="p">,</span> <span class="mi">47</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">scores</span><span class="p">))</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[23, 35, 25, 44, 56, 78, 62, 92, 94, 47]
+</code></pre></div></div>
+
+<h3 id="converting-data-types-to-and-from-json">Converting Data Types to and from JSON</h3>
+
+<p>This is useful for converting Python lists containing integers to a string. It can be used when connecting backend code (Python) to frontend code (JavaScript)</p>
+
+<p>The following shows us assigning a variable “a” to a list of integers that has been converted to a string using <code class="language-plaintext highlighter-rouge">json.dumps</code></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">json</span>
+<span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">lst</span><span class="p">))</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">json</span><span class="p">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;class 'list'&gt;
+[1, 2, 3, 4]
+&lt;class 'str'&gt;
+</code></pre></div></div>
+
+<h4 id="-popcorn-hack-5-"><font color="4895EF"> Popcorn Hack 5 </font></h4>
+
+<font color="4895EF"> Convert a list of integers in Python to a string using JSON. Assign a new variable to the newly converted string and print it. Also print the type of the new variable to ensure it is a string. </font>
+
+<h3 id="-hack-1-"><font color="FFC0CB"> Hack 1 </font></h3>
+
+<font color="FFC0CB"> Sort the variables in the code cell below into these categories and write the adjoining numbers for each type: </font>
+
+<ul>
+  <li>
+    <font color="FFC0CB"> Integer: </font>
+  </li>
+  <li>
+    <font color="FFC0CB"> List: </font>
+  </li>
+  <li>
+    <font color="FFC0CB"> Boolean: </font>
+  </li>
+  <li>
+    <font color="FFC0CB"> String: </font>
+  </li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Variable 1
+</span>
+<span class="n">numStudents</span> <span class="o">=</span> <span class="mi">26</span>
+<span class="k">print</span><span class="p">(</span><span class="n">numStudents</span><span class="p">)</span>
+
+<span class="c1"># Variable 2
+</span>
+<span class="n">car</span> <span class="o">=</span> <span class="s">"Tesla"</span>
+<span class="k">print</span><span class="p">(</span><span class="n">car</span><span class="p">)</span>
+
+<span class="c1"># Variable 3
+</span>
+<span class="n">groupMates</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Nikki"</span><span class="p">,</span> <span class="s">"Monika"</span><span class="p">,</span> <span class="s">"Ankit"</span><span class="p">,</span> <span class="s">"Varun"</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">groupMates</span><span class="p">)</span>
+
+<span class="c1"># Variable 4
+</span>
+<span class="n">dogsbeatcats</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="k">print</span><span class="p">(</span><span class="n">dogsbeatcats</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>26
+Tesla
+['Nikki', 'Monika', 'Ankit', 'Varun']
+True
+</code></pre></div></div>
+
+<h3 id="-hack-2-"><font color="FFC0CB"> Hack 2 </font></h3>
+
+<font color="FFC0CB"> Now in a separate code cell, define one variable for each type above! Make them unique to your interests and be creative. For your list, convert it to a string using JSON and print it out. </font>
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="nighthawkcoders/teacher_portfolio"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/teacher_portfolio/2023/10/02/P4_Data_Abstractions_IPYNB_2_.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+    <data class="u-url" href="/teacher_portfolio/"></data>
+  
+    <div class="wrapper">
+  
+      <div class="footer-col-wrapper">
+  
+        <div class="social-links"><ul class="social-media-list"><li>
+  <a rel="me" href="https://github.com/nighthawkcoders/teacher_portfolio" target="_blank" title="github">
+    <svg class="svg-icon grey">
+      <use xlink:href="/teacher_portfolio/assets/minima-social-icons.svg#github"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="https://x.com/NighthawkCoding/" target="_blank" title="x">
+    <svg class="svg-icon grey">
+      <use xlink:href="/teacher_portfolio/assets/minima-social-icons.svg#x"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="https://www.youtube.com/@nighthawkcodingsociety2868" target="_blank" title="youtube">
+    <svg class="svg-icon grey">
+      <use xlink:href="/teacher_portfolio/assets/minima-social-icons.svg#youtube"></use>
+    </svg>
+  </a>
+</li>
+</ul>
+</div>
+
+      </div>
+    </div>
+  
+  </footer></body>
+
+</html>
