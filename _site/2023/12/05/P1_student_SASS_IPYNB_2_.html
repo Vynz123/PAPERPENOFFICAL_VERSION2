@@ -73,14 +73,21 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">SASS | Student P1</h1>
-    <p class="post-meta"><time class="dt-published" datetime="2023-12-05T00:00:00-08:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">SASS | Student P1</h1><p class="page-description">Entire SASS Lesson.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-12-05T00:00:00-08:00" itemprop="datePublished">
         Dec 5, 2023
-      </time></p>
-  </header>
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      15 min read
+    
+</span></p>
 
-  <div class="post-content e-content" itemprop="articleBody">
-    <h1 id="introduction-to-sass">Introduction to SASS</h1>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody"><ul><li><a href="#introduction-to-sass">Introduction to SASS</a><ul><li><a href="#benefits-over-traditional-css">Benefits Over Traditional CSS</a><ul><li><a href="#improved-code-organization">Improved Code Organization</a></li><li><a href="#maintainability">Maintainability</a></li><li><a href="#advanced-features">Advanced Features</a></li></ul></li></ul></li><li><a href="#sass-basics">SASS Basics</a><ul><li><a href="#preprocessing">Preprocessing</a></li><li><a href="#modules">Modules</a></li><li><a href="#operators">Operators</a></li></ul></li><li>SASS Role in Design:<ul><li>Visual Concept as a Blueprint</li></ul></li><li>Hacks<ul><li><a href="#partials-and-modular-styling-with-sass">Partials and Modular Styling with SASS</a><ul><li><a href="#understanding-sass-partials">Understanding SASS Partials:</a></li><li><a href="#benefits-of-using-partials">Benefits of Using Partials:</a></li><li><a href="#importing-partials-into-a-main-sass-file">Importing Partials into a Main SASS File:</a></li></ul></li><li><a href="#variables-in-sass">Variables in SASS</a><ul><li><a href="#introduction-to-variables">Introduction to Variables:</a></li><li><a href="#variable-syntax">Variable Syntax:</a></li><li><a href="#sass-variable-scope">SASS Variable Scope:</a></li></ul></li></ul></li><li><a href="#nested-techniques">Nested techniques</a></li><li><a href="#flexbox-and-grid-integration">Flexbox and Grid Integration</a><ul><li><a href="#flexbox">Flexbox</a></li><li><a href="#grid">Grid</a></li></ul></li><li><a href="#simplifying-responsive-layouts-with-sass">Simplifying Responsive Layouts with SASS</a><ul><li><a href="#advanced-mixins-for-flexbox-and-grid">Advanced Mixins for Flexbox and Grid</a></li><li><a href="#dynamic-layouts-with-sass-functions">Dynamic Layouts with SASS Functions</a></li><li><a href="#nested-media-queries-for-responsive-design">Nested Media Queries for Responsive Design</a></li><li><a href="#demonstration-complex-flexbox-layout-with-sass">Demonstration: Complex Flexbox Layout with SASS</a></li><li><a href="#demonstration-responsive-grid-layout-with-sass">Demonstration: Responsive Grid Layout with SASS</a></li></ul></li><li><a href="#hacks">Hacks</a></li></ul></li><li><a href="#scripting-in-sass">Scripting in SASS</a><ul><li><a href="#sass-scripting">SASS Scripting</a></li><li><a href="#for-loops">For Loops</a><ul><li><a href="#for-loop-practice">For Loop Practice</a><ul><li><a href="#html">HTML</a></li><li><a href="#sass">SASS</a></li></ul></li></ul></li><li><a href="#conditionals">Conditionals</a><ul><li><a href="#if-statements">If Statements</a></li><li><a href="#else-statements">Else Statements</a></li><li><a href="#else-if-statements">Else If Statements</a></li><li><a href="#ternary-statement">Ternary Statement</a></li><li><a href="#conditional-examples">Conditional Examples</a></li></ul></li></ul></li><li><a href="#hacks-1">Hacks</a><ul><li><a href="#example-image">Example Image</a></li></ul></li></ul></li><li><a href="#extending--inheritance">Extending &amp; Inheritance</a></li><li><a href="#handling-errors-and-debugging-in-sass">Handling Errors and Debugging in Sass</a><ul><li><a href="#1-error-directive">1. @error Directive:</a></li><li><a href="#2-debug-directive">2. @debug Directive:</a></li><li><a href="#popcorn-hacks">Popcorn Hacks</a><ul><li><a href="#popcorn-hack-1">Popcorn Hack 1:</a></li><li><a href="#popcorn-hack-2">Popcorn Hack 2:</a></li></ul></li></ul></li><li><a href="#hacks-2">Hacks</a><ul><li><a href="#example-image-1">Example Image</a></li></ul></li></ul></li><li><a href="#mixins">Mixins</a><ul><li><a href="#mixins-in-sass">Mixins in SASS</a></li></ul></li><li><a href="#mixin-with-parameters">Mixin with Parameters</a></li><li><a href="#mixins-for-responsive-web-design">Mixins for Responsive Web Design</a><ul><li><a href="#responsive-design">Responsive Design</a></li><li><a href="#breakpoints-in-responsive-design">Breakpoints in Responsive Design</a></li><li><a href="#using-mixins-for-breakpoints">Using Mixins for Breakpoints</a><ul><li><a href="#example-of-a-breakpoint-mixin">Example of a Breakpoint Mixin</a></li><li><a href="#responsive-images-and-media-with-sass">Responsive Images and Media with SASS</a></li></ul></li></ul></li><li><a href="#responsive-images-and-media-with-sass-1">Responsive Images and Media with SASS</a><ul><li><a href="#handling-images-responsively">Handling Images Responsively</a><ul><li><a href="#example-scaling-images">Example: Scaling Images</a></li></ul></li><li><a href="#device-specific-media-queries">Device-Specific Media Queries</a><ul><li><a href="#targeting-specific-devices">Targeting Specific Devices</a><ul><li><a href="#example-targeting-iphones">Example: Targeting iPhones</a></li></ul></li></ul></li></ul></li><li><a href="#conclusion">Conclusion</a></li></ul><h1 id="introduction-to-sass">Introduction to SASS</h1>
 
 <p>SASS (Syntactically Awesome Stylesheets) is a powerful preprocessor scripting language that enhances CSS with advanced features. It’s compiled into standard CSS, making it a robust tool for modern web development.</p>
 <h2 id="benefits-over-traditional-css">Benefits Over Traditional CSS</h2>
@@ -876,7 +883,15 @@ and (-webkit-device-pixel-ratio : 3) {
 </ul>
 
 
-  </div><a class="u-url" href="/teacher_portfolio/2023/12/05/P1_student_SASS_IPYNB_2_.html" hidden></a>
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="nighthawkcoders/teacher_portfolio"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/teacher_portfolio/2023/12/05/P1_student_SASS_IPYNB_2_.html" hidden></a>
 </article>
 
       </div>
